@@ -1,0 +1,28 @@
+﻿.bottomTable a
+{
+    color: gray;
+}
+.topTable a
+{
+    height:25px;
+    color: White;
+    background-color: Black;
+}
+.textTable
+{
+    width: 623px; 
+    height: 24px;
+    border-color: Blue;
+}
+a
+{
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+body
+{
+    margin: 0px auto;
+}
