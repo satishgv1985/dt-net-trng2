@@ -1,43 +1,50 @@
-﻿        .selectedPage
-        {
-            border-top-style:solid; border-top-color:Red; font-weight:bold;
-        }
-        .toprowtable td
-        {
-            background-color: Black;
-            color: White;
-        }
-        .toprowtable td:hover
-        {
-            background-color: Gray;
-            cursor:pointer;
-            color: White;
-        }
-        .toprowtable a
-        {
-            background-color: Black;
-            cursor:pointer;
-            color: White;
-        }
+﻿.selectedPage
+{
+    border-top-style: solid;
+    border-top-color: Green;
+    font-weight: bold;
+}
+.toprowtable td
+{
+    background-color: Black;
+    color: White;
+}
+.toprowtable td:hover
+{
+    background-color: Gray;
+    cursor: pointer;
+    color: White;
+}
+.toprowtable a
+{
+    cursor: pointer;
+    color: White;
+}
 
-        .bottomrowtable
-        {
-            background-color: White;
-            text-decoration: none;
-            color: Gray;
-        }
-        .bottomrowtable:hover
-        {
-            background-color: White;
-            text-decoration: underline;
-            cursor:pointer;
-            color: Gray;
-        }
-        a
-        {
-            text-decoration:none;
-        }
-        a:hover
-        {
-            text-decoration:underline;
-        }
+.toprowtable a:hover
+{
+    background-color: gray;   
+}
+
+
+.bottomrowtable
+{
+    background-color: White;
+    text-decoration: none;
+    color: Gray;
+}
+.bottomrowtable:hover
+{
+    background-color: White;
+    text-decoration: underline;
+    cursor: pointer;
+    color: Gray;
+}
+a
+{
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: underline;
+}
