@@ -1,16 +1,31 @@
-﻿.bottomTable a
+﻿.borderstyle
+{
+    border-top-color: Green;
+    border-top-style: solid;
+    font-weight: bold;
+}
+.topTable td
+{
+    background-color:Black;
+    font:Arial Bold 20;
+}
+.topTable td:hover
+{
+    background-color:Gray;
+    
+}
+.bottomTable a
 {
     color: gray;
 }
 .topTable a
 {
-    height:25px;
+    height: 25px;
     color: White;
-    background-color: Black;
 }
 .textTable
 {
-    width: 623px; 
+    width: 623px;
     height: 24px;
     border-color: Blue;
 }
