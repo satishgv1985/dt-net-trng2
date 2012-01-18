@@ -51,12 +51,43 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assignments\Anupam_GooglewithTables.htm" />
+    <Content Include="Assignments\Naveen\googlepagedesign\crome.jpg" />
+    <Content Include="Assignments\Naveen\googlepagedesign\gogllogo.jpg" />
+    <Content Include="Assignments\Naveen\googlepagedesign\googlesearchpage.htm" />
+    <Content Include="Assignments\Naveen\googlepagedesign\googleImagepage.htm" />
+    <Content Include="Assignments\Naveen\googlepagedesign\Googlimageslogo.gif" />
+    <Content Include="Assignments\Naveen\googlepagedesign\settingsicon.jpg" />
+    <Content Include="Assignments\Naveen\googlepagedesign\StyleSheet.css" />
+    <Content Include="Assignments\Ravi\RAVIGOOGLEPAGE.htm" />
+    <Content Include="Assignments\Ravi\search.htm" />
+    <Content Include="Assignments\Ravi\youtube.html" />
+    <Content Include="Assignments\Naveen\googlepagedesign\Camera.JPG" />
+    <Content Include="Assignments\Srinivas\Imgs\Camera.JPG" />
+    <Content Include="Assignments\Srinivas\Imgs\GoogleImgs.JPG" />
+    <Content Include="Assignments\Naveen\googlepagedesign\Search.JPG" />
+    <Content Include="Assignments\Naveen\googlepagedesign\Wheel.JPG" />
+    <Content Include="Assignments\Srinivas\Imgs\GoogleMapImage.JPG" />
+    <Content Include="Assignments\Srinivas\Imgs\GoogleMaps_2ndRow_RightButtons.JPG" />
+    <Content Include="Assignments\Srinivas\Imgs\GoogleMaps_Experience.JPG" />
+    <Content Include="Assignments\Srinivas\Imgs\GoogleSearch.JPG" />
+    <Content Include="Assignments\Srinivas\Imgs\JustGoogle.JPG" />
+    <Content Include="Assignments\Srinivas\Imgs\Search.JPG" />
+    <Content Include="Assignments\Srinivas\Imgs\Wheel.JPG" />
+    <Content Include="Assignments\Srinivas\Srinivas_GoogleImages.htm" />
+    <Content Include="Assignments\Srinivas\Srinivas_GoogleImagesPage.htm" />
+    <Content Include="Assignments\Srinivas\Srinivas_GoogleMapsPage.htm" />
+    <Content Include="Assignments\Srinivas\Srinivas_GoogleSearchPage.htm" />
+    <Content Include="Assignments\Srinivas\Srinivas_StyleSheet.css" />
     <Content Include="Assignments\Srinivas_Google_WithTables.htm" />
     <Content Include="bin\AspNetTrainingClasses.dll" />
     <Content Include="bin\AspNetTrainingClasses.pdb" />
     <Content Include="Chrysanthemum.jpg" />
+    <Content Include="divSample.htm" />
+    <Content Include="GoogleImageSearch.htm" />
     <Content Include="HtmlClass.htm" />
     <Content Include="HtmlTableswithCSS.htm" />
+    <Content Include="images\bgImage1.png" />
+    <Content Include="images\tdBackImage.png" />
     <Content Include="obj\Debug\AspNetTrainingClasses.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\AspNetTrainingClasses.dll" />
     <Content Include="obj\Debug\AspNetTrainingClasses.pdb" />
@@ -75,9 +106,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assignments\Anupam\" />
-    <Folder Include="Assignments\Naveen\" />
-    <Folder Include="Assignments\Ravi\" />
-    <Folder Include="Assignments\Srinivas\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
