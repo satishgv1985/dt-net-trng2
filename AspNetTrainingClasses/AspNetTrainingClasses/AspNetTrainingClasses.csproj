@@ -50,6 +50,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assignments\Anupam\GoogleDemo.htm" />
+    <Content Include="Assignments\Anupam\images_logo_lg.gif" />
+    <Content Include="Assignments\Anupam\logo3w.png" />
+    <Content Include="Assignments\Anupam\wheel.JPG" />
+    <Content Include="Assignments\Anupam\yahoo.gif" />
+    <Content Include="Assignments\Anupam\yahoopage.htm" />
     <Content Include="Assignments\Anupam_GooglewithTables.htm" />
     <Content Include="Assignments\Naveen\googlepagedesign\crome.jpg" />
     <Content Include="Assignments\Naveen\googlepagedesign\gogllogo.jpg" />
@@ -105,7 +111,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assignments\Anupam\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
