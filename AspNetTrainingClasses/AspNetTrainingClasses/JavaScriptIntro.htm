@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        document.write('hi');
+
+        a = 121;
+        A = 'hi';
+        if (a == '12') {
+            document.write("<br/>");
+            document.write('a is 12 <br/>');
+
+            //alert('a is 12');
+            var readVal = confirm("Are you sure you want to submit");
+            if (readVal == true)
+                alert('submit the page');
+            var str = 'enter the age';
+
+            readVal = prompt("what is your age", str);
+
+        }
+
+        //alert(navigator.appName);
+       
+
+
+        a = 'aaaa';
+    </script>
+
+    <style type="text/css">
+    #chromeTextTable
+    {
+        color:Green;
+    }
+    </style>
+</head>
+<body>
+    how are you document.write('before body'); this is inside body
+    <script type="text/javascript">
+        document.write('after body');
+    </script>
+    <table id="chromeTextTable" style="display:none">
+        <tr>
+            <td>Please use Chrome
+            </td>
+        </tr>
+    </table>
+    
+    <script type="text/javascript">
+        if (navigator.appName == 'Microsoft Internet Explorer') {
+
+            document.getElementById('chromeTextTable').style.display='block';
+            document.write('<br/>Thankyou for using IE<br/>');
+        }
+        else if (navigator.appName == 'Netscape')
+            document.write('<br/>please use IE<br/>');
+    </script>
+</body>
+</html>
