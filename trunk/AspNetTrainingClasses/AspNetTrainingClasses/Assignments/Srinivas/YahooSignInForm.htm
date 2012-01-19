@@ -18,14 +18,15 @@
         .toplinks
         {
             width: 100%;
-            text-align: right; text-decoration:none;
+            text-align: right;
+            text-decoration: none;
             color: Gray;
         }
         input
         {
             color: Gray;
         }
-
+        
         .birthday
         {
             color: White;
@@ -35,20 +36,30 @@
         {
             color: Blue;
         }
+        select
+        {
+            color: Gray;
+        }
     </style>
 </head>
 <body>
-    <table style="padding-left: 40px;border-color:Gray;" border="0" width="900px">
+    <table style="padding-left: 80px; border-color: Gray;" border="0" width="750px">
         <tr>
-            <td class="toplinks" style="text-align: right">
-                <a href="http://www.yahoo.co.in">Yahoo</a> | <a href="http://help.yahoo.com/l/en-in/yahoo/edit/">
-                    Help</a>
+            <td style="background-image: url('Imgs/Yahoo_bkgrnd.JPG'); background-repeat: repeat-x">
+                <table>
+                    <tr>
+                        <td>
+                            <img alt="Yahoo Image" src="Imgs/Yahoo!.JPG" />
+                        </td>
+                        <td class="toplinks" style="text-align: right">
+                            <a href="http://www.yahoo.co.in">Yahoo</a> | <a href="http://help.yahoo.com/l/en-in/yahoo/edit/">
+                                Help</a>
+                        </td>
+                    </tr>
+                </table>
             </td>
         </tr>
         <tr>
-            <td style="background-image:url('Imgs/Yahoo_bkgrnd.JPG');; background-repeat: repeat-x">
-                <img alt="Yahoo Image" src="Imgs/Yahoo!.JPG" />
-            </td>
         </tr>
         <tr>
             <td>
@@ -87,24 +98,38 @@
                     <tr>
                         <td style="width: 100%; padding-left: 154px">
                             Sex
-                            <input type="text" value="Male" />
+                            <!--input type="text" value="Male" /-->
                             <select>
-                            <option>-Select One-</option>
-                            <option>Male</option>
-                            <option>Female</option>
+                                <option>-Select one-</option>
+                                <option>Male</option>
+                                <option>Female</option>
                             </select>
                         </td>
                     </tr>
                     <tr>
-                        <td style="width:100%">
+                        <td style="width: 100%">
                             <table border="0" cellpadding="2" cellspacing="0">
                                 <tr>
-                                    <td  style="width: 28%; padding-left: 125px;margin-top:0px">
+                                    <td style="width: 28%; padding-left: 125px; margin-top: 0px">
                                         Birthday
                                     </td>
                                     <td class="birthday" style="width: 72%;">
                                         <input type="text" value="Day" style="width: 40px" />
-                                        <input type="text" value="Month" style="width: 80px" />
+                                        <select style="width: 120px">
+                                            <option>- Select Month - </option>
+                                            <option>January</option>
+                                            <option>February</option>
+                                            <option>March</option>
+                                            <option>April</option>
+                                            <option>May</option>
+                                            <option>June</option>
+                                            <option>July</option>
+                                            <option>August</option>
+                                            <option>September</option>
+                                            <option>October</option>
+                                            <option>November</option>
+                                            <option>December</option>
+                                        </select>
                                         <input type="text" value="Year" style="width: 60px" />
                                         Knowing your birthday lets Yahoo!
                                     </td>
@@ -115,21 +140,35 @@
                     <tr>
                         <td style="width: 100%; padding-left: 128px">
                             Country
-                            <input type="text" value="Country" />
+                            <select title="Country">
+                                <option>India</option>
+                                <option>U.S.A</option>
+                                <option>U.K</option>
+                                <option>Germany</option>
+                            </select>
                         </td>
                     </tr>
                     <tr>
                         <td style="width: 100%; padding-left: 118px">
                             Language
-                            <input type="text" value="Language" />
+                            <select title="Language">
+                                <option>English</option>
+                                <option>Hindi</option>
+                                <option>Kannada</option>
+                            </select>
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
-          <tr>
+        <tr>
             <td>
                 <table border="0" width="100%">
+                    <tr>
+                        <td style="width: 100%; font-weight:bold;font-family:Arial;">
+                           <font color="purple"> Select an ID and password</font>
+                        </td>
+                    </tr>
                     <tr>
                         <td style="width: 80%">
                             <hr />
