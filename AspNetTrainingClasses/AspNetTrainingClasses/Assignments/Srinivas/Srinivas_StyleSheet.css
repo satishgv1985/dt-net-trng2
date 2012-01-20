@@ -20,7 +20,10 @@
     cursor: pointer;
     color: White;
 }
-
+img 
+{
+    border:0px;
+     }
 .toprowtable a:hover
 {
     background-color: gray;   

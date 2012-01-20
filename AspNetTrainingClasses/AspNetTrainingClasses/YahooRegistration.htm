@@ -1,0 +1,406 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        .textColor
+        {
+            color: Gray;
+        }
+        .normalTextColor
+        {
+            color: Black;
+        }
+    </style>
+    <script type="text/javascript">
+        function funcRemoveText(id) {
+            document.getElementById(id).value = '';
+            //debugger;
+            document.getElementById(id).attributes["class"].value = "normalTextColor";
+        }
+        function funcPlaceText(id, txt) {
+            var idLocal = document.getElementById(id);
+            document.getElementById('spanFirstName').style.visibility = 'hidden';
+            if (idLocal.value == txt || idLocal.value.length == 0) {
+                idLocal.value = txt;
+                idLocal.attributes["class"].value = "textColor";
+                return;
+            }
+            var str = idLocal.value;
+            var splChars = "@#$()";
+            for (var i = 0; i < str.length; i++) {
+                for (var j = 0; j < splChars.length; j++)
+                    if (splChars.indexOf(str[i], j) != -1) {
+                        document.getElementById('spanFirstName').style.visibility = 'visible';
+                        return;
+                    }
+            }
+        }
+        function funcTextChanged(id) {
+            //idofSpanTage.innerHTML = 'strong';
+        }
+
+        function funcValidatePage() {
+            var idLocal = document.getElementById('txtFName');
+            if (idLocal.value == 'First Name' || idLocal.value.length == 0) {
+                alert('Please give Name');
+                document.location = 'http://www.google.com';
+            }
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <div style="width: 752px; margin: 0px 296px 0px 296px">
+                    <div style="background-image: url('Images/bgimg.png'); height: 40px; width: 752px;
+                        padding-top: 0px; padding-left: 10px">
+                        <img src="Images/yahoo.gif" alt="Yahoo Image" />
+                        <div class="headerdesign">
+                            <a href="">Yahoo!</a> |
+                        </div>
+                        <div class="headerdesign" style="left: 980px">
+                            <a href="">Help</a>
+                        </div>
+                        <div style="width: 520px">
+                            <table>
+                                <tr>
+                                    <td style="height: 15px">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-size: 121%">
+                                        With a Yahoo! Account, get free email and other leading web
+                                        <br />
+                                        services.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 500px">
+                                        <hr />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 280px">
+                                        <table>
+                                            <tr>
+                                                <td style="padding-left: 140px">
+                                                    Name
+                                                </td>
+                                                <td>
+                                                    <input type="text" title="First Name" id="txtFName" value="First Name" class="textColor"
+                                                        onfocus="javascript:funcRemoveText('txtFName')" onblur="javascript:funcPlaceText('txtFName','First Name')"
+                                                        onchange="javascript:funcTextChanged(id)" />
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="txtSName" value="Last Name" class="textColor" onfocus="javascript:this.value=''"
+                                                        onblur="javascript:this.value='Last Name'" />
+                                                </td>
+                                                <td>
+                                                    <span style="visibility:hidden;" id='spanFirstName'>Only letters, spaces, hyphens and apostrophes are allowed </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="button" value="Submit" onclick="javascript:funcValidatePage()" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td style="padding-left: 150px">
+                                                    Sex
+                                                </td>
+                                                <td>
+                                                    <select>
+                                                        <option>-Select One-</option>
+                                                        <option>Male</option>
+                                                        <option>Female</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td style="padding-left: 130px">
+                                                    Birthday
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="Date" style="width: 70px" />
+                                                </td>
+                                                <td>
+                                                    <select style="width: 140px">
+                                                        <option>-Select Month-</option>
+                                                        <option>January</option>
+                                                        <option>February</option>
+                                                        <option>March</option>
+                                                        <option>April</option>
+                                                        <option>May</option>
+                                                        <option>June</option>
+                                                        <option>July</option>
+                                                        <option>August</option>
+                                                        <option>September</option>
+                                                        <option>October</option>
+                                                        <option>November</option>
+                                                        <option>December</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="Year" style="width: 65px" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td style="padding-left: 135px">
+                                                    Country
+                                                </td>
+                                                <td>
+                                                    <select style="width: 295px">
+                                                        <option>India</option>
+                                                        <option>England</option>
+                                                        <option>Australia</option>
+                                                        <option>Singapore</option>
+                                                        <option>SouthAfrica</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td style="padding-left: 128px">
+                                                    Language
+                                                </td>
+                                                <td>
+                                                    <select>
+                                                        <option>తెలుగు</option>
+                                                        <option>English</option>
+                                                        <option>ಕನ್ನಡ</option>
+                                                        <option>हिन्दी</option>
+                                                        <option>मराठी</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="height: 50px">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-family: Cambria; font-size: medium; color: #7f2986; font-weight: bold">
+                                        Select an ID and Password
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 500px">
+                                        <hr />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td style="padding-left: 10px">
+                                                    Desired Yahoo ID and Email
+                                                </td>
+                                                <td style="border: 2px;">
+                                                    <input type="text" style="width: 100px" />
+                                                </td>
+                                                <td>
+                                                    @
+                                                </td>
+                                                <td>
+                                                    <select style="width: 110px">
+                                                        <option>yahoo.in</option>
+                                                        <option>yahoo.com</option>
+                                                        <option>ymail.com</option>
+                                                        <option>rocketmail.com</option>
+                                                    </select>
+                                                </td>
+                                                <td align="center">
+                                                    <input type="button" value="check" id="btnCheck" style="width: 50px" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td style="padding-left: 130px">
+                                                    Password
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="txtPassword" style="width: 170px" />
+                                                </td>
+                                                <td>
+                                                    <table>
+                                                        <tr>
+                                                            <td style="font-size: small">
+                                                                Password Strength
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <table>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <input type="text" style="width: 12px; height: 3px" />
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" style="width: 12px; height: 3px" />
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" style="width: 12px; height: 3px" />
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" style="width: 12px; height: 3px" />
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td style="padding-left: 25px">
+                                                    Type The Password Again
+                                                </td>
+                                                <td>
+                                                    <input type="text" style="width: 170px" />
+                                                </td>
+                                                <td>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="height: 25px">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="font-family: Cambria; font-size: medium; color: #7f2986; font-weight: bold">
+                                        In case you forget your ID or Password ...
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <hr />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td nowrap="nowrap" style="padding-left: 50px">
+                                                    Secret Question1
+                                                </td>
+                                                <td>
+                                                    <select style="width: 250px">
+                                                        <option>-Select One-</option>
+                                                        <option>What town were you born in?</option>
+                                                        <option>What town was your father born in?</option>
+                                                        <option>What is the name of the hospital in which you were born?</option>
+                                                        <option>What is the first name of your best childhood friend?</option>
+                                                        <option>What was the name of your primary school?</option>
+                                                        <option>What town was your mother born in?</option>
+                                                        <option>What is the name of the first company / organization you worked for?</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td style="padding-left: 71px">
+                                                    Your Answer
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="txtscrtAnswer1" style="width: 250px" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td nowrap="nowrap" style="padding-left: 50px">
+                                                    Secret Question2
+                                                </td>
+                                                <td>
+                                                    <select style="width: 250px">
+                                                        <option>-Select One</option>
+                                                        <option>What was your favourite food as a child?</option>
+                                                        <option>What is the title of your favourite book?</option>
+                                                        <option>Who is your favourite author?</option>
+                                                        <option>Who is your all-time favourite sports personality?</option>
+                                                        <option>Who is your all-time favourite movie character?</option>
+                                                        <option>What was your favourite childhood game?</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td style="padding-left: 71px">
+                                                    Your Answer
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="txtscrtAnswer2" style="width: 250px" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
