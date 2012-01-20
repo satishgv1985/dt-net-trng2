@@ -67,6 +67,7 @@
     <Content Include="Assignments\Naveen\googlepagedesign\Googlimageslogo.gif" />
     <Content Include="Assignments\Naveen\googlepagedesign\settingsicon.jpg" />
     <Content Include="Assignments\Naveen\googlepagedesign\StyleSheet.css" />
+    <Content Include="Assignments\Naveen\Yahoo\Images\bgimg.png" />
     <Content Include="Assignments\Naveen\Yahoo\Images\yahoo.gif" />
     <Content Include="Assignments\Naveen\Yahoo\YahooLogin.htm" />
     <Content Include="Assignments\Ravi\RAVIGOOGLEPAGE.htm" />
@@ -74,6 +75,9 @@
     <Content Include="Assignments\Ravi\youtube.html" />
     <Content Include="Assignments\Naveen\googlepagedesign\Camera.JPG" />
     <Content Include="Assignments\Srinivas\Imgs\Camera.JPG" />
+    <Content Include="Assignments\Srinivas\Imgs\ChromeImge.JPG" />
+    <Content Include="Assignments\Srinivas\Imgs\Chrome_btn.JPG" />
+    <Content Include="Assignments\Srinivas\Imgs\Cross_btn.JPG" />
     <Content Include="Assignments\Srinivas\Imgs\GoogleImgs.JPG" />
     <Content Include="Assignments\Naveen\googlepagedesign\Search.JPG" />
     <Content Include="Assignments\Naveen\googlepagedesign\Wheel.JPG" />
@@ -83,6 +87,7 @@
     <Content Include="Assignments\Srinivas\Imgs\GoogleMaps_Experience.JPG" />
     <Content Include="Assignments\Srinivas\Imgs\GoogleSearch.JPG" />
     <Content Include="Assignments\Naveen\googlepagedesign\JustGoogle.JPG" />
+    <Content Include="Assignments\Srinivas\Imgs\Google_Icon.ico" />
     <Content Include="Assignments\Srinivas\Imgs\JustGoogle.JPG" />
     <Content Include="Assignments\Srinivas\Imgs\Search.JPG" />
     <Content Include="Assignments\Srinivas\Imgs\Wheel.JPG" />
@@ -117,6 +122,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="YahooRegistration.htm" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
