@@ -70,6 +70,7 @@
     <Content Include="Assignments\Naveen\Yahoo\Images\bgimg.png" />
     <Content Include="Assignments\Naveen\Yahoo\Images\yahoo.gif" />
     <Content Include="Assignments\Naveen\Yahoo\YahooLogin.htm" />
+    <Content Include="Assignments\Naveen\Yahoo\yahoologinpage.htm" />
     <Content Include="Assignments\Ravi\RAVIGOOGLEPAGE.htm" />
     <Content Include="Assignments\Ravi\search.htm" />
     <Content Include="Assignments\Ravi\youtube.html" />
