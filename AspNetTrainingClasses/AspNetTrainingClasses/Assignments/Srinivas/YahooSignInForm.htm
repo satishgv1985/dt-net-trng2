@@ -22,11 +22,19 @@
             text-decoration: none;
             color: Gray;
         }
-        input
+        .ErrorTextColor
+        {
+            background-color:#FFEBEB;
+        }
+        
+        .DefaultTextColor
         {
             color: Gray;
         }
-        
+        .NormalTextColor
+        {
+            color: Black;
+        }
         .birthday
         {
             color: White;
@@ -41,9 +49,97 @@
             color: Gray;
         }
     </style>
+    <script type="text/javascript" language="javascript">
+    function test()
+    {
+        alert('hi');
+    }
+
+    function funcRemoveDefaultText(id, txt) {
+        if (id == "BirthDay")
+            document.getElementById('spanBirthDay').style.visibility = "visible";
+
+        //if (id == 'FirstName'|| id== 'Surname') {
+            var idLocal = document.getElementById(id);
+            if (idLocal.value.length == 0 || idLocal.value == txt) {
+                idLocal.value = '';
+
+            }
+            if (idLocal.attributes["class"].value != "ErrorTextColor")
+                idLocal.attributes["class"].value = "NormalTextColor";
+    }
+
+    function funcPlaceDefaultText(id, txt) {
+        if (id == "BirthDay") 
+        {
+            var idBDay = document.getElementById(id);
+            
+            document.getElementById('spanBirthDay').style.visibility = "hidden";
+
+            if (idBDay.value.length == 0 || idBDay.value == txt) 
+            {
+                idBDay.value = txt;
+
+                idBDay.attributes["class"].value = "DefaultTextColor";
+            }
+            else
+                idBDay.attributes["class"].value = "NormalTextColor";
+
+        }
+
+        if (id == 'FirstName' || id == 'Surname') {
+            var specialChars = '!@#$%^&*()';
+            var idLocal = document.getElementById(id);
+            document.getElementById('spanFirstName').style.visibility = "hidden";
+
+            var strVal = idLocal.value;
+
+            for (var i = 0; i < strVal.length; i++) {
+                for (var j = 0; j < specialChars.length; j++) {
+                    if (specialChars.indexOf(strVal[i], j) != -1) {
+                        document.getElementById('spanFirstName').style.visibility = "visible";
+                        idLocal.attributes["class"].value = "ErrorTextColor";
+                        if (id == 'FirstName')
+                            document.getElementById('Surname').attributes["class"].value = "ErrorTextColor";
+                        else
+                            document.getElementById('FirstName').attributes["class"].value = "ErrorTextColor";
+                        return;
+                    }
+                }
+            }
+            if (idLocal.value.length == 0 || idLocal.value == txt) {
+                idLocal.value = txt;
+
+                idLocal.attributes["class"].value = "DefaultTextColor";
+            }
+            else
+                idLocal.attributes["class"].value = "NormalTextColor";
+
+            if (id == 'FirstName') {
+                if (document.getElementById('Surname').value.length == 0 || document.getElementById('Surname').value == "Surname or Initial") {
+                    document.getElementById('Surname').value = "Surname or Initial";
+                    document.getElementById('Surname').attributes["class"].value = "DefaultTextColor";
+                }
+                else
+                    document.getElementById('Surname').attributes["class"].value = "NormalTextColor";
+            }
+            else {
+
+                if (document.getElementById('FirstName').value.length == 0 || document.getElementById('FirstName').value == "First Name") {
+                    document.getElementById('FirstName').value = "First Name";
+                    document.getElementById('FirstName').attributes["class"].value = "DefaultTextColor";
+                }
+                else
+                    document.getElementById('FirstName').attributes["class"].value = "NormalTextColor";
+
+            }
+
+        }
+    }
+    </script>
 </head>
 <body>
-    <table style="padding-left: 80px; border-color: Gray;" border="0" width="750px">
+    <table style="padding-left: 80px; border-color: Gray; margin: 0px" border="0" width="750px">
         <tr>
             <td style="background-image: url('Imgs/Yahoo_bkgrnd.JPG'); background-repeat: repeat-x">
                 <table>
@@ -87,16 +183,30 @@
         </tr>
         <tr>
             <td width="100%">
-                <table>
+                <table border="1">
                     <tr>
-                        <td style="width: 100%; padding-left: 140px">
-                            Name
-                            <input type="text" value="First Name" />
-                            &nbsp;<input type="text" value="Surname or Initial" />
+                        <td style="width: 100%; padding-left: 50px">
+                            <table border="1">
+                                <tr>
+                                    <td style="width: 60%">
+                                        Name
+                                        <input id="FirstName" title="First Name" class="DefaultTextColor" type="text" value="First Name"
+                                            onblur="javascript:funcPlaceDefaultText('FirstName', 'First Name');" 
+                                            onfocus="funcRemoveDefaultText('FirstName', 'First Name');" />
+                                        &nbsp;<input id="Surname" title="Surname or Initial" class="DefaultTextColor" type="text" value="Surname or Initial" 
+                                        onblur="funcPlaceDefaultText('Surname', 'Surname or Initial');"
+                                        onfocus="funcRemoveDefaultText('Surname', 'Surname or Initial');" />
+                                    </td>
+                                    <td style="width: 40%">
+                                        <span id="spanFirstName" style="visibility: hidden">Only letters, spaces, hyphens and
+                                            apostrophes are allowed </span>
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
                     <tr>
-                        <td style="width: 100%; padding-left: 154px">
+                        <td style="width: 100%; padding-left: 68px">
                             Sex
                             <!--input type="text" value="Male" /-->
                             <select>
@@ -108,13 +218,16 @@
                     </tr>
                     <tr>
                         <td style="width: 100%">
-                            <table border="0" cellpadding="2" cellspacing="0">
+                            <table border="1" cellpadding="2" cellspacing="0">
                                 <tr>
-                                    <td style="width: 28%; padding-left: 125px; margin-top: 0px">
+                                    <td style="width: 2%; padding-left: 33px; margin-top: 0px">
                                         Birthday
                                     </td>
-                                    <td class="birthday" style="width: 72%;">
-                                        <input type="text" value="Day" style="width: 40px" />
+                                    <td id="BirthDay" class="DefaultTextColor" style="width: 72%;">
+                                        <input type="text" value="Day" style="width: 40px"
+                                        onblur="funcPlaceDefaultText('BirthDay', 'Day');"
+                                        onfocus="funcRemoveDefaultText('BirthDay', 'Day');"
+                                         />
                                         <select style="width: 120px">
                                             <option>- Select Month - </option>
                                             <option>January</option>
@@ -131,14 +244,16 @@
                                             <option>December</option>
                                         </select>
                                         <input type="text" value="Year" style="width: 60px" />
-                                        Knowing your birthday lets Yahoo!
+                                    </td>
+                                    <td style="width:26%"> 
+                                    <span id="spanBirthDay" style="visibility:hidden"> Knowing your birthday lets Yahoo! provide you with a better experience</span>
                                     </td>
                                 </tr>
                             </table>
                         </td>
                     </tr>
                     <tr>
-                        <td style="width: 100%; padding-left: 128px">
+                        <td style="width: 100%; padding-left: 40px">
                             Country
                             <select title="Country">
                                 <option>India</option>
@@ -149,7 +264,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="width: 100%; padding-left: 118px">
+                        <td style="width: 100%; padding-left: 32px">
                             Language
                             <select title="Language">
                                 <option>English</option>
@@ -165,8 +280,8 @@
             <td>
                 <table border="0" width="100%">
                     <tr>
-                        <td style="width: 100%; font-weight:bold;font-family:Arial;">
-                           <font color="purple"> Select an ID and password</font>
+                        <td style="width: 100%; font-weight: bold; font-family: Arial;">
+                            <font color="purple">Select an ID and password</font>
                         </td>
                     </tr>
                     <tr>

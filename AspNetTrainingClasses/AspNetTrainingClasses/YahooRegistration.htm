@@ -15,7 +15,6 @@
     <script type="text/javascript">
         function funcRemoveText(id) {
             document.getElementById(id).value = '';
-            //debugger;
             document.getElementById(id).attributes["class"].value = "normalTextColor";
         }
         function funcPlaceText(id, txt) {
@@ -41,12 +40,23 @@
         }
 
         function funcValidatePage() {
+            func_selectSexOnChange(document.getElementById('selectSex'));
+            
             var idLocal = document.getElementById('txtFName');
             if (idLocal.value == 'First Name' || idLocal.value.length == 0) {
                 alert('Please give Name');
-                document.location = 'http://www.google.com';
+                //document.location = 'http://www.google.com';
             }
+
         }
+
+        function func_selectSexOnChange(selectId) {
+            if (selectId[0].selected)
+                document.getElementById('spanSelectSexError').style.visibility = 'visible';
+            else
+                document.getElementById('spanSelectSexError').style.visibility = 'hidden';
+        }
+
     </script>
 </head>
 <body>
@@ -56,7 +66,7 @@
                 <div style="width: 752px; margin: 0px 296px 0px 296px">
                     <div style="background-image: url('Images/bgimg.png'); height: 40px; width: 752px;
                         padding-top: 0px; padding-left: 10px">
-                        <img src="Images/yahoo.gif" alt="Yahoo Image" />
+                        <img src="../Images/yahoo.gif" alt="Yahoo Image" />
                         <div class="headerdesign">
                             <a href="">Yahoo!</a> |
                         </div>
@@ -99,12 +109,8 @@
                                                         onblur="javascript:this.value='Last Name'" />
                                                 </td>
                                                 <td>
-                                                    <span style="visibility:hidden;" id='spanFirstName'>Only letters, spaces, hyphens and apostrophes are allowed </span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <input type="button" value="Submit" onclick="javascript:funcValidatePage()" />
+                                                    <span style="visibility: hidden;" id='spanFirstName'>Only letters, spaces, hyphens and
+                                                        apostrophes are allowed </span>
                                                 </td>
                                             </tr>
                                         </table>
@@ -118,11 +124,13 @@
                                                     Sex
                                                 </td>
                                                 <td>
-                                                    <select>
+                                                    <select id="selectSex" onchange="javascript:func_selectSexOnChange(this)">
                                                         <option>-Select One-</option>
                                                         <option>Male</option>
                                                         <option>Female</option>
                                                     </select>
+                                                    <span id="spanSelectSexError" style="color: Red; visibility: hidden;">&nbsp;!Please
+                                                        select Sex</span>
                                                 </td>
                                             </tr>
                                         </table>
@@ -200,6 +208,11 @@
                                                 </td>
                                             </tr>
                                         </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="button" value="Submit" onclick="javascript:funcValidatePage()" />
                                     </td>
                                 </tr>
                                 <tr>
