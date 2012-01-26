@@ -87,7 +87,7 @@
 
         }
 
-        if (id == 'FirstName' || id == 'Surname') {
+        if (id == 'First Name' || id == 'Surname') {
             var specialChars = '!@#$%^&*()';
             var idLocal = document.getElementById(id);
             document.getElementById('spanFirstName').style.visibility = "hidden";
@@ -191,7 +191,7 @@
                                     <td style="width: 60%">
                                         Name
                                         <input id="FirstName" title="First Name" class="DefaultTextColor" type="text" value="First Name"
-                                            onblur="javascript:funcPlaceDefaultText('FirstName', 'First Name');" 
+                                            onblur="funcPlaceDefaultText('FirstName', 'First Name');" 
                                             onfocus="funcRemoveDefaultText('FirstName', 'First Name');" />
                                         &nbsp;<input id="Surname" title="Surname or Initial" class="DefaultTextColor" type="text" value="Surname or Initial" 
                                         onblur="funcPlaceDefaultText('Surname', 'Surname or Initial');"
