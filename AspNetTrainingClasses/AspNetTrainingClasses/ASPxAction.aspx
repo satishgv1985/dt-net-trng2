@@ -1,0 +1,25 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ASPxAction.aspx.cs" Inherits="AspNetTrainingClasses.ASPxAction" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        User Name:
+        <asp:TextBox runat="server" ID="txtUserName" />
+        <br />
+        Password:<asp:TextBox runat="server" ID="txtPassword" />
+        <br />
+        <asp:Button ID="btnSubmit" runat="server" Text="Submit(GET)" OnClick="btnSubmit_Click" />
+        &nbsp; &nbsp; &nbsp;
+        <asp:Button ID="btnPostSubmit" runat="server" Text="Submit(POST)" PostBackUrl="~/FormSubmittedPost.aspx" />
+        <br />
+        <asp:HyperLink ID="hlSubmit" runat="server" Text="Submit" NavigateUrl="~/FormSubmitted.aspx?name=satish&id=1"></asp:HyperLink>
+
+    </div>
+    </form>
+</body>
+</html>
