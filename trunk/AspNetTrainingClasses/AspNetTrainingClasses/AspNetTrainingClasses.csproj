@@ -50,6 +50,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ASPxAction.aspx" />
+    <Content Include="Assignments\Anupam\gmail_asp_net\bar.bmp" />
+    <Content Include="Assignments\Anupam\gmail_asp_net\google_logo_41.png" />
+    <Content Include="Assignments\Anupam\gmail_asp_net\more-than.jpg" />
+    <Content Include="Assignments\Anupam\gmail_asp_net\WebForm1.aspx" />
     <Content Include="Assignments\Anupam\GoogleDemo.htm" />
     <Content Include="Assignments\Anupam\images_logo_lg.gif" />
     <Content Include="Assignments\Anupam\logo3w.png" />
@@ -72,9 +77,22 @@
     <Content Include="Assignments\Naveen\Yahoo\YahooLogin.htm" />
     <Content Include="Assignments\Naveen\Yahoo\yahoologinpage.htm" />
     <Content Include="Assignments\Ravi\RAVIGOOGLEPAGE.htm" />
+    <Content Include="Assignments\Ravi\ravi\About.aspx" />
+    <Content Include="Assignments\Ravi\ravi\Default.aspx" />
+    <Content Include="Assignments\Ravi\ravi\Default2.aspx" />
+    <Content Include="Assignments\Ravi\ravi\facebok1.gif" />
+    <Content Include="Assignments\Ravi\ravi\facebook.gif" />
+    <Content Include="Assignments\Ravi\ravi\Global.asax" />
+    <Content Include="Assignments\Ravi\ravi\Homepage.aspx" />
+    <Content Include="Assignments\Ravi\ravi\line.gif" />
+    <Content Include="Assignments\Ravi\ravi\Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Assignments\Ravi\ravi\Scripts\jquery-1.4.1.js" />
+    <Content Include="Assignments\Ravi\ravi\Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Assignments\Ravi\ravi\Styles\Site.css" />
     <Content Include="Assignments\Ravi\search.htm" />
     <Content Include="Assignments\Ravi\youtube.html" />
     <Content Include="Assignments\Naveen\googlepagedesign\Camera.JPG" />
+    <Content Include="Assignments\Srinivas\GoogleSearchPage.aspx" />
     <Content Include="Assignments\Srinivas\Imgs\Camera.JPG" />
     <Content Include="Assignments\Srinivas\Imgs\ChromeImge.JPG" />
     <Content Include="Assignments\Srinivas\Imgs\Chrome_btn.JPG" />
@@ -105,6 +123,8 @@
     <Content Include="bin\AspNetTrainingClasses.pdb" />
     <Content Include="Chrysanthemum.jpg" />
     <Content Include="divSample.htm" />
+    <Content Include="FormSubmitted.aspx" />
+    <Content Include="FormSubmittedPost.aspx" />
     <Content Include="GoogleImageSearch.htm" />
     <Content Include="HtmlClass.htm" />
     <Content Include="HtmlTableswithCSS.htm" />
@@ -123,15 +143,79 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="yahooRegistration.aspx" />
     <Content Include="YahooRegistration.htm" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ASPxAction.aspx.cs">
+      <DependentUpon>ASPxAction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPxAction.aspx.designer.cs">
+      <DependentUpon>ASPxAction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assignments\Anupam\gmail_asp_net\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Anupam\gmail_asp_net\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assignments\Ravi\ravi\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Ravi\ravi\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Ravi\ravi\Default2.aspx.cs">
+      <DependentUpon>Default2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Ravi\ravi\Homepage.aspx.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Ravi\ravi\Site.master.cs">
+      <DependentUpon>Site.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Srinivas\GoogleSearchPage.aspx.cs">
+      <DependentUpon>GoogleSearchPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Srinivas\GoogleSearchPage.aspx.designer.cs">
+      <DependentUpon>GoogleSearchPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormSubmitted.aspx.cs">
+      <DependentUpon>FormSubmitted.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormSubmitted.aspx.designer.cs">
+      <DependentUpon>FormSubmitted.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormSubmittedPost.aspx.cs">
+      <DependentUpon>FormSubmittedPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormSubmittedPost.aspx.designer.cs">
+      <DependentUpon>FormSubmittedPost.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="yahooRegistration.aspx.cs">
+      <DependentUpon>yahooRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yahooRegistration.aspx.designer.cs">
+      <DependentUpon>yahooRegistration.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assignments\Ravi\ravi\Site.master" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -60,11 +60,11 @@
         }
     </style>
 </head>
-<body>
+<body style="margin:0px auto">
     <form id="form1" runat="server">
     <div>
-        <asp:Table ID="tblMain" runat="server" BorderWidth="1" Width="100%" CellPadding="2"
-            CellSpacing="2">
+        <asp:Table ID="tblMain" runat="server" BorderWidth="0" Width="100%" CellPadding="4"
+            CellSpacing="0">
             <asp:TableHeaderRow ID="tblMainHdrRow" runat="server" CssClass="toprowtable" BackColor="">
                 <asp:TableHeaderCell ID="TableHeaderCell0" runat="server">+You</asp:TableHeaderCell>
                 <asp:TableHeaderCell ID="TableHeaderCell1" runat="server">Search</asp:TableHeaderCell>
@@ -140,12 +140,12 @@
             <asp:TableRow ID="TableRow4" runat="server">
                 <asp:TableCell ID="TableCell3" runat="server" ColumnSpan="8"></asp:TableCell>
                 <asp:TableCell ID="TableCell4" runat="server" ColumnSpan="1">
-                    <asp:Table ID="Table1" runat="server" >
+                    <asp:Table ID="Table1" runat="server">
                         <asp:TableRow ID="TableRow5" runat="server">
                             <asp:TableCell ID="TableCell5" runat="server"> </asp:TableCell>
-                                <asp:TableCell ID="TableRow4Cell1" runat="server">
-                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                                </asp:TableCell>
+                            <asp:TableCell ID="TableRow4Cell1" runat="server">
+                                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                            </asp:TableCell>
                         </asp:TableRow>
                     </asp:Table>
                 </asp:TableCell>
