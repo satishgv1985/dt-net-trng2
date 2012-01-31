@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Google.master.cs" Inherits="AspNetTrainingClasses.Assignments.Srinivas.Google" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="margin:0px">
+    <form id="form1" runat="server">
+    <div>
+        <asp:Table ID="tblHeaderRow" runat="server" BackColor="Black" ForeColor="White" CellPadding="4" CellSpacing="0" GridLines="Both">
+            <asp:TableHeaderRow ID="tblMainHdrRow" runat="server" CssClass="toprowtable" BackColor="">
+                <asp:TableHeaderCell ID="TableHeaderCell0" runat="server">+You</asp:TableHeaderCell>
+                <asp:TableHeaderCell ID="TableHeaderCell1" runat="server">Search</asp:TableHeaderCell>
+                <asp:TableHeaderCell ID="TableHeaderCell2" runat="server">
+                    <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Assignments/Srinivas/Srinivas_GoogleImagesPage.htm">Images</asp:HyperLink></asp:TableHeaderCell>
+                <asp:TableHeaderCell ID="TableHeaderCell3" runat="server">
+                    <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Assignments/Srinivas/Srinivas_GoogleMapsPage.htm">Maps</asp:HyperLink></asp:TableHeaderCell>
+                <asp:TableHeaderCell ID="TableHeaderCell4" runat="server">
+                    <asp:HyperLink ID="HyperLink8" runat="server">News</asp:HyperLink></asp:TableHeaderCell>
+                <asp:TableHeaderCell ID="TableHeaderCell5" runat="server">
+                    <asp:HyperLink ID="HyperLink1" runat="server">Orkut</asp:HyperLink></asp:TableHeaderCell>
+                <asp:TableHeaderCell ID="TableHeaderCell6" runat="server">
+                    <asp:HyperLink ID="HyperLink2" runat="server">Gmail</asp:HyperLink></asp:TableHeaderCell>
+                <asp:TableHeaderCell ID="TableHeaderCell7" runat="server">
+                    <asp:HyperLink ID="HyperLink3" runat="server">More</asp:HyperLink></asp:TableHeaderCell>
+                <asp:TableHeaderCell ID="TableHeaderCell8" runat="server" Width="20%">&nbsp;</asp:TableHeaderCell>
+                <asp:TableHeaderCell ID="TableHeaderCell11" runat="server" Width="20%">&nbsp;</asp:TableHeaderCell>
+                <asp:TableHeaderCell ID="TableHeaderCell12" runat="server" Width="10%">&nbsp;</asp:TableHeaderCell>
+                <asp:TableHeaderCell ID="TableHeaderCell9" runat="server" Width="10%" HorizontalAlign="Right">
+                    <asp:HyperLink ID="HyperLink4" runat="server">Sign In</asp:HyperLink></asp:TableHeaderCell>
+                <asp:TableHeaderCell ID="TableHeaderCell10" runat="server">
+                    <asp:HyperLink ID="HyperLink5" runat="server"><img alt="wheel.jpg" src="Imgs/Wheel.JPG" /></asp:HyperLink></asp:TableHeaderCell>
+            </asp:TableHeaderRow>
+        </asp:Table>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
