@@ -3,8 +3,92 @@
 <head>
     <title>Google</title>
     <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function func_onclick_DisplayMore() {
+            document.getElementById('morediv').style.visibility = 'visible';
+        }
+        function func_onmouseout_Removemore() {
+            document.getElementById('morediv').style.visibility = 'hidden';
+        }
+
+    </script>
 </head>
 <body>
+    <div id="morediv" class="divmore" style="padding-top: 24px; padding-left: 472px;
+        position: absolute;" onmouseover="javascript:func_onclick_DisplayMore()" onmouseout="func_onmouseout_Removemore()">
+        <table id="tablemore" border="1" style="border-collapse:collapse;">
+            <tr>
+                <td align="center">
+                    <a href="#">Translate</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="#">Books</a>   
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="">Scholar</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="">Blogs</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <hr />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="">YouTube</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="">Calendar</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="">Photos</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="">Documents</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="">Sites</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="">Group</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="">Reader</a>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <hr />
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="">Even more</a>
+                </td>
+            </tr>
+        </table>
+    </div>
     <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-left: 0px;
         margin-right: 50px">
         <tr>
@@ -12,49 +96,50 @@
                 <table cellpadding="0" cellspacing="0" width="100%" border="0">
                     <!-- Main table Starts -->
                     <tr>
-                        <td class="topTable">
-                            <table border="0" cellpadding="10" cellspacing="0" width="100%" style="background-color: Black;">
+                        <td class="topTable" style="height: 29px">
+                            <table border="0" cellpadding="2" cellspacing="0" width="100%">
                                 <tr>
-                                    <td width="50">
+                                    <td width="50" align="center">
                                         <!-- one -->
                                         <a href="http://www.googleplus.com">You+</a>
                                     </td>
-                                    <td width="50" class="borderstyle">
+                                    <td width="50" class="borderstyle" align="center">
                                         <!-- two -->
                                         <a href="">Search</a>
                                     </td>
-                                    <td width="50">
+                                    <td width="50" align="center">
                                         <!-- three -->
                                         <a href="googleImagepage.htm">Images</a>
                                     </td>
-                                    <td width="50">
+                                    <td width="50" align="center">
                                         <!-- four -->
                                         <a href="GoogleMapPage.htm">Maps</a>
                                     </td>
-                                    <td width="50">
+                                    <td width="50" align="center">
                                         <!-- five -->
                                         <a href="http://news.google.co.in/nwshp?hl=en&tab=in">News</a>
                                     </td>
-                                    <td width="50">
+                                    <td width="50" align="center">
                                         <!-- six -->
                                         <a href="http://www.orkut.com">Orkut</a>
                                     </td>
-                                    <td width="50">
+                                    <td width="50" align="center">
                                         <!-- seven -->
                                         <a href="http://www.gmail.com">Gmail</a>
                                     </td>
-                                    <td width="50">
+                                    <td width="50" align="center" onclick="javascript:func_onclick_DisplayMore()" onmouseout="javascript:func_onmouseout_Removemore()"
+                                        style="background-image: icon.png; padding-right: 5px;">
                                         <!-- eight -->
-                                        <a href="">More</a>
+                                        <span style="cursor: hand;">More</span>
                                     </td>
-                                    <td width="520">
+                                    <td width="520" style="background-color: #2D2D2D" align="center">
                                         <!-- nine -->
                                     </td>
-                                    <td width="50" nowrap="nowrap">
+                                    <td width="50" nowrap="nowrap" align="center">
                                         <!-- ten -->
                                         <a href="http://www.loginpage.google.com">Sign in</a>
                                     </td>
-                                    <td width="30">
+                                    <td width="30" align="center">
                                         <!-- eleven -->
                                         <img src="Wheel.jpg" width="20" alt="Options" />
                                     </td>
@@ -79,7 +164,8 @@
                     </tr>
                     <tr>
                         <td align="center">
-                            <input type="text" style="width: 623px; height: 24px; line-height:24px; border-style: ridge; border-color: #FFFFFF" />
+                            <input type="text" style="width: 623px; height: 24px; line-height: 24px; border-style: ridge;
+                                border-color: #FFFFFF" />
                         </td>
                     </tr>
                     <tr>

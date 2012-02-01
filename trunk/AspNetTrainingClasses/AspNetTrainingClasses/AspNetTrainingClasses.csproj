@@ -13,6 +13,7 @@
     <RootNamespace>AspNetTrainingClasses</RootNamespace>
     <AssemblyName>AspNetTrainingClasses</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,23 +34,24 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ASPNetClass.aspx" />
+    <Content Include="aspValidation.aspx" />
     <Content Include="ASPxAction.aspx" />
     <Content Include="Assignments\Anupam\gmail_asp_net\bar.bmp" />
     <Content Include="Assignments\Anupam\gmail_asp_net\google_logo_41.png" />
@@ -61,21 +63,29 @@
     <Content Include="Assignments\Anupam\wheel.JPG" />
     <Content Include="Assignments\Anupam\yahoo.gif" />
     <Content Include="Assignments\Anupam\yahoopage.htm" />
+    <Content Include="Assignments\Anupam\Anupam_GooglewithTables.htm" />
     <Content Include="Assignments\Anupam_GooglewithTables.htm" />
     <Content Include="Assignments\Naveen\googlepagedesign\crome.jpg" />
     <Content Include="Assignments\Naveen\googlepagedesign\gogllogo.jpg" />
     <Content Include="Assignments\Naveen\googlepagedesign\GoogleMapPage.htm" />
     <Content Include="Assignments\Naveen\googlepagedesign\GoogleMaps_2ndRow_RightButtons.JPG" />
     <Content Include="Assignments\Naveen\googlepagedesign\GoogleMaps_Experience.JPG" />
+    <Content Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\googleimagepage.aspx" />
+    <Content Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\googlemaps.aspx" />
+    <Content Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\googlesearch.aspx" />
+    <Content Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\StyleSheet.css" />
     <Content Include="Assignments\Naveen\googlepagedesign\googlesearchpage.htm" />
     <Content Include="Assignments\Naveen\googlepagedesign\googleImagepage.htm" />
     <Content Include="Assignments\Naveen\googlepagedesign\Googlimageslogo.gif" />
+    <Content Include="Assignments\Naveen\googlepagedesign\icon.png" />
     <Content Include="Assignments\Naveen\googlepagedesign\settingsicon.jpg" />
     <Content Include="Assignments\Naveen\googlepagedesign\StyleSheet.css" />
+    <Content Include="Assignments\Naveen\WebForm1.aspx" />
     <Content Include="Assignments\Naveen\Yahoo\Images\bgimg.png" />
     <Content Include="Assignments\Naveen\Yahoo\Images\yahoo.gif" />
     <Content Include="Assignments\Naveen\Yahoo\YahooLogin.htm" />
     <Content Include="Assignments\Naveen\Yahoo\yahoologinpage.htm" />
+    <Content Include="Assignments\Naveen\Yahoo\yahooregasppage.aspx" />
     <Content Include="Assignments\Ravi\RAVIGOOGLEPAGE.htm" />
     <Content Include="Assignments\Ravi\ravi\About.aspx" />
     <Content Include="Assignments\Ravi\ravi\Default.aspx" />
@@ -118,11 +128,15 @@
     <Content Include="Assignments\Srinivas\Srinivas_GoogleSearchPage.htm" />
     <Content Include="Assignments\Srinivas\Srinivas_StyleSheet.css" />
     <Content Include="Assignments\Srinivas\YahooSignInForm.htm" />
+    <Content Include="Assignments\Srinivas\Srinivas_Google_WithTables.htm" />
     <Content Include="Assignments\Srinivas_Google_WithTables.htm" />
     <Content Include="bin\AspNetTrainingClasses.dll" />
     <Content Include="bin\AspNetTrainingClasses.pdb" />
+    <Content Include="bodyPage.aspx" />
     <Content Include="Chrysanthemum.jpg" />
+    <Content Include="customValidation.aspx" />
     <Content Include="divSample.htm" />
+    <Content Include="dynamicAddition.aspx" />
     <Content Include="FormSubmitted.aspx" />
     <Content Include="FormSubmittedPost.aspx" />
     <Content Include="GoogleImageSearch.htm" />
@@ -135,7 +149,9 @@
     <Content Include="obj\Debug\AspNetTrainingClasses.dll" />
     <Content Include="obj\Debug\AspNetTrainingClasses.pdb" />
     <Content Include="StyleSheet.css" />
+    <Content Include="SubmittedText.aspx" />
     <Content Include="Tables.htm" />
+    <Content Include="valGroup.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -147,6 +163,62 @@
     <Content Include="YahooRegistration.htm" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ASPNetClass.aspx.cs">
+      <DependentUpon>ASPNetClass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPNetClass.aspx.designer.cs">
+      <DependentUpon>ASPNetClass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aspValidation.aspx.cs">
+      <DependentUpon>aspValidation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aspValidation.aspx.designer.cs">
+      <DependentUpon>aspValidation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\googleimagepage.aspx.cs">
+      <DependentUpon>googleimagepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\googleimagepage.aspx.designer.cs">
+      <DependentUpon>googleimagepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\googlemaps.aspx.cs">
+      <DependentUpon>googlemaps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\googlemaps.aspx.designer.cs">
+      <DependentUpon>googlemaps.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\Googlemaster.Master.cs">
+      <DependentUpon>Googlemaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\Googlemaster.Master.designer.cs">
+      <DependentUpon>Googlemaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\googlesearch.aspx.cs">
+      <DependentUpon>googlesearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\googlesearch.aspx.designer.cs">
+      <DependentUpon>googlesearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assignments\Naveen\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Naveen\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assignments\Naveen\Yahoo\yahooregasppage.aspx.cs">
+      <DependentUpon>yahooregasppage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Naveen\Yahoo\yahooregasppage.aspx.designer.cs">
+      <DependentUpon>yahooregasppage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ASPxAction.aspx.cs">
       <DependentUpon>ASPxAction.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -188,6 +260,27 @@
     <Compile Include="Assignments\Srinivas\GoogleSearchPage.aspx.designer.cs">
       <DependentUpon>GoogleSearchPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="bodyPage.aspx.cs">
+      <DependentUpon>bodyPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bodyPage.aspx.designer.cs">
+      <DependentUpon>bodyPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customValidation.aspx.cs">
+      <DependentUpon>customValidation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customValidation.aspx.designer.cs">
+      <DependentUpon>customValidation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dynamicAddition.aspx.cs">
+      <DependentUpon>dynamicAddition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dynamicAddition.aspx.designer.cs">
+      <DependentUpon>dynamicAddition.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FormSubmitted.aspx.cs">
       <DependentUpon>FormSubmitted.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -203,6 +296,27 @@
       <DependentUpon>FormSubmittedPost.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SubmittedText.aspx.cs">
+      <DependentUpon>SubmittedText.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubmittedText.aspx.designer.cs">
+      <DependentUpon>SubmittedText.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="valGroup.aspx.cs">
+      <DependentUpon>valGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="valGroup.aspx.designer.cs">
+      <DependentUpon>valGroup.aspx</DependentUpon>
+    </Compile>
     <Compile Include="yahooRegistration.aspx.cs">
       <DependentUpon>yahooRegistration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -216,7 +330,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assignments\Ravi\ravi\Site.master" />
+    <Content Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\Googlemaster.Master" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="Site.Master" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

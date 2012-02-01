@@ -5,9 +5,8 @@
     <style type="text/css">
         body
         {
-            background-image:url('images/bgImage.png');
-            background-repeat:repeat-x;
-            
+            background-image: url('images/bgImage.png');
+            background-repeat: repeat-x;
         }
         .toprowtable td
         {
@@ -42,8 +41,39 @@
             text-decoration: underline;
         }
     </style>
+    <script type="text/javascript">
+        function func_OnClick_DisplayMore() {
+            document.getElementById('divMore').style.visibility = 'visible';
+        }
+        function func_OnMouseOut_RemoveMore() {
+            //setInterval(timeOut(), 10);
+            document.getElementById('divMore').style.visibility = 'hidden';
+        }
+        function timeOut() {
+        }
+        
+    </script>
 </head>
 <body style="margin: 0px">
+    <div id="divMore" style="position: absolute; top: 46px; left: 420px; visibility:hidden;">
+        <table id="tableMore" border="1" style="border-collapse:collapse;" onmouseover="javascript:func_OnClick_DisplayMore()" onmouseout="javascript:func_OnMouseOut_RemoveMore()">
+            <tr>
+                <td>
+                    Code
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Translator
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Groups
+                </td>
+            </tr>
+        </table>
+    </div>
     <table style="width: 1900" border="0">
         <tr>
             <td style="width: 100%">
@@ -70,8 +100,11 @@
                         <td>
                             Gmail
                         </td>
-                        <td style="width: 700px">
+                        <td onclick="javascript:func_OnClick_DisplayMore()" onmouseout="javascript:func_OnMouseOut_RemoveMore()">
                             More
+                        </td>
+                        <td width="600px" style="background-color:black;">
+                            &nbsp;
                         </td>
                         <td nowrap="nowrap">
                             Sign in
@@ -157,7 +190,8 @@
             <td style="width: 100%">
                 <table border="0" width="100%">
                     <tr>
-                        <td style="width: 80%; text-align: right; background-image:url('images/tdBackImage.png'); background-repeat:repeat-x">
+                        <td style="width: 80%; text-align: right; background-image: url('images/tdBackImage.png');
+                            background-repeat: repeat-x">
                             <a class="bottomrowtable" href="https://www.google.co.in">Advertising Programs</a>
                         </td>
                         <td style="width: 10%; text-align: center">

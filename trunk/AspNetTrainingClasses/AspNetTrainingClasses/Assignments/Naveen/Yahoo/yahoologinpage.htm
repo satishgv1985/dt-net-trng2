@@ -17,6 +17,11 @@
         {
             text-decoration: underline;
         }
+        .tdAlign
+        {
+            width:150px;
+            text-align:right;
+        }
     </style>
 </head>
 <body style="margin: 0px 0px">
@@ -53,62 +58,73 @@
             </table>
             <table title="Name Design">
                 <tr>
-                    <td style="padding-left: 140px">
+                    <td class="tdAlign">
                         Name
                     </td>
                     <td>
-                        <input type="text" id="txtFName" />
-                    </td>
-                    <td>
-                        <input type="text" id="txtSName" />
+                        <table border="0" cellpadding="0" cellspacing="3">
+                            <tr>
+                                <td>
+                                    <input type="text" id="txtFName" />
+                                </td>
+                                <td>
+                                    <input type="text" id="txtSName" />
+                                </td>
+                            </tr>
+                        </table>
                     </td>
                 </tr>
                 <tr>
-                    <td style="padding-left: 150px">
+                    <td class="tdAlign">
                         Sex
                     </td>
                     <td>
-                        <select>
-                            <option>-Select One-</option>
-                            <option>Male</option>
-                            <option>Female</option>
-                        </select>
-                    </td>
-                    <td>
-                        &nbsp;
+                        <table border="0" cellpadding="0" cellspacing="3">
+                            <tr>
+                                <td>
+                                    <select>
+                                        <option>-Select One-</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
                     </td>
                 </tr>
                 <tr>
-                    <td align="right">
+                    <td class="tdAlign">
                         Birthday
                     </td>
-                    
                     <td>
-                        <input type="text" id="Date" style="width: 130px" />
+                        <table border="0" cellpadding="0" cellspacing="3">
+                            <tr>
+                                <td>
+                                    <input type="text" id="Date" style="width: 130px" />
+                                </td>
+                                <td>
+                                    <select>
+                                        <option>-Select Month-</option>
+                                        <option>January</option>
+                                        <option>February</option>
+                                        <option>March</option>
+                                        <option>April</option>
+                                        <option>May</option>
+                                        <option>June</option>
+                                        <option>July</option>
+                                        <option>August</option>
+                                        <option>September</option>
+                                        <option>October</option>
+                                        <option>November</option>
+                                        <option>December</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="text" id="Year" style="width: 90px" />
+                                </td>
+                            </tr>
+                        </table>
                     </td>
-                   
-                    <td>
-                        <select>
-                            <option>-Select Month-</option
-                            <option>January</option>
-                            <option>February</option>
-                            <option>March</option>
-                            <option>April</option>
-                            <option>May</option>
-                            <option>June</option>
-                            <option>July</option>
-                            <option>August</option>
-                            <option>September</option>
-                            <option>October</option>
-                            <option>November</option>
-                            <option>December</option>
-                        </select>
-                    </td>
-                    <td>
-                        <input type="text" id="Year" style="width: 65px" />
-                    </td>
-                    
-                   
                 </tr>
             </table>
         </div>
