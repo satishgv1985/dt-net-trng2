@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace AspNetTrainingClasses
 {
-    public partial class bodyPage : System.Web.UI.Page
+    public partial class AccessUCvalue : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            CheckBox cb = (CheckBox)this.Master.FindControl("");
+
         }
     }
 }

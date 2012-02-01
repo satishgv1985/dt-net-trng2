@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Assignments/Naveen/googlepagedesign/googlepageusingmaster/Googlemaster.Master" AutoEventWireup="true" CodeBehind="googleimagepage.aspx.cs" Inherits="AspNetTrainingClasses.Assignments.Naveen.googlepagedesign.googlepageusingmaster.googleimagepage" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
     <link href="StyleSheet.css" rel="stylesheet" type="text/css" />

@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Assignments/Naveen/googlepagedesign/googlepageusingmaster/Googlemaster.Master" AutoEventWireup="true" CodeBehind="googlemaps.aspx.cs" Inherits="AspNetTrainingClasses.Assignments.Naveen.googlepagedesign.googlepageusingmaster.googlemaps" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-     <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     

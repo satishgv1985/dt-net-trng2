@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AspNetTrainingClasses.Assignments.Naveen.googlepagedesign.googlepageusingmaster {
+namespace AspNetTrainingClasses {
     
     
-    public partial class googlesearch {
+    public partial class AccessUCvalue {
         
         /// <summary>
-        /// ucFooter control.
+        /// txtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AspNetTrainingClasses.Assignments.Naveen.googlepagedesign.googlepageusingmaster.ISFooter ucFooter;
+        protected global::System.Web.UI.WebControls.TextBox txtName;
     }
 }

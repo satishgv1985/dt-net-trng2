@@ -50,6 +50,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AccessUCvalue.ascx" />
     <Content Include="ASPNetClass.aspx" />
     <Content Include="aspValidation.aspx" />
     <Content Include="ASPxAction.aspx" />
@@ -73,6 +74,8 @@
     <Content Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\googleimagepage.aspx" />
     <Content Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\googlemaps.aspx" />
     <Content Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\googlesearch.aspx" />
+    <Content Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\ISFooter.ascx" />
+    <Content Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\MapsFooter.ascx" />
     <Content Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\StyleSheet.css" />
     <Content Include="Assignments\Naveen\googlepagedesign\googlesearchpage.htm" />
     <Content Include="Assignments\Naveen\googlepagedesign\googleImagepage.htm" />
@@ -127,6 +130,7 @@
     <Content Include="Assignments\Srinivas\Srinivas_GoogleMapsPage.htm" />
     <Content Include="Assignments\Srinivas\Srinivas_GoogleSearchPage.htm" />
     <Content Include="Assignments\Srinivas\Srinivas_StyleSheet.css" />
+    <Content Include="Assignments\Srinivas\WebForm1.aspx" />
     <Content Include="Assignments\Srinivas\YahooSignInForm.htm" />
     <Content Include="Assignments\Srinivas\Srinivas_Google_WithTables.htm" />
     <Content Include="Assignments\Srinivas_Google_WithTables.htm" />
@@ -148,6 +152,7 @@
     <Content Include="obj\Debug\AspNetTrainingClasses.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\AspNetTrainingClasses.dll" />
     <Content Include="obj\Debug\AspNetTrainingClasses.pdb" />
+    <Content Include="PageToAccessUCvalue.aspx" />
     <Content Include="StyleSheet.css" />
     <Content Include="SubmittedText.aspx" />
     <Content Include="Tables.htm" />
@@ -159,10 +164,18 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="header.ascx" />
     <Content Include="yahooRegistration.aspx" />
     <Content Include="YahooRegistration.htm" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessUCvalue.ascx.cs">
+      <DependentUpon>AccessUCvalue.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccessUCvalue.ascx.designer.cs">
+      <DependentUpon>AccessUCvalue.ascx</DependentUpon>
+    </Compile>
     <Compile Include="ASPNetClass.aspx.cs">
       <DependentUpon>ASPNetClass.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -204,6 +217,20 @@
     </Compile>
     <Compile Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\googlesearch.aspx.designer.cs">
       <DependentUpon>googlesearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\ISFooter.ascx.cs">
+      <DependentUpon>ISFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\ISFooter.ascx.designer.cs">
+      <DependentUpon>ISFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\MapsFooter.ascx.cs">
+      <DependentUpon>MapsFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\MapsFooter.ascx.designer.cs">
+      <DependentUpon>MapsFooter.ascx</DependentUpon>
     </Compile>
     <Compile Include="Assignments\Naveen\WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
@@ -253,12 +280,26 @@
       <DependentUpon>Site.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Assignments\Srinivas\Google.Master.cs">
+      <DependentUpon>Google.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Srinivas\Google.Master.designer.cs">
+      <DependentUpon>Google.Master</DependentUpon>
+    </Compile>
     <Compile Include="Assignments\Srinivas\GoogleSearchPage.aspx.cs">
       <DependentUpon>GoogleSearchPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Assignments\Srinivas\GoogleSearchPage.aspx.designer.cs">
       <DependentUpon>GoogleSearchPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assignments\Srinivas\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Srinivas\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="bodyPage.aspx.cs">
       <DependentUpon>bodyPage.aspx</DependentUpon>
@@ -295,6 +336,13 @@
     <Compile Include="FormSubmittedPost.aspx.designer.cs">
       <DependentUpon>FormSubmittedPost.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PageToAccessUCvalue.aspx.cs">
+      <DependentUpon>PageToAccessUCvalue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageToAccessUCvalue.aspx.designer.cs">
+      <DependentUpon>PageToAccessUCvalue.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -317,6 +365,13 @@
     <Compile Include="valGroup.aspx.designer.cs">
       <DependentUpon>valGroup.aspx</DependentUpon>
     </Compile>
+    <Compile Include="header.ascx.cs">
+      <DependentUpon>header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="header.ascx.designer.cs">
+      <DependentUpon>header.ascx</DependentUpon>
+    </Compile>
     <Compile Include="yahooRegistration.aspx.cs">
       <DependentUpon>yahooRegistration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -331,6 +386,7 @@
   <ItemGroup>
     <Content Include="Assignments\Ravi\ravi\Site.master" />
     <Content Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\Googlemaster.Master" />
+    <Content Include="Assignments\Srinivas\Google.Master" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="Site.Master" />
   </ItemGroup>
