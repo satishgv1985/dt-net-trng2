@@ -11,12 +11,23 @@
         {
             color: Black;
         }
+        .paswordstrength
+        {
+            background-color:Red;
+        }
+        .paswordstrength
+        {
+            background-color:Green;
+        }
     </style>
     <script type="text/javascript">
         function funcRemoveText(id) {
             document.getElementById(id).value = '';
             document.getElementById(id).attributes["class"].value = "normalTextColor";
         }
+
+        
+
         function funcPlaceText(id, txt) {
             var idLocal = document.getElementById(id);
             document.getElementById('spanFirstName').style.visibility = 'hidden';
@@ -265,12 +276,12 @@
                                                     Password
                                                 </td>
                                                 <td>
-                                                    <input type="text" id="txtPassword" style="width: 170px" />
+                                                    <input type="text" id="txtPassword" style="width: 170px" onchange="javascript:passwordStrength()"/>
                                                 </td>
                                                 <td>
                                                     <table>
                                                         <tr>
-                                                            <td style="font-size: small">
+                                                            <td  id="PasswordStrength" style="font-size: small">
                                                                 Password Strength
                                                             </td>
                                                         </tr>
@@ -279,16 +290,16 @@
                                                                 <table>
                                                                     <tr>
                                                                         <td>
-                                                                            <input type="text" style="width: 12px; height: 3px" />
+                                                                            <input id="passwordStrength1" type="text" style="width: 12px; height: 3px" />
                                                                         </td>
                                                                         <td>
-                                                                            <input type="text" style="width: 12px; height: 3px" />
+                                                                            <input id="passwordStrength2" type="text" style="width: 12px; height: 3px" />
                                                                         </td>
                                                                         <td>
-                                                                            <input type="text" style="width: 12px; height: 3px" />
+                                                                            <input id="passwordStrength3" type="text" style="width: 12px; height: 3px" />
                                                                         </td>
                                                                         <td>
-                                                                            <input type="text" style="width: 12px; height: 3px" />
+                                                                            <input id="passwordStrength4" type="text" style="width: 12px; height: 3px" />
                                                                         </td>
                                                                     </tr>
                                                                 </table>

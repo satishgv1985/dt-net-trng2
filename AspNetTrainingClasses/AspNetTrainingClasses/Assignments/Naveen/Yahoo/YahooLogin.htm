@@ -17,7 +17,64 @@
         {
             text-decoration: underline;
         }
+        .paswordstrength
+        {
+            background-color: Red;
+        }
+        .paswordstrength1
+        {
+            background-color: Green;
+        }
+        
+        .ddndesign td
+        {
+            width: 250px;
+        }
+        .ddndesign td:hover
+        {
+            width: 350px;
+        }
     </style>
+    <script type="text/javascript">
+        function func_OnKeyDown_passwordStrength(txtPassword) {
+            //debugger;
+            if (txtPassword.value.length <= 3) {
+                document.getElementById('spanPaswordStrength').innerHTML = 'Too Short';
+                document.getElementById('tdPasswordStrength1').style.backgroundColor = 'green';
+            }
+            else
+                if (txtPassword.value.length < 7) {
+                    document.getElementById('spanPaswordStrength').innerHTML = 'Week';
+                }
+        }
+
+        //              document.getElementById(passwordStrength1).attributes["class"].value=PaswordStrength;
+
+        //              if ((txtPassword.match(/[a-z]/)) && (password.match(/[A-Z]/))) 
+
+        //              document.getElementById(passwordStrength1).attributes["class"].value=PaswordStrength;
+        //              document.getElementById(passwordStrength2).attributes["class"].value=PaswordStrength;
+
+
+        //              
+        //              if (txtPassword.match(/\d+/)) 
+
+        //              document.getElementById(passwordStrength1).attributes["class"].value=PaswordsStrength1;
+        //              document.getElementById(passwordStrength2).attributes["class"].value=PaswordsStrength1;
+        //              document.getElementById(passwordStrength3).attributes["class"].value=PaswordsStrength1;
+
+        //                           
+        //              if (txtPassword.match(/.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/)) 
+
+        //              document.getElementById(passwordStrength1).attributes["class"].value=PaswordsStrength1;
+        //              document.getElementById(passwordStrength2).attributes["class"].value=PaswordsStrength1;
+        //              document.getElementById(passwordStrength3).attributes["class"].value=PaswordsStrength1;
+        //              document.getElementById(passwordStrength1).attributes["class"].value=PaswordsStrength1;
+                                       
+          
+
+
+    </script>
 </head>
 <body style="margin: 0px 0px">
     <table>
@@ -211,31 +268,33 @@
                                                     Password
                                                 </td>
                                                 <td>
-                                                    <input type="text" id="txtPassword" style="width: 170px" />
+                                                    <input type="text" id="txtPassword" style="width: 170px" onkeydown="javascript:func_OnKeyDown_passwordStrength(this)" />
                                                 </td>
                                                 <td>
                                                     <table>
                                                         <tr>
-                                                            <td style="font-size: small">
-                                                                Password Strength
+                                                            <td style="font-size: small;">
+                                                                <span id="spanPaswordStrength">Password Strength</span>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <table>
+                                                                <table border="0" cellpadding="0" cellspacing="3">
                                                                     <tr>
-                                                                        <td>
-                                                                            <input type="text" style="width: 12px; height: 3px" />
+                                                                        <td id="tdPasswordStrength1" style="width: 15px; height: 10px; border: 1px solid green; line-height: 10px;">
                                                                         </td>
-                                                                        <td>
-                                                                            <input type="text" style="width: 12px; height: 3px" />
+                                                                        <td style="width: 15px; height: 10px; border: 1px solid green; line-height: 10px;">
                                                                         </td>
-                                                                        <td>
-                                                                            <input type="text" style="width: 12px; height: 3px" />
+                                                                        <!-- <td style="width: 12px; height: 3px; border:1px solid green">
+                                                                            &nbsp;
                                                                         </td>
-                                                                        <td>
-                                                                            <input type="text" style="width: 12px; height: 3px" />
+                                                                         <td style="width: 12px; height: 3px; border:1px solid green">
+                                                                            &nbsp;
                                                                         </td>
+                                                                         <td style="width: 12px; height: 3px; border:1px solid green">
+                                                                            &nbsp;
+                                                                        </td>
+                                                                   -->
                                                                     </tr>
                                                                 </table>
                                                             </td>
@@ -285,7 +344,7 @@
                                                     Secret Question1
                                                 </td>
                                                 <td>
-                                                    <select style="width: 250px">
+                                                    <select class="ddndesign">
                                                         <option>-Select One-</option>
                                                         <option>What town were you born in?</option>
                                                         <option>What town was your father born in?</option>
