@@ -4,7 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  
+    <div>
         <asp:Table ID="tblMain" runat="server" BorderWidth="0" BorderColor="Green" Width="100%"
             CellPadding="0" CellSpacing="0">
             <asp:TableRow ID="TableRow1" runat="server" Height="5">
@@ -147,5 +147,5 @@
                 <asp:TableCell></asp:TableCell>
             </asp:TableRow>
         </asp:Table>
-   
+    </div>
 </asp:Content>

@@ -36,7 +36,13 @@
                     <asp:HyperLink ID="HyperLink5" runat="server"><img alt="wheel.jpg" src="Imgs/Wheel.JPG" /></asp:HyperLink></asp:TableHeaderCell>
             </asp:TableHeaderRow>
         </asp:Table>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        <br />
+        <asp:TextBox ID="tbName" runat="server"></asp:TextBox>
+        <br />
+        <asp:Button ID="btnSubmit" runat="server" onclick="btnSubmit_Click" />
+        <br />
+        <asp:Label ID="lblName" runat="server"></asp:Label>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" ClientIDMode="Static">
         </asp:ContentPlaceHolder>
         <asp:Table ID="tblMasterFooter" runat="server" Width="100%" BorderColor="Red" GridLines="Both">
             <asp:TableRow ID="tblMasterFooterRow" runat="server">
