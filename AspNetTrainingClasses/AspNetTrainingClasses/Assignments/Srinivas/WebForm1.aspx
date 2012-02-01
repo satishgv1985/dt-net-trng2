@@ -72,8 +72,7 @@
             </asp:TableRow>
             <asp:TableRow ID="TableRow7" runat="server" Width="100%">
                 <asp:TableCell ID="TableCell4" runat="server" Width="100%">
-                    <asp:Table ID="Table2" runat="server" BorderWidth="0" BorderColor="Red" Width="100%"
-                        GridLines="Both">
+                    <asp:Table ID="Table2" runat="server" BorderWidth="0" BorderColor="Red" Width="100%">
                         <asp:TableRow ID="TableRow8" runat="server" Width="100%">
                             <asp:TableCell ID="TableCell6" runat="server" Width="25%" HorizontalAlign="Center">
                                 &nbsp;
@@ -95,9 +94,8 @@
             </asp:TableRow>
             <asp:TableRow ID="TableRow9" runat="server" Width="100%">
                 <asp:TableCell ID="TableCell9" runat="server" Width="100%">
-                    <asp:Table ID="Table3" runat="server" BorderWidth="0" BorderColor="Red" Width="100%"
-                        GridLines="Both">
-                        <asp:TableRow ID="TableRow10" runat="server" Width="100%">
+                    <asp:Table ID="Table3" runat="server" BorderWidth="0" Width="100%">
+                        <asp:TableRow ID="TableRow10" runat="server" Width="100%" Height="100">
                             <asp:TableCell ID="TableCell10" runat="server" Width="5%" HorizontalAlign="Center">
                                 &nbsp;
                             </asp:TableCell>
