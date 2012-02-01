@@ -11,7 +11,8 @@ namespace AspNetTrainingClasses.Assignments.Srinivas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            TextBox tb = (TextBox)this.Master.FindControl("tbName");
+            tbSearchInput.Text = tb.Text;
         }
     }
 }
