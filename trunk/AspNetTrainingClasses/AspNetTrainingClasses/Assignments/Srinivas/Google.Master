@@ -10,7 +10,7 @@
 <body style="margin:0px">
     <form id="form1" runat="server">
     <div>
-        <asp:Table ID="tblHeaderRow" runat="server" BackColor="Black" ForeColor="White" CellPadding="4" CellSpacing="0" GridLines="Both">
+        <asp:Table ID="tblHeaderRow" runat="server" BackColor="Black" ForeColor="White" CellPadding="4" CellSpacing="0">
             <asp:TableHeaderRow ID="tblMainHdrRow" runat="server" CssClass="toprowtable" BackColor="">
                 <asp:TableHeaderCell ID="TableHeaderCell0" runat="server">+You</asp:TableHeaderCell>
                 <asp:TableHeaderCell ID="TableHeaderCell1" runat="server">Search</asp:TableHeaderCell>
@@ -36,7 +36,34 @@
             </asp:TableHeaderRow>
         </asp:Table>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
         </asp:ContentPlaceHolder>
+        <asp:Table ID="tblMasterFooter" runat="server" Width="100%" BorderColor="Red" GridLines="Both">
+                    <asp:TableRow  ID="tblMasterFooterRow" runat="server">
+                        <asp:TableCell style="width: 10%; text-align: right"  nowrap="nowrap">
+                            <asp:HyperLink runat="server" CssClass="bottomrowtable" NavigateUrl="https://www.google.co.in">iGoogle</asp:HyperLink>
+                        </asp:TableCell>
+                        <asp:TableCell style="width: 30%; text-align: left"  nowrap="nowrap">
+                            <asp:HyperLink  runat="server" CssClass="bottomrowtable" NavigateUrl="https://www.google.co.in">Change background Image</asp:HyperLink>
+                        </asp:TableCell>
+                        <asp:TableCell style="width: 10%; text-align: left" nowrap="nowrap">
+                            <asp:HyperLink  runat="server" CssClass="bottomrowtable" NavigateUrl="https://www.google.co.in">Advertising Programs</asp:HyperLink>
+                        </asp:TableCell>
+                        <asp:TableCell style="width: 10%; text-align: center" nowrap="nowrap">
+                            <asp:HyperLink  runat="server" CssClass="bottomrowtable" NavigateUrl="https://www.google.co.in">Business Solutions</asp:HyperLink>
+                        </asp:TableCell>
+                        <asp:TableCell style="width: 10%; text-align: center" nowrap="nowrap">
+                            <asp:HyperLink  runat="server" CssClass="bottomrowtable" NavigateUrl="https://www.google.co.in">Privacy</asp:HyperLink>
+                        </asp:TableCell>
+                        <asp:TableCell style="width: 10%; text-align: center" nowrap="nowrap">
+                            <asp:HyperLink  runat="server" CssClass="bottomrowtable" NavigateUrl="https://www.google.co.in">About Google</asp:HyperLink>
+                        </asp:TableCell>
+                        <asp:TableCell style="width: 10%; text-align: center" nowrap="nowrap">
+                            <asp:HyperLink  runat="server" CssClass="bottomrowtable" NavigateUrl="https://www.google.co.in">Go to Google.com</asp:HyperLink>
+                        </asp:TableCell>
+                    </asp:TableRow>
+        
+        </asp:Table>
     </div>
     </form>
 </body>
