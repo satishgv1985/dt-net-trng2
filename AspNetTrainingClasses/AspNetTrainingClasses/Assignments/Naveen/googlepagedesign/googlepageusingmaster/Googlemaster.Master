@@ -6,7 +6,7 @@
 <head runat="server">
     <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
     <title></title>
-       <script type="text/javascript">
+    <script type="text/javascript">
         function func_onclick_DisplayMore() {
             document.getElementById('morediv').style.visibility = 'visible';
         }
@@ -20,8 +20,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div id="morediv" class="divmore" style="top: 24px; left: 475px;
-        position: absolute; visibility:hidden; background-color:White" onmouseover="javascript:func_onclick_DisplayMore()" onmouseout="func_onmouseout_Removemore()">
+    <div id="morediv" class="divmore" style="top: 24px; left: 475px; position: absolute;
+        visibility: hidden; background-color: White" onmouseover="javascript:func_onclick_DisplayMore()"
+        onmouseout="func_onmouseout_Removemore()">
         <table id="tablemore" border="1" style="border-collapse: collapse;">
             <tr>
                 <td align="center">
@@ -95,21 +96,24 @@
             </tr>
         </table>
     </div>
-    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-left: 0px;
-        margin-right: 50px">
+    <table cellpadding="0" cellspacing="0" border="0">
         <tr>
             <td>
-             <table border="0" cellpadding="2" cellspacing="0" width="100%">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-left: 0px;
+                    margin-right: 50px">
+                    <tr>
+                        <td>
+                            <table border="0" cellpadding="2" cellspacing="0" width="100%">
                                 <tr>
                                     <td width="50" align="center">
                                         <!-- one -->
                                         <a href="http://www.googleplus.com">You+</a>
                                     </td>
-                                    <td width="50" class="borderstyle" align="center">
+                                    <td width="50" align="center" id="tdSearch" runat="server">
                                         <!-- two -->
                                         <a href="googlesearch.aspx">Search</a>
                                     </td>
-                                    <td width="50" align="center">
+                                    <td width="50" align="center" id="tdImages" runat="server">
                                         <!-- three -->
                                         <a href="googleimagepage.aspx">Images</a>
                                     </td>
@@ -147,13 +151,18 @@
                                     </td>
                                 </tr>
                             </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
             </td>
         </tr>
     </table>
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        </asp:ContentPlaceHolder>
-    </div>
     </form>
 </body>
 </html>

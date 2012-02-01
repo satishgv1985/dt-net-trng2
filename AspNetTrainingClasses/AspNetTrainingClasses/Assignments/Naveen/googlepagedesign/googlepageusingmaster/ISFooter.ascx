@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ISFooter.ascx.cs" Inherits="AspNetTrainingClasses.Assignments.Naveen.googlepagedesign.googlepageusingmaster.ISFooter" %>
+This footer is used for Image and Search pages

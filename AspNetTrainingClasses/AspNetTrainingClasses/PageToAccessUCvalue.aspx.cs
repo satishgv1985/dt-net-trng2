@@ -7,11 +7,17 @@ using System.Web.UI.WebControls;
 
 namespace AspNetTrainingClasses
 {
-    public partial class bodyPage : System.Web.UI.Page
+    public partial class PageToAccessUCvalue : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            CheckBox cb = (CheckBox)this.Master.FindControl("");
+
+        }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            TextBox tb = (TextBox)ucAccessValue.FindControl("txtName");
+            lblName.Text = tb.Text;
         }
     }
 }

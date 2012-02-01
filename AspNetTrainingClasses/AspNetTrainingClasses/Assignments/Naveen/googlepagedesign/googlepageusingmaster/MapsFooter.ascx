@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MapsFooter.ascx.cs" Inherits="AspNetTrainingClasses.Assignments.Naveen.googlepagedesign.googlepageusingmaster.MapsFooter" %>
+This is for maps

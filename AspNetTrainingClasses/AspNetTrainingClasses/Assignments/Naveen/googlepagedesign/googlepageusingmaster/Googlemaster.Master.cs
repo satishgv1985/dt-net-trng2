@@ -11,7 +11,13 @@ namespace AspNetTrainingClasses.Assignments.Naveen.googlepagedesign.googlepageus
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //HtmlTableCell ht = (HtmlTableCell)this.Master.FindControl("tdSearch");
+            //ht.Attributes.Add("class", "borderstyle");
 
+            if(Request.PhysicalPath.Contains("search"))
+                tdSearch.Attributes.Add("class", "borderstyle");
+            else if(Request.PhysicalPath.Contains("image"))
+                tdImages.Attributes.Add("class", "borderstyle");
         }
     }
 }
