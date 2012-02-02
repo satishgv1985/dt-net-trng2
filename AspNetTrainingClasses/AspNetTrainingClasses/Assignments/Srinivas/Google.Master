@@ -39,7 +39,7 @@
         <br />
         <asp:TextBox ID="tbName" runat="server"></asp:TextBox>
         <br />
-        <asp:Button ID="btnSubmit" runat="server" onclick="btnSubmit_Click" />
+        <asp:Button ID="btnSubmit" runat="server" onclick="btnSubmit_Click" Text="Submit" />
         <br />
         <asp:Label ID="lblName" runat="server"></asp:Label>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" ClientIDMode="Static">
