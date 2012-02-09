@@ -5,14 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace AspNetTrainingClasses.Assignments.Srinivas
+namespace AspNetTrainingClasses.Assignments.Naveen.UserControl
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class WebUserControl1 : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            TextBox tb = (TextBox)this.Master.FindControl("tbName");
-            tb.Text = tbSearchInput.Text;
+
         }
     }
 }

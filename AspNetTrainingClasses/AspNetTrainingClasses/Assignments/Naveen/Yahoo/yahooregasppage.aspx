@@ -5,6 +5,38 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+     <script type="text/javascript">
+        function funcRemoveText(id) {
+            document.getElementById(id).value = '';
+            document.getElementById(id).attributes["class"].value = "normalTextColor";
+        }
+      
+        function funcPlaceText(id, txt) {
+            var idLocal = document.getElementById(id);
+            document.getElementById('spanFirstName').style.visibility = 'hidden';
+            if (idLocal.value == txt || idLocal.value.length == 0) {
+                idLocal.value = txt;
+                idLocal.attributes["class"].value = "textColor";
+                return;
+            }
+            var str = idLocal.value;
+            var splChars = "@#$()";
+            for (var i = 0; i < str.length; i++) {
+                for (var j = 0; j < splChars.length; j++)
+                    if (splChars.indexOf(str[i], j) != -1) {
+                        document.getElementById('spanFirstName').style.visibility = 'visible';
+                        return;
+                    }
+            }
+
+        }
+         
+        function funcTextChanged(id) {
+            //idofSpanTage.innerHTML = 'strong';
+        }
+      
+        </script>
+
     <style type="text/css">
         .labeldesign
         {
@@ -19,6 +51,10 @@
         {
             width: 752px;
             margin: 0px 296px 0px 296px;
+        }
+        .textColor
+        {
+            color:Gray;
         }
         .topimage
         {
@@ -82,11 +118,12 @@
         }
         .passwordimage
         {
-            width: 15px;
-            height: 10px;
-            border: 1px solid green;
-            line-height: 10px;
-        }
+            border: 1px solid #AAAAAA;
+            font-size: 100%;
+            height: 6px;
+            margin: 0;
+            width: 1.4em;
+    }
     </style>
 </head>
 <body class="border">
@@ -121,11 +158,18 @@
                     <asp:Table runat="server">
                         <asp:TableRow>
                             <asp:TableCell>
-                                <asp:TextBox ID="txtFname" runat="server"> </asp:TextBox>
+                                 <input type="text" title="First Name" id="txtFName" value="First Name" class="textColor"
+                                 onfocus="javascript:funcRemoveText('txtFName')" onblur="javascript:funcPlaceText('txtFName','First Name')"
+                                 onchange="javascript:funcTextChanged(id)" />
+                             </asp:TableCell>
+                            <asp:TableCell>
+                                  <asp:TextBox runat="server" ID="txtLname"></asp:TextBox>
+                            
                             </asp:TableCell>
                             <asp:TableCell>
-                                <asp:TextBox ID="txtLname" runat="server"></asp:TextBox>
-                            </asp:TableCell>
+                             <span style="visibility: hidden; color:Red" id='spanFirstName'>Only letters, spaces, hyphens and
+                                                  apostrophes are allowed </span>
+                           </asp:TableCell>
                         </asp:TableRow>
                     </asp:Table>
                 </asp:TableCell>
@@ -268,20 +312,7 @@
                                                <asp:TableCell CssClass="passwordimage">                         
                                                </asp:TableCell>
                                       </asp:TableRow>
-                                         <%--<asp:TableRow>
-                                <asp:TableCell CssClass="passwordstrength">
-                                <div class="passwordstrength"></div>
-                                </asp:TableCell>
-                                <asp:TableCell CssClass="passwordstrength">
-                                <div class="passwordstrength"></div>
-                                </asp:TableCell >
-                                <asp:TableCell CssClass="passwordstrength">
-                                <div class="passwordstrength"></div>
-                                </asp:TableCell>
-                                <asp:TableCell CssClass="passwordstrength">
-                                </asp:TableCell>
-                           </asp:TableRow>--%>
-                                    </asp:Table>
+                                   </asp:Table>
                                 </asp:TableCell>
                             </asp:TableRow>
                         </asp:Table>

@@ -26,21 +26,25 @@
             document.getElementById(id).attributes["class"].value = "normalTextColor";
         }
 
-        
 
-        function funcPlaceText(id, txt) {
+
+        function funcPlaceText(id, txt)
+         {
             var idLocal = document.getElementById(id);
             document.getElementById('spanFirstName').style.visibility = 'hidden';
-            if (idLocal.value == txt || idLocal.value.length == 0) {
+            if (idLocal.value == txt || idLocal.value.length == 0) 
+            {
                 idLocal.value = txt;
                 idLocal.attributes["class"].value = "textColor";
                 return;
             }
             var str = idLocal.value;
             var splChars = "@#$()";
-            for (var i = 0; i < str.length; i++) {
+            for (var i = 0; i < str.length; i++) 
+            {
                 for (var j = 0; j < splChars.length; j++)
-                    if (splChars.indexOf(str[i], j) != -1) {
+                    if (splChars.indexOf(str[i], j) != -1) 
+                    {
                         document.getElementById('spanFirstName').style.visibility = 'visible';
                         return;
                     }
