@@ -146,12 +146,16 @@
     <Content Include="cache\student.xml" />
     <Content Include="Chrysanthemum.jpg" />
     <Content Include="customValidation.aspx" />
+    <Content Include="dataControls\DataDetailsView.aspx" />
+    <Content Include="dataControls\DataFormView.aspx" />
+    <Content Include="dataControls\Datarepeater.aspx" />
     <Content Include="divSample.htm" />
     <Content Include="dynamicAddition.aspx" />
     <Content Include="FormSubmitted.aspx" />
     <Content Include="FormSubmittedPost.aspx" />
     <Content Include="Global.asax" />
     <Content Include="GoogleImageSearch.htm" />
+    <Content Include="gvP.aspx" />
     <Content Include="HtmlClass.htm" />
     <Content Include="HtmlTableswithCSS.htm" />
     <Content Include="images\bgImage1.png" />
@@ -372,6 +376,27 @@
     <Compile Include="customValidation.aspx.designer.cs">
       <DependentUpon>customValidation.aspx</DependentUpon>
     </Compile>
+    <Compile Include="dataControls\DataDetailsView.aspx.cs">
+      <DependentUpon>DataDetailsView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dataControls\DataDetailsView.aspx.designer.cs">
+      <DependentUpon>DataDetailsView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dataControls\DataFormView.aspx.cs">
+      <DependentUpon>DataFormView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dataControls\DataFormView.aspx.designer.cs">
+      <DependentUpon>DataFormView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dataControls\Datarepeater.aspx.cs">
+      <DependentUpon>Datarepeater.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dataControls\Datarepeater.aspx.designer.cs">
+      <DependentUpon>Datarepeater.aspx</DependentUpon>
+    </Compile>
     <Compile Include="dynamicAddition.aspx.cs">
       <DependentUpon>dynamicAddition.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -395,6 +420,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="gvP.aspx.cs">
+      <DependentUpon>gvP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gvP.aspx.designer.cs">
+      <DependentUpon>gvP.aspx</DependentUpon>
     </Compile>
     <Compile Include="login\loginPage.aspx.cs">
       <DependentUpon>loginPage.aspx</DependentUpon>
