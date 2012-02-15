@@ -148,7 +148,11 @@
     <Content Include="customValidation.aspx" />
     <Content Include="dataControls\DataDetailsView.aspx" />
     <Content Include="dataControls\DataFormView.aspx" />
+    <Content Include="dataControls\DataListDemo.aspx" />
     <Content Include="dataControls\Datarepeater.aspx" />
+    <Content Include="dataControls\ListViewDemo.aspx" />
+    <Content Include="dataControls\ObjectDS.aspx" />
+    <Content Include="dataControls\OrderDetails.aspx" />
     <Content Include="divSample.htm" />
     <Content Include="dynamicAddition.aspx" />
     <Content Include="FormSubmitted.aspx" />
@@ -390,12 +394,40 @@
     <Compile Include="dataControls\DataFormView.aspx.designer.cs">
       <DependentUpon>DataFormView.aspx</DependentUpon>
     </Compile>
+    <Compile Include="dataControls\DataListDemo.aspx.cs">
+      <DependentUpon>DataListDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dataControls\DataListDemo.aspx.designer.cs">
+      <DependentUpon>DataListDemo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="dataControls\Datarepeater.aspx.cs">
       <DependentUpon>Datarepeater.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="dataControls\Datarepeater.aspx.designer.cs">
       <DependentUpon>Datarepeater.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dataControls\ListViewDemo.aspx.cs">
+      <DependentUpon>ListViewDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dataControls\ListViewDemo.aspx.designer.cs">
+      <DependentUpon>ListViewDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dataControls\ObjectDS.aspx.cs">
+      <DependentUpon>ObjectDS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dataControls\ObjectDS.aspx.designer.cs">
+      <DependentUpon>ObjectDS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dataControls\OrderDetails.aspx.cs">
+      <DependentUpon>OrderDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dataControls\OrderDetails.aspx.designer.cs">
+      <DependentUpon>OrderDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="dynamicAddition.aspx.cs">
       <DependentUpon>dynamicAddition.aspx</DependentUpon>
@@ -517,6 +549,12 @@
     <Content Include="Assignments\Srinivas\Google.Master" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
+      <Project>{BDC0FC82-1DA0-4283-A9C7-5A4EF4A6DD6B}</Project>
+      <Name>BusinessLogic</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
