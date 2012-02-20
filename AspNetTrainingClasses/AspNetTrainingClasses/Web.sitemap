@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="http://www.aspnettraining.com" title="Home" description="">
+		<siteMapNode url="http://www.aspnettraining.com/asp/" title="ASP"  description="">
+			<siteMapNode url="http://www.aspnettraining.com/asp/introduction.aspx" title="intro"  description=""></siteMapNode>
+			<siteMapNode url="http://www.aspnettraining.com/asp/example.aspx" title="example"  description="" />
+
+		</siteMapNode>
+		<siteMapNode url="http://www.aspnettraining.com/asp.net" title="ASP.net">
+
+			<siteMapNode url="http://www.aspnettraining.com/aspnet/introduction.aspx" title="asp.net intro"  description=""></siteMapNode>
+			<siteMapNode url="http://www.aspnettraining.com/aspnet/example.aspx" title="asp.net example"  description="" />
+		</siteMapNode>
+	</siteMapNode>
+</siteMap>

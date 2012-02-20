@@ -35,6 +35,9 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -150,9 +153,14 @@
     <Content Include="dataControls\DataFormView.aspx" />
     <Content Include="dataControls\DataListDemo.aspx" />
     <Content Include="dataControls\Datarepeater.aspx" />
+    <Content Include="dataControls\EntityDataSourceDemo.aspx" />
     <Content Include="dataControls\ListViewDemo.aspx" />
     <Content Include="dataControls\ObjectDS.aspx" />
     <Content Include="dataControls\OrderDetails.aspx" />
+    <Content Include="dataControls\Products.xml" />
+    <Content Include="dataControls\SitemapDataSourceDemo.aspx" />
+    <Content Include="dataControls\XMLDataSourceDemo.aspx" />
+    <Content Include="dataControls\XSLTFile1.xslt" />
     <Content Include="divSample.htm" />
     <Content Include="dynamicAddition.aspx" />
     <Content Include="FormSubmitted.aspx" />
@@ -408,6 +416,13 @@
     <Compile Include="dataControls\Datarepeater.aspx.designer.cs">
       <DependentUpon>Datarepeater.aspx</DependentUpon>
     </Compile>
+    <Compile Include="dataControls\EntityDataSourceDemo.aspx.cs">
+      <DependentUpon>EntityDataSourceDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dataControls\EntityDataSourceDemo.aspx.designer.cs">
+      <DependentUpon>EntityDataSourceDemo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="dataControls\ListViewDemo.aspx.cs">
       <DependentUpon>ListViewDemo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -428,6 +443,20 @@
     </Compile>
     <Compile Include="dataControls\OrderDetails.aspx.designer.cs">
       <DependentUpon>OrderDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dataControls\SitemapDataSourceDemo.aspx.cs">
+      <DependentUpon>SitemapDataSourceDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dataControls\SitemapDataSourceDemo.aspx.designer.cs">
+      <DependentUpon>SitemapDataSourceDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dataControls\XMLDataSourceDemo.aspx.cs">
+      <DependentUpon>XMLDataSourceDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dataControls\XMLDataSourceDemo.aspx.designer.cs">
+      <DependentUpon>XMLDataSourceDemo.aspx</DependentUpon>
     </Compile>
     <Compile Include="dynamicAddition.aspx.cs">
       <DependentUpon>dynamicAddition.aspx</DependentUpon>
@@ -473,6 +502,11 @@
     </Compile>
     <Compile Include="login\Welcome.aspx.designer.cs">
       <DependentUpon>Welcome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NorthwindModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NorthwindModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="PageToAccessUCvalue.aspx.cs">
       <DependentUpon>PageToAccessUCvalue.aspx</DependentUpon>
@@ -547,8 +581,15 @@
     <Content Include="Assignments\Ravi\ravi\Site.master" />
     <Content Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\Googlemaster.Master" />
     <Content Include="Assignments\Srinivas\Google.Master" />
+    <EntityDeploy Include="NorthwindModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NorthwindModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="Site.Master" />
+    <Content Include="Web.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
