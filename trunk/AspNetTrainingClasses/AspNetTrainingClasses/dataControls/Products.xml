@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<products>
+	<product id="111">
+
+		<name>Product1</name>
+		<price>100</price>
+		<order>
+			<id>o1</id>
+			<amount>999</amount>
+		</order>
+	</product>
+	<product id="112">
+
+		<name>
+			Chang
+		</name>
+		<price>80</price>
+		<order>
+			<id>o2</id>
+			<amount>888</amount>
+		</order>
+	</product>
+	<product id="113">
+
+		<name>
+			Chef Anton's Gumbo Mix
+		</name>
+		<price>100</price>
+	</product>
+</products>
