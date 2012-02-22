@@ -16,7 +16,7 @@ namespace AspNetTrainingClasses
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            Response.Redirect("FormSubmitted.aspx?name="+txtUserName.Text);
+            //Response.Redirect("FormSubmitted.aspx?name="+txtUserName.Text);
             //Server.Transfer("FormSubmitted.aspx?name=" + txtUserName.Text);
         }
     }

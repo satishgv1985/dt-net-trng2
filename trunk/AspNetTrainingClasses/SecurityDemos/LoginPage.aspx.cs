@@ -13,5 +13,11 @@ namespace SecurityDemos
         {
 
         }
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            Exception ex=new Exception();
+            throw ex;
+
+        }
     }
 }

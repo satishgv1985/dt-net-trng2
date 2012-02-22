@@ -86,6 +86,10 @@
     <Content Include="Assignments\Naveen\googlepagedesign\icon.png" />
     <Content Include="Assignments\Naveen\googlepagedesign\settingsicon.jpg" />
     <Content Include="Assignments\Naveen\googlepagedesign\StyleSheet.css" />
+    <Content Include="Assignments\Naveen\TNSRTC\Apsrtcimages.jpg" />
+    <Content Include="Assignments\Naveen\TNSRTC\background.jpg" />
+    <Content Include="Assignments\Naveen\TNSRTC\Regestration.aspx" />
+    <Content Include="Assignments\Naveen\TNSRTC\RegistrationLogoBg.gif" />
     <Content Include="Assignments\Naveen\UserControl\CSS\csspage.aspx" />
     <Content Include="Assignments\Naveen\UserControl\CSS\W3Schools.ascx" />
     <Content Include="Assignments\Naveen\UserControl\w3schools.ascx" />
@@ -163,6 +167,8 @@
     <Content Include="dataControls\XSLTFile1.xslt" />
     <Content Include="divSample.htm" />
     <Content Include="dynamicAddition.aspx" />
+    <Content Include="feeds\FeedsInHtmlPage.htm" />
+    <Content Include="feeds\FeedsInNet.aspx" />
     <Content Include="FormSubmitted.aspx" />
     <Content Include="FormSubmittedPost.aspx" />
     <Content Include="Global.asax" />
@@ -262,6 +268,13 @@
     </Compile>
     <Compile Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\MapsFooter.ascx.designer.cs">
       <DependentUpon>MapsFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Assignments\Naveen\TNSRTC\Regestration.aspx.cs">
+      <DependentUpon>Regestration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Naveen\TNSRTC\Regestration.aspx.designer.cs">
+      <DependentUpon>Regestration.aspx</DependentUpon>
     </Compile>
     <Compile Include="Assignments\Naveen\UserControl\CSS\csspage.aspx.cs">
       <DependentUpon>csspage.aspx</DependentUpon>
@@ -464,6 +477,13 @@
     </Compile>
     <Compile Include="dynamicAddition.aspx.designer.cs">
       <DependentUpon>dynamicAddition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="feeds\FeedsInNet.aspx.cs">
+      <DependentUpon>FeedsInNet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="feeds\FeedsInNet.aspx.designer.cs">
+      <DependentUpon>FeedsInNet.aspx</DependentUpon>
     </Compile>
     <Compile Include="FormSubmitted.aspx.cs">
       <DependentUpon>FormSubmitted.aspx</DependentUpon>

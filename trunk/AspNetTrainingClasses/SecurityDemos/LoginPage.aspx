@@ -9,7 +9,14 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    <asp:TextBox ID="txtLogin" runat="server"></asp:TextBox>
+      <asp:Label ID="lblError" runat="server" ForeColor="Red" Text="Invalid Login. Please try again." Visible="false"></asp:Label>
+    UserName:
+    <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox><br />
+    Password:
+    <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
+    <br />
+    <asp:Button ID="btnSubmit" runat="server" Text="Submit" 
+        onclick="btnSubmit_Click" />
     </div>
     </form>
 </body>
