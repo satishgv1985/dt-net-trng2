@@ -31,7 +31,7 @@ namespace AspNetTrainingClasses
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            txtName.Text = Convert.ToString(ViewState["name"]);
+            //txtName.Text = Convert.ToString(ViewState["name"]);
             //txtName.Text = ViewState["name"].ToString();
 
             lblCookieValue.Text = Request.Cookies["dotnet"].Value;
