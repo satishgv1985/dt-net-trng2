@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="ftp://docileinfotech.com/" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="False" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FTP" replaceMatchingFiles="True" userName="tnsrtcweb" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQ1Mbo7abxUeMXk8tM+IkKgAAAAACAAAAAAADZgAAqAAAABAAAACrbHaeD1JbzXktlCoiT7KSAAAAAASAAACgAAAAEAAAAAIBUjHQNDlNHVdLFmcNkcEYAAAAGrVcFfjiDpqzKniKWdxiuJ/5sMcYmGZwFAAAAB4CZTKTc1nAaZLAI6IhW0uAfXWv" SelectedForPublish="True">
+    <file relUrl="bin/TNSRTC.pdb" publishTime="02/25/2012 01:17:15" />
+    <file relUrl="LoginPage.aspx" publishTime="02/22/2012 22:58:43" />
+    <file relUrl="bin/TNSRTCWebSite.pdb" publishTime="02/25/2012 01:17:15" />
+    <file relUrl="WelcomePage.aspx" publishTime="02/22/2012 22:58:43" />
+    <file relUrl="user/WelcomeUser.aspx" publishTime="02/22/2012 22:58:43" />
+    <file relUrl="TNSRTCsite.Master" publishTime="02/22/2012 22:58:43" />
+    <file relUrl="Web.config" publishTime="02/25/2012 01:17:20" />
+    <file relUrl="Default.aspx" publishTime="02/22/2012 22:58:43" />
+    <file relUrl="Registration.aspx" publishTime="02/24/2012 11:43:11" />
+    <file relUrl="bin/TNSRTCWebSite.dll" publishTime="02/25/2012 01:17:16" />
+    <file relUrl="bin/TNSRTC.dll" publishTime="02/25/2012 01:17:15" />
+  </publishProfile>
+</publishData>
