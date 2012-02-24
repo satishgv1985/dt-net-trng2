@@ -28,8 +28,8 @@ namespace TNSRTCWebSite
             //sdsLogin.ConnectionString = ConfigurationManager.ConnectionStrings["TNSRTCConnectionString"].ConnectionString;
 
             UserDetail ud = new UserDetail();
-            ud.userName = txtUserName.Text;
-            ud.password = txtPassword.Text;
+            ud.Username = txtUserName.Text;
+            ud.Password = txtPassword.Text;
 
             //bool val = UserDetailDAL.ValidateUser(ud);
             //if (true)
@@ -42,7 +42,7 @@ namespace TNSRTCWebSite
             //}
             UserDetail loggedUser = UserDetailDAL.ValidateUser(ud);
             //System.Diagnostics.Debugger.Launch();
-            if (loggedUser.FirstName!=null)
+            if (loggedUser.Firstname!=null)
             {
                 Session["userDetails"] = loggedUser;
                 FormsAuthentication.RedirectFromLoginPage(txtUserName.Text, false);
