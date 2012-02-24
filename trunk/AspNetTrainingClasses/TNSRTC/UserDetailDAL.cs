@@ -8,9 +8,9 @@ using System.Configuration;
 
 namespace TNSRTC
 {
-   public class UserDetailDAL
+    public class UserDetailDAL
     {
-        public static bool ValidateUser(UserDetail ud,int i)
+        public static bool ValidateUser(UserDetail ud, int i)
         {
             //pass the username, password to the db to validate the user
 
@@ -19,7 +19,7 @@ namespace TNSRTC
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             string query = "SELECT [userId], [userName], [password], [firstName], [lastName] FROM [tblUser] WHERE (([userName] = {0}) AND ([password] = {1}) ";
-            query = String.Format(query, ud.userName, ud.password);
+            query = String.Format(query, ud.Username, ud.Password);
             cmd.CommandText = query;
             con.Open();
             SqlDataReader sdr = cmd.ExecuteReader();
@@ -42,7 +42,7 @@ namespace TNSRTC
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             string query = "SELECT [userId], [userName], [password], [firstName], [lastName] FROM [tblUser] WHERE (([userName] = '{0}') AND ([password] = '{1}')) ";
-            query = String.Format(query, ud.userName, ud.password);
+            query = String.Format(query, ud.Username, ud.Password);
             cmd.CommandText = query;
             con.Open();
 
@@ -51,10 +51,15 @@ namespace TNSRTC
             UserDetail tempUser = new UserDetail();
             if (sdr.Read())
             {
-                tempUser.FirstName = Convert.ToString(sdr["firstName"]);
-                tempUser.LastName = Convert.ToString(sdr["lastName"]);
+                tempUser.Firstname = Convert.ToString(sdr["firstName"]);
+                tempUser.Lastname = Convert.ToString(sdr["lastName"]);
             }
             return tempUser;
+        }
+
+        public static void InsertUser(UserDetail ud)
+        {
+
         }
     }
 }

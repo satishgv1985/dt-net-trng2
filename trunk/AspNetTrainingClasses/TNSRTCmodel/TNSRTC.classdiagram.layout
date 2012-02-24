@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="TNSRTC">
+  <logicalClassDesignerModelMoniker Id="e1e64990-d619-487c-a446-37b389c45def" />
+  <nestedChildShapes>
+    <classShape Id="08a06941-0974-4010-a16d-d85a8e847628" absoluteBounds="1.5, 1.25, 1.5, 0.90234373509883881" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="083c7995-8d5b-4e32-a09d-1f2f6b8da1eb" LastKnownName="Class1" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="3c577bbe-a7ce-4a2c-a369-d5964d0092b0" absoluteBounds="1.5150000000000001, 1.6400000000000001, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="e1aeaf21-7479-4c06-b481-61de2fb6e53a" absoluteBounds="1.5150000000000001, 1.8511718675494193, 1.4700000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

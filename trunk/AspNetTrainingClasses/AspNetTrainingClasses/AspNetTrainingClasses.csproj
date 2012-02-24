@@ -276,6 +276,7 @@
     <Compile Include="Assignments\Naveen\TNSRTC\Regestration.aspx.designer.cs">
       <DependentUpon>Regestration.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Assignments\Naveen\TNSRTC\RegestrationDetail.cs" />
     <Compile Include="Assignments\Naveen\UserControl\CSS\csspage.aspx.cs">
       <DependentUpon>csspage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

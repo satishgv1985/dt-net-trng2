@@ -13,7 +13,7 @@ namespace TNSRTCWebSite.user
         protected void Page_Load(object sender, EventArgs e)
         {
             UserDetail us = (UserDetail)Session["userDetails"];
-            lblName.Text = us.FirstName + ", " + us.LastName;
+            lblName.Text = us.Firstname + ", " + us.Lastname;
         }
     }
 }
