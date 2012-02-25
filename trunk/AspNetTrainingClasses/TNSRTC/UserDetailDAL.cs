@@ -45,7 +45,7 @@ namespace TNSRTC
             query = String.Format(query, ud.Username, ud.Password);
             cmd.CommandText = query;
             con.Open();
-
+            //System.Diagnostics.Debugger.Launch();
             SqlDataReader sdr = cmd.ExecuteReader();
 
             UserDetail tempUser = new UserDetail();
@@ -57,8 +57,25 @@ namespace TNSRTC
             return tempUser;
         }
 
-        public static void InsertUser(UserDetail ud)
+        public static int InsertUser(UserDetail ud)
         {
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = ConfigurationManager.ConnectionStrings["TNSRTCConnectionString"].ConnectionString;
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "spInsertUser";
+            cmd.Parameters.Add(new SqlParameter("username", ud.Username));
+            cmd.Parameters.Add(new SqlParameter("password", ud.Password));
+            cmd.Parameters.Add(new SqlParameter("firstName", ud.Firstname));
+
+            con.Open();
+            int rowsAffected=cmd.ExecuteNonQuery();
+            con.Close();
+
+            return rowsAffected;
+
 
         }
     }

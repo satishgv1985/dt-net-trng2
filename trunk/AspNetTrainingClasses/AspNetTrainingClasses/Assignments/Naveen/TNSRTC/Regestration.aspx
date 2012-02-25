@@ -38,7 +38,7 @@
             width: 752px;
             margin: 0px 300px 0px 350px;
             border:1px ridge orange;
-            background-color:#C3E3E5;
+            background-color:#E6E6FA++++++++++++++++++++++++++;
             
         }
         .topimage

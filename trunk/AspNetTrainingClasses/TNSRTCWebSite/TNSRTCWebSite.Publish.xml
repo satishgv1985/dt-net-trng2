@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
-  <publishProfile publishUrl="ftp://docileinfotech.com/" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="False" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FTP" replaceMatchingFiles="True" userName="tnsrtcweb" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQ1Mbo7abxUeMXk8tM+IkKgAAAAACAAAAAAADZgAAqAAAABAAAACrbHaeD1JbzXktlCoiT7KSAAAAAASAAACgAAAAEAAAAAIBUjHQNDlNHVdLFmcNkcEYAAAAGrVcFfjiDpqzKniKWdxiuJ/5sMcYmGZwFAAAAB4CZTKTc1nAaZLAI6IhW0uAfXWv" SelectedForPublish="True">
-    <file relUrl="bin/TNSRTC.pdb" publishTime="02/25/2012 01:17:15" />
-    <file relUrl="LoginPage.aspx" publishTime="02/22/2012 22:58:43" />
-    <file relUrl="bin/TNSRTCWebSite.pdb" publishTime="02/25/2012 01:17:15" />
-    <file relUrl="WelcomePage.aspx" publishTime="02/22/2012 22:58:43" />
-    <file relUrl="user/WelcomeUser.aspx" publishTime="02/22/2012 22:58:43" />
-    <file relUrl="TNSRTCsite.Master" publishTime="02/22/2012 22:58:43" />
-    <file relUrl="Web.config" publishTime="02/25/2012 01:17:20" />
-    <file relUrl="Default.aspx" publishTime="02/22/2012 22:58:43" />
-    <file relUrl="Registration.aspx" publishTime="02/24/2012 11:43:11" />
-    <file relUrl="bin/TNSRTCWebSite.dll" publishTime="02/25/2012 01:17:16" />
-    <file relUrl="bin/TNSRTC.dll" publishTime="02/25/2012 01:17:15" />
+  <publishProfile publishUrl="ftp://docileinfotech.com/" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="False" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FTP" replaceMatchingFiles="True" userName="tnsrtcweb" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHgif42L92061gJz9mRa6jQAAAAACAAAAAAAQZgAAAAEAACAAAABlVwuo7SXSP3V5px/fk0nZ2HWSdpvvBHt0RrnAGll2cwAAAAAOgAAAAAIAACAAAACd7McGzXPT1NOVM/Qj/lNtEpOHbcIw3YshyhncfCda2iAAAADInlIO9HyrriHoT2vmV56BOvRbgxYlUiqNsdgxoU9kgEAAAADAlrWhVS0Cm0sr9uvmagUY4tqHndcDsxHX9YG1ZyVEupHY36w4dei7T+gEBJQLjvqKJ9orcq5PzRAZhKu+6VeM" SelectedForPublish="True">
+    <file relUrl="bin/TNSRTC.pdb" publishTime="02/25/2012 11:23:51" />
+    <file relUrl="LoginPage.aspx" publishTime="02/25/2012 11:18:19" />
+    <file relUrl="bin/TNSRTCWebSite.pdb" publishTime="02/25/2012 11:23:51" />
+    <file relUrl="WelcomePage.aspx" publishTime="02/21/2012 11:38:39" />
+    <file relUrl="user/WelcomeUser.aspx" publishTime="02/22/2012 10:28:06" />
+    <file relUrl="TNSRTCsite.Master" publishTime="02/22/2012 10:42:32" />
+    <file relUrl="Web.config" publishTime="02/25/2012 11:37:00" />
+    <file relUrl="RegistrationLogoBg.gif" publishTime="02/25/2012 10:43:04" />
+    <file relUrl="Default.aspx" publishTime="02/21/2012 11:43:24" />
+    <file relUrl="Registration.aspx" publishTime="02/25/2012 11:18:19" />
+    <file relUrl="bin/TNSRTCWebSite.dll" publishTime="02/25/2012 11:23:51" />
+    <file relUrl="bin/TNSRTC.dll" publishTime="02/25/2012 11:23:51" />
   </publishProfile>
 </publishData>
