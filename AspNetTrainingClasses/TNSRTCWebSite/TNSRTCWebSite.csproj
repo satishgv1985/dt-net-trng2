@@ -54,6 +54,7 @@
     <Content Include="Default.aspx" />
     <Content Include="LoginPage.aspx" />
     <Content Include="Registration.aspx" />
+    <Content Include="RegistrationLogoBg.gif" />
     <Content Include="user\WelcomeUser.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
