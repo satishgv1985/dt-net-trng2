@@ -9,3 +9,9 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
+
+IF NOT EXISTS(SELECT * FROM tblUser WHERE roleId=0)
+INSERT INTO tblUser([userName]
+           ,[password]
+           ,[firstName], roleId)
+		   VALUES('admin','pass','Administrator',0)

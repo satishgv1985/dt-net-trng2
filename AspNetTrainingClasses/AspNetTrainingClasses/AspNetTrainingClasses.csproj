@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AccessUCvalue.ascx" />
+    <Content Include="AJAX\Demo.aspx" />
     <Content Include="ASPNetClass.aspx" />
     <Content Include="aspValidation.aspx" />
     <Content Include="ASPxAction.aspx" />
@@ -212,6 +213,13 @@
     </Compile>
     <Compile Include="AccessUCvalue.ascx.designer.cs">
       <DependentUpon>AccessUCvalue.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AJAX\Demo.aspx.cs">
+      <DependentUpon>Demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AJAX\Demo.aspx.designer.cs">
+      <DependentUpon>Demo.aspx</DependentUpon>
     </Compile>
     <Compile Include="ASPNetClass.aspx.cs">
       <DependentUpon>ASPNetClass.aspx</DependentUpon>

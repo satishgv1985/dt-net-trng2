@@ -102,6 +102,13 @@ namespace TNSRTC
         private string _country;
         private string _phoneNo;
 
+        private int _roleId;
+        public int RoleId
+        {
+            get { return _roleId; }
+            set { _roleId = value; }
+        }
+
         public string Username
         {
             get

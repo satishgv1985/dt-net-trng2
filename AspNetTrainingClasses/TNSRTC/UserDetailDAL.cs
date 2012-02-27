@@ -41,7 +41,7 @@ namespace TNSRTC
             con.ConnectionString = ConfigurationManager.ConnectionStrings["TNSRTCConnectionString"].ConnectionString;
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            string query = "SELECT [userId], [userName], [password], [firstName], [lastName] FROM [tblUser] WHERE (([userName] = '{0}') AND ([password] = '{1}')) ";
+            string query = "SELECT [userId], [userName], [password], [firstName], [lastName], roleId FROM [tblUser] WHERE (([userName] = '{0}') AND ([password] = '{1}')) ";
             query = String.Format(query, ud.Username, ud.Password);
             cmd.CommandText = query;
             con.Open();
@@ -53,6 +53,8 @@ namespace TNSRTC
             {
                 tempUser.Firstname = Convert.ToString(sdr["firstName"]);
                 tempUser.Lastname = Convert.ToString(sdr["lastName"]);
+                
+                tempUser.RoleId = Convert.ToInt32(sdr["roleId"]);
             }
             return tempUser;
         }

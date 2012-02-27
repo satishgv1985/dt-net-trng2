@@ -1,7 +1,7 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TNSRTCsite.master.cs"
-    Inherits="TNSRTCWebSite.TNSRTCsite" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="TNSRTCWebSite.Admin.Admin" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
@@ -11,12 +11,8 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <h1 align="center">
-            TNSRTC Reservation System</h1>
-        <asp:LinkButton ID="lbLogOut" runat="server" Text="Log Out" 
-            onclick="lbLogOut_Click"></asp:LinkButton>
-        <br />
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
         </asp:ContentPlaceHolder>
     </div>
     </form>
