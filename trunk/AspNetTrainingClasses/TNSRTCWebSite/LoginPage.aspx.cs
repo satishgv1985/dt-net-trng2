@@ -27,6 +27,14 @@ namespace TNSRTCWebSite
             //SqlDataSource sdsLogin = new SqlDataSource();
             //sdsLogin.ConnectionString = ConfigurationManager.ConnectionStrings["TNSRTCConnectionString"].ConnectionString;
 
+
+            //if (txtUserName.Text = "admin")
+            //{
+            //    bool val = FormsAuthentication.Authenticate(txtUserName.Text, txtPassword.Text);
+               
+            //    return;
+            //}
+
             UserDetail ud = new UserDetail();
             ud.Username = txtUserName.Text;
             ud.Password = txtPassword.Text;
@@ -46,6 +54,8 @@ namespace TNSRTCWebSite
             {
                 Session["userDetails"] = loggedUser;
                 FormsAuthentication.RedirectFromLoginPage(txtUserName.Text, false);
+                Response.Redirect("WelcomePage.aspx");
+                //FormsAuthentication.SetAuthCookie(txtUserName.Text, false);
             }
             else
             {

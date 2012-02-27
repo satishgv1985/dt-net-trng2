@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using TNSRTC;
+using System.Web.Security;
 namespace TNSRTCWebSite
 {
     public partial class Registration : System.Web.UI.Page
@@ -35,8 +36,11 @@ namespace TNSRTCWebSite
                     //Mobile = txt_Mobile.Text,
                     //Nationality = ddlNationality.SelectedValue,
                     //Address = txtAddress.Text,
+                    //
                 };
 
+
+             
 
                 int retVal = UserDetailDAL.InsertUser(ud);
                 if (retVal == 1)
@@ -49,6 +53,8 @@ namespace TNSRTCWebSite
                     lblMessage.Visible = true;
                     lblMessage.Text = "Error! Try again";
                 }
+
+
 
             }
         }

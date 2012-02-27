@@ -67,18 +67,6 @@ GO
 */
 
 GO
-PRINT N'Creating [dbo].[tblPlace]...';
-
-
-GO
-CREATE TABLE [dbo].[tblPlace] (
-    [placeId]      INT          IDENTITY (1, 1) NOT NULL,
-    [placeName]    VARCHAR (50) NULL,
-    [dateModified] DATETIME     NULL
-);
-
-
-GO
 /*
 Post-Deployment Script Template							
 --------------------------------------------------------------------------------------
@@ -90,5 +78,10 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
+
+INSERT INTO tblUser([userName]
+           ,[password]
+           ,[firstName], roleId)
+		   VALUES('admin','pass','Administrator',0)
 
 GO

@@ -9,7 +9,7 @@
         }
         .style3
         {
-            width: 139px;
+            width: 186px;
             height: 23px;
         }
         .style4
@@ -18,7 +18,7 @@
         }
         .style5
         {
-            width: 139px;
+            width: 186px;
             height: 26px;
         }
         .style6
@@ -31,7 +31,7 @@
         }
         .body
         {
-            height: 680px;
+            height: 780px;
             width: 752px;
             margin: 0px 300px 0px 350px;
             border: 1px ridge orange;
@@ -45,14 +45,21 @@
             padding-top: 5px;
             padding-left: 10px;
         }
+        .style7
+        {
+            width: 186px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="body">
         <h2>
-            <asp:Label ID="lblMessage" ForeColor="Green" runat="server" Visible="false" Text="Registration Successfull"></asp:Label></h2>
+            <span>
+                <asp:Label ID="lblMessage" ForeColor="Green" runat="server" Visible="false" Text="Registration Successfull"></asp:Label></span></h2>
         <br />
-        <asp:HyperLink ID="hlClickHere" runat="server" NavigateUrl="~/LoginPage.aspx" Visible="false" Text="Click Here to login"></asp:HyperLink>
+        <span>
+            <asp:HyperLink ID="hlClickHere" runat="server" NavigateUrl="~/LoginPage.aspx" Visible="false"
+                Text="Click Here to login"></asp:HyperLink></span>
         <br />
         <div class="topimage">
             <div style="height: 50px; font-family: @FangSong; color: Orange; font-size: large;
@@ -64,15 +71,34 @@
             </div>
             <table class="style1">
                 <tr>
-                    <td class="style2">
+                    <td class="style7">
                         <asp:Label ID="lblUsername" runat="server">User Name &nbsp:<span class="Errortext">&nbsp*</span></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox ID="txtuName" runat="server"></asp:TextBox>
+                        <table>
+                            <tr>
+                                <td>
+                                    <asp:TextBox ID="txtuName" runat="server"></asp:TextBox>
+                                </td>
+                                <td>
+                                    <span>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtuName" SetFocusOnError="true"
+                                            ForeColor="Red" ErrorMessage="Enter your name." runat="Server" Display="Dynamic">
+                                        </asp:RequiredFieldValidator>
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>
+                                        <asp:RegularExpressionValidator ID="revName" runat="server" ControlToValidate="txtuName" SetFocusOnError="true"
+                                            ForeColor="Red" ErrorMessage="Please enter only alphabet" ValidationExpression="[a-z]" Display="Dynamic"></asp:RegularExpressionValidator>
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
                     </td>
                 </tr>
                 <tr>
-                    <td class="style2">
+                    <td class="style7">
                         <asp:Label ID="lblPassword" runat="server">Password&nbsp:<span class="Errortext">&nbsp*</span></asp:Label>
                     </td>
                     <td>
@@ -80,7 +106,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="style2">
+                    <td class="style7">
                         <asp:Label ID="lblConfirmpassword" runat="server">Confirm Password &nbsp:<span class="Errortext">&nbsp*</span></asp:Label>
                     </td>
                     <td>
@@ -88,7 +114,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="style2">
+                    <td class="style7">
                         <asp:Label ID="lblSecurityQuestion" runat="server">Security Question &nbsp:<span class="Errortext">&nbsp*</span></asp:Label>
                     </td>
                     <td>
@@ -112,7 +138,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="style2">
+                    <td class="style7">
                         <asp:Label ID="lblFirstname" runat="server">First Name &nbsp:<span class="Errortext">&nbsp*</span></asp:Label>
                     </td>
                     <td>
@@ -120,7 +146,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="style2">
+                    <td class="style7">
                         <asp:Label ID="lblLastname" runat="server">Last Name &nbsp:<span class="Errortext">&nbsp*</span></asp:Label>
                     </td>
                     <td>
@@ -128,7 +154,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="style2">
+                    <td class="style7">
                         <asp:Label ID="lblEmailid" runat="server">Email ID &nbsp:<span class="Errortext">&nbsp*</span></asp:Label>
                     </td>
                     <td>
@@ -136,7 +162,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="style2">
+                    <td class="style7">
                         <asp:Label ID="lblGender" runat="server">Gender &nbsp:<span class="Errortext">&nbsp*</span></asp:Label>
                     </td>
                     <td>
@@ -148,7 +174,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="style2">
+                    <td class="style7">
                         <asp:Label ID="lblMaritualstatus" runat="server" Text="Maritual Status : "></asp:Label>
                     </td>
                     <td>
@@ -160,7 +186,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="style2">
+                    <td class="style7">
                         <asp:Label ID="lblDateofbirth" runat="server">Date of Birth &nbsp:<span class="Errortext">&nbsp*</span></asp:Label>
                     </td>
                     <td>
@@ -254,7 +280,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="style2">
+                    <td class="style7">
                         <asp:Label ID="lblMobile" runat="server">Mobile &nbsp:<span class="Errortext">&nbsp*</span></asp:Label>
                     </td>
                     <td>
@@ -262,7 +288,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="style2">
+                    <td class="style7">
                         <asp:Label ID="lblNationality" runat="server" Text="Nationality : "></asp:Label>
                     </td>
                     <td>
@@ -274,7 +300,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="style2">
+                    <td class="style7">
                         <asp:Label ID="lblResedentialaddress" runat="server" ForeColor="#33CC33" Text="Residential Address"></asp:Label>
                     </td>
                     <td>
@@ -282,7 +308,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="style2">
+                    <td class="style7">
                         <asp:Label ID="lblAddress" runat="server">Address &nbsp:<span class="Errortext">&nbsp*</span></asp:Label>
                     </td>
                     <td>
@@ -290,7 +316,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="style2">
+                    <td class="style7">
                         <asp:Label ID="lblCity" runat="server" Text="City :"></asp:Label>
                     </td>
                     <td>
@@ -298,7 +324,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="style2">
+                    <td class="style7">
                         <asp:Label ID="lblState" runat="server" Text="State :"></asp:Label>
                     </td>
                     <td>
@@ -313,7 +339,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="style2">
+                    <td class="style7">
                         <asp:Label ID="lblPin" runat="server" Text="Pin/Zip"></asp:Label>
                     </td>
                     <td>
@@ -321,7 +347,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="style2">
+                    <td class="style7">
                         <asp:Label ID="lblCountry" runat="server" Text="Country"></asp:Label>
                     </td>
                     <td>
@@ -334,7 +360,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="style2">
+                    <td class="style7">
                         <asp:Label ID="lblPhone" runat="server" Text="Phone"></asp:Label>
                     </td>
                     <td>
@@ -343,7 +369,8 @@
                 </tr>
                 <tr>
                     <td class="style2" align="center" colspan="2">
-                        <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" />
+                        <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit"
+                            UseSubmitBehavior="true" />
                     </td>
                 </tr>
             </table>
