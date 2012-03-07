@@ -51,9 +51,27 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="bin\Debug\TNSRTC.dll.config" />
+    <None Include="bin\Release\TNSRTC.dll.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\TNSRTC.dll" />
+    <Content Include="bin\Debug\TNSRTC.pdb" />
+    <Content Include="bin\Release\TNSRTC.dll" />
+    <Content Include="bin\Release\TNSRTC.pdb" />
     <Content Include="ClassNeeded.txt" />
+    <Content Include="obj\Debug\TNSRTC.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TNSRTC.dll" />
+    <Content Include="obj\Debug\TNSRTC.pdb" />
+    <Content Include="obj\Release\TNSRTC.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\TNSRTC.dll" />
+    <Content Include="obj\Release\TNSRTC.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

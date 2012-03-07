@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>E:\software\New folder\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Entity" />
@@ -54,7 +57,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AccessUCvalue.ascx" />
+    <Content Include="AJAX\accordTabs.aspx" />
+    <Content Include="AJAX\AsyncCallBack.aspx" />
+    <Content Include="AJAX\available.gif" />
+    <Content Include="AJAX\CalculatorService.asmx" />
+    <Content Include="AJAX\calExtender.aspx" />
+    <Content Include="AJAX\CompletionCheck.aspx" />
     <Content Include="AJAX\Demo.aspx" />
+    <Content Include="AJAX\GetProducts.asmx" />
+    <Content Include="AJAX\images\image1.jpg" />
+    <Content Include="AJAX\images\image2.jpg" />
+    <Content Include="AJAX\images\image4.jpg" />
+    <Content Include="AJAX\images\image3.jpg" />
+    <Content Include="AJAX\spinner.gif" />
+    <Content Include="AJAX\taken.gif" />
+    <Content Include="AJAX\timerControl.aspx" />
+    <Content Include="AJAX\updateProgessDemo.aspx" />
+    <Content Include="AJAX\userNameCheck.aspx" />
+    <Content Include="AJAX\WebServiceDemo.aspx" />
     <Content Include="ASPNetClass.aspx" />
     <Content Include="aspValidation.aspx" />
     <Content Include="ASPxAction.aspx" />
@@ -94,6 +114,8 @@
     <Content Include="Assignments\Naveen\UserControl\CSS\csspage.aspx" />
     <Content Include="Assignments\Naveen\UserControl\CSS\W3Schools.ascx" />
     <Content Include="Assignments\Naveen\UserControl\w3schools.ascx" />
+    <Content Include="Assignments\Naveen\Web Services\GetCities.aspx" />
+    <Content Include="Assignments\Naveen\Web Services\SendSMS.aspx" />
     <Content Include="Assignments\Naveen\WebForm1.aspx" />
     <Content Include="Assignments\Naveen\Yahoo\Images\bgimg.png" />
     <Content Include="Assignments\Naveen\Yahoo\Images\yahoo.gif" />
@@ -145,6 +167,7 @@
     <Content Include="Assignments\Srinivas\YahooSignInForm.htm" />
     <Content Include="Assignments\Srinivas\Srinivas_Google_WithTables.htm" />
     <Content Include="Assignments\Srinivas_Google_WithTables.htm" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
     <Content Include="bin\AspNetTrainingClasses.dll" />
     <Content Include="bin\AspNetTrainingClasses.pdb" />
     <Content Include="bodyPage.aspx" />
@@ -166,6 +189,7 @@
     <Content Include="dataControls\SitemapDataSourceDemo.aspx" />
     <Content Include="dataControls\XMLDataSourceDemo.aspx" />
     <Content Include="dataControls\XSLTFile1.xslt" />
+    <Content Include="Default.aspx" />
     <Content Include="divSample.htm" />
     <Content Include="dynamicAddition.aspx" />
     <Content Include="feeds\FeedsInHtmlPage.htm" />
@@ -193,6 +217,18 @@
     <Content Include="Tables.htm" />
     <Content Include="valGroup.aspx" />
     <Content Include="ViewState.aspx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\calculator\CalculatorService.disco" />
+    <None Include="Web References\MyCalc\CalculatorService.disco" />
+    <None Include="Web References\net.webservicex.www\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\net.webservicex.www\weatherforecast.disco" />
+    <None Include="Web References\weatherwebservicedemo\globalweather.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -205,6 +241,24 @@
     <Content Include="header.ascx" />
     <Content Include="yahooRegistration.aspx" />
     <Content Include="YahooRegistration.htm" />
+    <None Include="Web References\calculator\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MyCalc\CalculatorService.wsdl" />
+    <None Include="Web References\MyCalc\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\net.webservicex.www\weatherforecast.wsdl" />
+    <None Include="Web References\net.webservicex.www\WeatherForecasts.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\weatherwebservicedemo\globalweather.wsdl" />
+    <None Include="Web References\weatherwebservicedemo\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessUCvalue.ascx.cs">
@@ -214,12 +268,76 @@
     <Compile Include="AccessUCvalue.ascx.designer.cs">
       <DependentUpon>AccessUCvalue.ascx</DependentUpon>
     </Compile>
+    <Compile Include="AJAX\accordTabs.aspx.cs">
+      <DependentUpon>accordTabs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AJAX\accordTabs.aspx.designer.cs">
+      <DependentUpon>accordTabs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AJAX\AsyncCallBack.aspx.cs">
+      <DependentUpon>AsyncCallBack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AJAX\AsyncCallBack.aspx.designer.cs">
+      <DependentUpon>AsyncCallBack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AJAX\CalculatorService.asmx.cs">
+      <DependentUpon>CalculatorService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AJAX\calExtender.aspx.cs">
+      <DependentUpon>calExtender.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AJAX\calExtender.aspx.designer.cs">
+      <DependentUpon>calExtender.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AJAX\CompletionCheck.aspx.cs">
+      <DependentUpon>CompletionCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AJAX\CompletionCheck.aspx.designer.cs">
+      <DependentUpon>CompletionCheck.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AJAX\Demo.aspx.cs">
       <DependentUpon>Demo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AJAX\Demo.aspx.designer.cs">
       <DependentUpon>Demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AJAX\GetProducts.asmx.cs">
+      <DependentUpon>GetProducts.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AJAX\timerControl.aspx.cs">
+      <DependentUpon>timerControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AJAX\timerControl.aspx.designer.cs">
+      <DependentUpon>timerControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AJAX\updateProgessDemo.aspx.cs">
+      <DependentUpon>updateProgessDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AJAX\updateProgessDemo.aspx.designer.cs">
+      <DependentUpon>updateProgessDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AJAX\userNameCheck.aspx.cs">
+      <DependentUpon>userNameCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AJAX\userNameCheck.aspx.designer.cs">
+      <DependentUpon>userNameCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AJAX\WebServiceDemo.aspx.cs">
+      <DependentUpon>WebServiceDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AJAX\WebServiceDemo.aspx.designer.cs">
+      <DependentUpon>WebServiceDemo.aspx</DependentUpon>
     </Compile>
     <Compile Include="ASPNetClass.aspx.cs">
       <DependentUpon>ASPNetClass.aspx</DependentUpon>
@@ -305,6 +423,20 @@
     </Compile>
     <Compile Include="Assignments\Naveen\UserControl\w3schools.ascx.designer.cs">
       <DependentUpon>w3schools.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Assignments\Naveen\Web Services\GetCities.aspx.cs">
+      <DependentUpon>GetCities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Naveen\Web Services\GetCities.aspx.designer.cs">
+      <DependentUpon>GetCities.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assignments\Naveen\Web Services\SendSMS.aspx.cs">
+      <DependentUpon>SendSMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Naveen\Web Services\SendSMS.aspx.designer.cs">
+      <DependentUpon>SendSMS.aspx</DependentUpon>
     </Compile>
     <Compile Include="Assignments\Naveen\WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
@@ -480,6 +612,13 @@
     <Compile Include="dataControls\XMLDataSourceDemo.aspx.designer.cs">
       <DependentUpon>XMLDataSourceDemo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="dynamicAddition.aspx.cs">
       <DependentUpon>dynamicAddition.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -545,6 +684,11 @@
       <DependentUpon>PageToAccessUCvalue.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Session.aspx.cs">
       <DependentUpon>Session.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -594,6 +738,26 @@
     <Compile Include="ViewState.aspx.designer.cs">
       <DependentUpon>ViewState.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Web References\calculator\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MyCalc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\net.webservicex.www\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\weatherwebservicedemo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="yahooRegistration.aspx.cs">
       <DependentUpon>yahooRegistration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -619,6 +783,7 @@
     <Content Include="Web.sitemap">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="Web References\calculator\CalculatorService.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
@@ -626,18 +791,66 @@
       <Name>BusinessLogic</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:1285/CalculatorService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MyCalc\</RelPath>
+      <UpdateFromURL>http://localhost:1285/CalculatorService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>AspNetTrainingClasses_MyCalc_CalculatorService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:49340/AJAX/CalculatorService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\calculator\</RelPath>
+      <UpdateFromURL>http://localhost:49340/AJAX/CalculatorService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>AspNetTrainingClasses_calculator_CalculatorService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.webservicex.net/globalweather.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\weatherwebservicedemo\</RelPath>
+      <UpdateFromURL>http://www.webservicex.net/globalweather.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>AspNetTrainingClasses_weatherwebservicedemo_GlobalWeather</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.webservicex.net/weatherforecast.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\net.webservicex.www\</RelPath>
+      <UpdateFromURL>http://www.webservicex.net/weatherforecast.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>AspNetTrainingClasses_net_webservicex_www_WeatherForecast</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49340</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>
-          </IISUrl>
+          <IISUrl>http://localhost/AspNetTrainingClasses</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

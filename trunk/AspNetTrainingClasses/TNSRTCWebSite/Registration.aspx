@@ -33,9 +33,10 @@
         {
             height: 780px;
             width: 752px;
-            margin: 0px 300px 0px 350px;
+            margin: 0px 300px 0px 300px;
             border: 1px ridge orange;
             background-color: #E6E6FA;
+            
         }
         .topimage
         {
@@ -52,21 +53,18 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="body">
-        <h2>
-            <span>
-                <asp:Label ID="lblMessage" ForeColor="Green" runat="server" Visible="false" Text="Registration Successfull"></asp:Label></span></h2>
-        <br />
+   <div class="body">
         <span>
-            <asp:HyperLink ID="hlClickHere" runat="server" NavigateUrl="~/LoginPage.aspx" Visible="false"
-                Text="Click Here to login"></asp:HyperLink></span>
-        <br />
+            <asp:Label ID="lblMessage" ForeColor="Green" runat="server" Visible="false" Text="Registration Successfull"></asp:Label>
+        </span>
+        <span>
+            <asp:HyperLink ID="hlClickHere" runat="server" NavigateUrl="~/LoginPage.aspx" Visible="false" Text="Click Here to login"></asp:HyperLink></span>
         <div class="topimage">
-            <div style="height: 50px; font-family: @FangSong; color: Orange; font-size: large;
+            <div style="height: 20px; font-family: @FangSong; color: Orange; font-size: large;
                 font-weight: bolder">
                 Registration
             </div>
-            <div style="height: 60px">
+            <div style="height: 30px">
                 &nbsp;
             </div>
             <table class="style1">
@@ -82,15 +80,17 @@
                                 </td>
                                 <td>
                                     <span>
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtuName" SetFocusOnError="true"
-                                            ForeColor="Red" ErrorMessage="Enter your name." runat="Server" Display="Dynamic">
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtuName"
+                                            SetFocusOnError="true" ForeColor="Red" ErrorMessage="Enter your name." runat="Server"
+                                            Display="Dynamic">
                                         </asp:RequiredFieldValidator>
                                     </span>
                                 </td>
                                 <td>
                                     <span>
-                                        <asp:RegularExpressionValidator ID="revName" runat="server" ControlToValidate="txtuName" SetFocusOnError="true"
-                                            ForeColor="Red" ErrorMessage="Please enter only alphabet" ValidationExpression="[a-z]" Display="Dynamic"></asp:RegularExpressionValidator>
+                                        <asp:RegularExpressionValidator ID="revName" runat="server" ControlToValidate="txtuName"
+                                            SetFocusOnError="true" ForeColor="Red" ErrorMessage="Please enter only alphabet"
+                                            ValidationExpression="[a-z]" Display="Dynamic"></asp:RegularExpressionValidator>
                                     </span>
                                 </td>
                             </tr>
