@@ -39,6 +39,8 @@ Project("{C8D11400-126E-41CD-887F-60BD40844F9E}") = "TNSRTCdb", "TNSRTCdb\TNSRTC
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "TNSRTCmodel", "TNSRTCmodel\TNSRTCmodel.modelproj", "{EAE35C84-EED5-4553-BEA3-A482AD8E030E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TNSRTCWebServices", "TNSRTCWebServices\TNSRTCWebServices.csproj", "{DCE39634-C067-4A6C-B4F9-1A7380F44B0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,16 @@ Global
 		{EAE35C84-EED5-4553-BEA3-A482AD8E030E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{EAE35C84-EED5-4553-BEA3-A482AD8E030E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{EAE35C84-EED5-4553-BEA3-A482AD8E030E}.Release|x86.ActiveCfg = Release|Any CPU
+		{DCE39634-C067-4A6C-B4F9-1A7380F44B0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCE39634-C067-4A6C-B4F9-1A7380F44B0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCE39634-C067-4A6C-B4F9-1A7380F44B0B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{DCE39634-C067-4A6C-B4F9-1A7380F44B0B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{DCE39634-C067-4A6C-B4F9-1A7380F44B0B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DCE39634-C067-4A6C-B4F9-1A7380F44B0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCE39634-C067-4A6C-B4F9-1A7380F44B0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCE39634-C067-4A6C-B4F9-1A7380F44B0B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{DCE39634-C067-4A6C-B4F9-1A7380F44B0B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{DCE39634-C067-4A6C-B4F9-1A7380F44B0B}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

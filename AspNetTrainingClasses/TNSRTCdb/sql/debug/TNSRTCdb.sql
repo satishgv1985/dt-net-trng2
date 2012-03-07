@@ -67,6 +67,20 @@ GO
 */
 
 GO
+PRINT N'Creating [dbo].[tblbusService]...';
+
+
+GO
+CREATE TABLE [dbo].[tblbusService] (
+    [busId]        INT         NOT NULL,
+    [busserviceNo] INT         NULL,
+    [fromplaceID]  INT         NULL,
+    [toplaceID]    INT         NULL,
+    [busType]      VARCHAR (1) NULL
+);
+
+
+GO
 /*
 Post-Deployment Script Template							
 --------------------------------------------------------------------------------------
@@ -79,6 +93,7 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 
+IF NOT EXISTS(SELECT * FROM tblUser WHERE roleId=0)
 INSERT INTO tblUser([userName]
            ,[password]
            ,[firstName], roleId)

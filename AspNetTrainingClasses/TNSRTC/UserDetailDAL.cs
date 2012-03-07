@@ -10,30 +10,30 @@ namespace TNSRTC
 {
     public class UserDetailDAL
     {
-        public static bool ValidateUser(UserDetail ud, int i)
-        {
-            //pass the username, password to the db to validate the user
+        //public static bool ValidateUser(UserDetail ud, int i)
+        //{
+        //    //pass the username, password to the db to validate the user
 
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = ConfigurationManager.ConnectionStrings["TNSRTCConnectionString"].ConnectionString;
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            string query = "SELECT [userId], [userName], [password], [firstName], [lastName] FROM [tblUser] WHERE (([userName] = {0}) AND ([password] = {1}) ";
-            query = String.Format(query, ud.Username, ud.Password);
-            cmd.CommandText = query;
-            con.Open();
-            SqlDataReader sdr = cmd.ExecuteReader();
+        //    SqlConnection con = new SqlConnection();
+        //    con.ConnectionString = ConfigurationManager.ConnectionStrings["TNSRTCConnectionString"].ConnectionString;
+        //    SqlCommand cmd = new SqlCommand();
+        //    cmd.Connection = con;
+        //    string query = "SELECT [userId], [userName], [password], [firstName], [lastName] FROM [tblUser] WHERE (([userName] = {0}) AND ([password] = {1}) ";
+        //    query = String.Format(query, ud.Username, ud.Password);
+        //    cmd.CommandText = query;
+        //    con.Open();
+        //    SqlDataReader sdr = cmd.ExecuteReader();
 
-            if (sdr.Read())
-            {
-                con.Close();
-                return true;
-            }
-            con.Close();
-            return false;
+        //    if (sdr.Read())
+        //    {
+        //        con.Close();
+        //        return true;
+        //    }
+        //    con.Close();
+        //    return false;
 
 
-        }
+        //}
 
         public static UserDetail ValidateUser(UserDetail ud)
         {

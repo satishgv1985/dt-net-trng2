@@ -14,11 +14,11 @@ namespace TNSRTCWebSite
         {
             System.Threading.Thread.Sleep(8000);
             UserDetail ud = (UserDetail)Session["userDetails"];
-            if (ud.RoleId != 0)
+            if (ud.RoleId != 1)
             {
                 Response.Redirect("user/WelcomeUser.aspx");
             }
-            else if (ud.RoleId == 0)
+            else if (ud.RoleId == 1)
                 Response.Redirect("Admin/ManageBus.aspx");
 
         }

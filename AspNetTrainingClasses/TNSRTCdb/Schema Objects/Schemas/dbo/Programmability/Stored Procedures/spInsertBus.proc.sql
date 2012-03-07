@@ -9,5 +9,5 @@ CREATE PROCEDURE spInsertBus
 AS
 BEGIN
 	INSERT INTO tblBus(BusTypeId, BusName, SeatingCapacity)
-		   VALUES(@BusTypeId,@BusName,@Capcity)
+		   VALUES(@BusTypeId,@BusName,@Capacity)
 END
