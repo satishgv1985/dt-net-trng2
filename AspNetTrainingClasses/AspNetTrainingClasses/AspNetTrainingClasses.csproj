@@ -275,6 +275,7 @@
     <Compile Include="AJAX\accordTabs.aspx.designer.cs">
       <DependentUpon>accordTabs.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AJAX\AjaxControlToolkit.cs" />
     <Compile Include="AJAX\AsyncCallBack.aspx.cs">
       <DependentUpon>AsyncCallBack.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
