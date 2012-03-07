@@ -14,7 +14,7 @@
 			<Metadata Name="CompatibilityMode" Value="90" />
 		</CustomData>
 		<CustomData Category="Permissions" Type="XmlPermissions">
-			<Metadata Name="FileName" Value="C:\DOCUMENTS AND SETTINGS\COMPLEX\DESKTOP\DT-NET-TRNG2\ASPNETTRAININGCLASSES\TNSRTCDB\PROPERTIES\DATABASE.SQLPERMISSIONS" />
+			<Metadata Name="FileName" Value="C:\DOCUMENTS AND SETTINGS\SRINI\DESKTOP\DT-NET-TRNG2\TNSRTCDB\PROPERTIES\DATABASE.SQLPERMISSIONS" />
 		</CustomData>
 	</Header>
 	<Model>
@@ -109,6 +109,52 @@ END]]></Value>
 				<Property Name="HeaderContents" Value="--IF EXISTS(SELECT * FROM sys.objects WHERE type='p' and name='_ProcedureName')&#xD;&#xA;--DROP PROCEDURE _ProcedureName&#xD;&#xA;--GO&#xD;&#xA;&#xD;&#xA;-- =============================================&#xD;&#xA;-- Author:&#x9;&#x9;&lt;Author,,Name&gt;&#xD;&#xA;-- Create date: &lt;Create Date,,&gt;&#xD;&#xA;-- Description:&#x9;&lt;Description,,&gt;&#xD;&#xA;-- =============================================&#xD;&#xA;CREATE PROCEDURE _ProcedureName&#xD;&#xA;&#x9;-- Add the parameters for the stored procedure here&#xD;&#xA;&#x9;@param int&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
+		<Element Type="ISql90Procedure" Name="[dbo].[spDeleteBooking]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	DELETE FROM tblBooking where BookingId = @BookingId]]></Value>
+			</Property>
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblBooking]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[BookingId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spDeleteBooking].[@BookingId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Owner">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spDeleteBooking].[@BookingId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="116" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spDeleteBooking]&#xD;&#xA;&#x9;@BookingId int &#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
 		<Element Type="ISql90Procedure" Name="[dbo].[spDeleteBus]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Property Name="BodyScript">
@@ -199,6 +245,391 @@ END]]></Value>
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spDeletePlace]&#xD;&#xA;&#x9;@placeId int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="ISql90Procedure" Name="[dbo].[spInsertBooking]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	INSERT INTO tblBooking(
+	UserID ,
+	ServiceID ,
+	AmtPerTkt ,
+	NoofTkts ,
+	TotalAmt ,
+	PaymentType ,
+	ChequeNo ,
+	Chequedate ,
+	BankName ,
+	DateOfBooking ,
+	PlaceofBooking ,
+	BoardingPoint ,
+	ReservationUpto ,
+	Passenger1Name ,
+	Passenger1ContactNo)
+	VALUES
+	(
+	@UserID ,
+	@ServiceID,
+	@AmtPerTkt,
+	@NoofTkts,
+	@TotalAmt,
+	@PaymentType,
+	@ChequeNo,
+	@Chequedate,
+	@BankName,
+	@DateOfBooking,
+	@PlaceofBooking,
+	@BoardingPoint,
+	@ReservationUpto,
+	@Passenger1Name,
+	@Passenger1ContactNo
+    )]]></Value>
+			</Property>
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblBooking]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[UserID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[ServiceID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[AmtPerTkt]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[NoofTkts]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[TotalAmt]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[PaymentType]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[ChequeNo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[Chequedate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[BankName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[DateOfBooking]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[PlaceofBooking]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[BoardingPoint]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[ReservationUpto]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[Passenger1Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[Passenger1ContactNo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertBooking].[@UserID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertBooking].[@ServiceID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertBooking].[@AmtPerTkt]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertBooking].[@NoofTkts]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertBooking].[@TotalAmt]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertBooking].[@PaymentType]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertBooking].[@ChequeNo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertBooking].[@Chequedate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertBooking].[@BankName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertBooking].[@DateOfBooking]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertBooking].[@PlaceofBooking]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertBooking].[@BoardingPoint]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertBooking].[@ReservationUpto]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertBooking].[@Passenger1Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertBooking].[@Passenger1ContactNo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Owner">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spInsertBooking].[@UserID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spInsertBooking].[@ServiceID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spInsertBooking].[@AmtPerTkt]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Scale" Value="4" />
+									<Property Name="Precision" Value="14" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[numeric]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spInsertBooking].[@NoofTkts]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spInsertBooking].[@TotalAmt]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Scale" Value="4" />
+									<Property Name="Precision" Value="14" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[numeric]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spInsertBooking].[@PaymentType]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spInsertBooking].[@ChequeNo]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spInsertBooking].[@Chequedate]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spInsertBooking].[@BankName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spInsertBooking].[@DateOfBooking]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spInsertBooking].[@PlaceofBooking]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spInsertBooking].[@BoardingPoint]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spInsertBooking].[@ReservationUpto]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spInsertBooking].[@Passenger1Name]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spInsertBooking].[@Passenger1ContactNo]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="978" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spInsertBooking]&#xD;&#xA;&#x9;@UserID int ,&#xD;&#xA;&#x9;@ServiceID int ,&#xD;&#xA;&#x9;@AmtPerTkt numeric(14,4) ,&#xD;&#xA;&#x9;@NoofTkts int ,&#xD;&#xA;&#x9;@TotalAmt numeric(14,4) ,&#xD;&#xA;&#x9;@PaymentType varchar(50) , &#xD;&#xA;&#x9;@ChequeNo varchar(50) ,&#xD;&#xA;&#x9;@Chequedate DateTime ,&#xD;&#xA;&#x9;@BankName varchar(50) ,&#xD;&#xA;&#x9;@DateOfBooking DateTime ,&#xD;&#xA;&#x9;@PlaceofBooking varchar(50) ,&#xD;&#xA;&#x9;@BoardingPoint varchar(50) ,&#xD;&#xA;&#x9;@ReservationUpto varchar(50) ,&#xD;&#xA;&#x9;@Passenger1Name varchar(50) ,&#xD;&#xA;&#x9;@Passenger1ContactNo varchar(10) &#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
 		<Element Type="ISql90Procedure" Name="[dbo].[spInsertBus]">
@@ -440,6 +871,395 @@ END]]></Value>
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="--IF EXISTS(SELECT * FROM sys.objects WHERE type='p' and name='spInsertUser')&#xD;&#xA;--DROP PROCEDURE spInsertUser&#xD;&#xA;--GO&#xD;&#xA;CREATE PROCEDURE spInsertUser&#xD;&#xA;&#x9;@userName varchar(50), &#xD;&#xA;&#x9;@password varchar(50),&#xD;&#xA;&#x9;@firstName varchar(50)&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="ISql90Procedure" Name="[dbo].[spUpdateBooking]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	UPDATE tblBooking Set 
+	UserID = @UserID,
+	ServiceID = @ServiceID,
+	AmtPerTkt = @AmtPerTkt,
+	NoofTkts = @NoofTkts,
+	TotalAmt = @TotalAmt,
+	PaymentType = @PaymentType,
+	ChequeNo = @ChequeNo,
+	Chequedate = @Chequedate,
+	BankName = @BankName,
+	DateOfBooking = @DateOfBooking,
+	PlaceofBooking = @PlaceofBooking,
+	BoardingPoint = @BoardingPoint,
+	ReservationUpto = @ReservationUpto,
+	Passenger1Name = @Passenger1Name,
+	Passenger1ContactNo = @Passenger1ContactNo
+	WHERE BookingId = @BookingId]]></Value>
+			</Property>
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[tblBooking]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[UserID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateBooking].[@UserID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[ServiceID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateBooking].[@ServiceID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[AmtPerTkt]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateBooking].[@AmtPerTkt]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[NoofTkts]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateBooking].[@NoofTkts]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[TotalAmt]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateBooking].[@TotalAmt]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[PaymentType]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateBooking].[@PaymentType]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[ChequeNo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateBooking].[@ChequeNo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[Chequedate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateBooking].[@Chequedate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[BankName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateBooking].[@BankName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[DateOfBooking]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateBooking].[@DateOfBooking]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[PlaceofBooking]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateBooking].[@PlaceofBooking]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[BoardingPoint]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateBooking].[@BoardingPoint]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[ReservationUpto]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateBooking].[@ReservationUpto]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[Passenger1Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateBooking].[@Passenger1Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[Passenger1ContactNo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateBooking].[@Passenger1ContactNo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[tblBooking].[BookingId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateBooking].[@BookingId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Owner">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spUpdateBooking].[@BookingId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spUpdateBooking].[@UserID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spUpdateBooking].[@ServiceID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spUpdateBooking].[@AmtPerTkt]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Scale" Value="4" />
+									<Property Name="Precision" Value="14" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[numeric]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spUpdateBooking].[@NoofTkts]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spUpdateBooking].[@TotalAmt]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Scale" Value="4" />
+									<Property Name="Precision" Value="14" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[numeric]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spUpdateBooking].[@PaymentType]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spUpdateBooking].[@ChequeNo]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spUpdateBooking].[@Chequedate]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spUpdateBooking].[@BankName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spUpdateBooking].[@DateOfBooking]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spUpdateBooking].[@PlaceofBooking]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spUpdateBooking].[@BoardingPoint]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spUpdateBooking].[@ReservationUpto]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spUpdateBooking].[@Passenger1Name]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="ISqlSubroutineParameter" Name="[dbo].[spUpdateBooking].[@Passenger1ContactNo]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="ISql90TypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="976" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUpdateBooking]&#xD;&#xA;&#x9;@BookingId int,&#xD;&#xA;&#x9;@UserID int ,&#xD;&#xA;&#x9;@ServiceID int ,&#xD;&#xA;&#x9;@AmtPerTkt numeric(14,4) ,&#xD;&#xA;&#x9;@NoofTkts int ,&#xD;&#xA;&#x9;@TotalAmt numeric(14,4) ,&#xD;&#xA;&#x9;@PaymentType varchar(50) , &#xD;&#xA;&#x9;@ChequeNo varchar(50) ,&#xD;&#xA;&#x9;@Chequedate DateTime ,&#xD;&#xA;&#x9;@BankName varchar(50) ,&#xD;&#xA;&#x9;@DateOfBooking DateTime ,&#xD;&#xA;&#x9;@PlaceofBooking varchar(50) ,&#xD;&#xA;&#x9;@BoardingPoint varchar(50) ,&#xD;&#xA;&#x9;@ReservationUpto varchar(50) ,&#xD;&#xA;&#x9;@Passenger1Name varchar(50) ,&#xD;&#xA;&#x9;@Passenger1ContactNo varchar(10) &#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
 		<Element Type="ISql90Procedure" Name="[dbo].[spUpdateBus]">

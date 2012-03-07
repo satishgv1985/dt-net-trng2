@@ -1,0 +1,35 @@
+﻿CREATE PROCEDURE [dbo].[spUpdateBooking]
+	@BookingId int,
+	@UserID int ,
+	@ServiceID int ,
+	@AmtPerTkt numeric(14,4) ,
+	@NoofTkts int ,
+	@TotalAmt numeric(14,4) ,
+	@PaymentType varchar(50) , 
+	@ChequeNo varchar(50) ,
+	@Chequedate DateTime ,
+	@BankName varchar(50) ,
+	@DateOfBooking DateTime ,
+	@PlaceofBooking varchar(50) ,
+	@BoardingPoint varchar(50) ,
+	@ReservationUpto varchar(50) ,
+	@Passenger1Name varchar(50) ,
+	@Passenger1ContactNo varchar(10) 
+AS
+	UPDATE tblBooking Set 
+	UserID = @UserID,
+	ServiceID = @ServiceID,
+	AmtPerTkt = @AmtPerTkt,
+	NoofTkts = @NoofTkts,
+	TotalAmt = @TotalAmt,
+	PaymentType = @PaymentType,
+	ChequeNo = @ChequeNo,
+	Chequedate = @Chequedate,
+	BankName = @BankName,
+	DateOfBooking = @DateOfBooking,
+	PlaceofBooking = @PlaceofBooking,
+	BoardingPoint = @BoardingPoint,
+	ReservationUpto = @ReservationUpto,
+	Passenger1Name = @Passenger1Name,
+	Passenger1ContactNo = @Passenger1ContactNo
+	WHERE BookingId = @BookingId
