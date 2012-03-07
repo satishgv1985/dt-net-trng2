@@ -1,0 +1,51 @@
+﻿CREATE PROCEDURE [dbo].[spInsertBooking]
+	@UserID int ,
+	@ServiceID int ,
+	@AmtPerTkt numeric(14,4) ,
+	@NoofTkts int ,
+	@TotalAmt numeric(14,4) ,
+	@PaymentType varchar(50) , 
+	@ChequeNo varchar(50) ,
+	@Chequedate DateTime ,
+	@BankName varchar(50) ,
+	@DateOfBooking DateTime ,
+	@PlaceofBooking varchar(50) ,
+	@BoardingPoint varchar(50) ,
+	@ReservationUpto varchar(50) ,
+	@Passenger1Name varchar(50) ,
+	@Passenger1ContactNo varchar(10) 
+AS
+	INSERT INTO tblBooking(
+	UserID ,
+	ServiceID ,
+	AmtPerTkt ,
+	NoofTkts ,
+	TotalAmt ,
+	PaymentType ,
+	ChequeNo ,
+	Chequedate ,
+	BankName ,
+	DateOfBooking ,
+	PlaceofBooking ,
+	BoardingPoint ,
+	ReservationUpto ,
+	Passenger1Name ,
+	Passenger1ContactNo)
+	VALUES
+	(
+	@UserID ,
+	@ServiceID,
+	@AmtPerTkt,
+	@NoofTkts,
+	@TotalAmt,
+	@PaymentType,
+	@ChequeNo,
+	@Chequedate,
+	@BankName,
+	@DateOfBooking,
+	@PlaceofBooking,
+	@BoardingPoint,
+	@ReservationUpto,
+	@Passenger1Name,
+	@Passenger1ContactNo
+    )
