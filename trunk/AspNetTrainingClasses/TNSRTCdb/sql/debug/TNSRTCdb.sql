@@ -67,19 +67,136 @@ GO
 */
 
 GO
-PRINT N'Creating [dbo].[tblbusService]...';
+PRINT N'Creating [dbo].[tblBooking]...';
 
 
 GO
-CREATE TABLE [dbo].[tblbusService] (
-    [busId]        INT         NOT NULL,
-    [busserviceNo] INT         NULL,
-    [fromplaceID]  INT         NULL,
-    [toplaceID]    INT         NULL,
-    [busType]      VARCHAR (1) NULL
+CREATE TABLE [dbo].[tblBooking] (
+    [BookingId]           INT             IDENTITY (1, 1) NOT NULL,
+    [UserID]              INT             NULL,
+    [ServiceID]           INT             NULL,
+    [AmtPerTkt]           NUMERIC (14, 4) NULL,
+    [NoofTkts]            INT             NULL,
+    [TotalAmt]            NUMERIC (14, 4) NULL,
+    [PaymentType]         VARCHAR (50)    NULL,
+    [ChequeNo]            VARCHAR (50)    NULL,
+    [Chequedate]          DATETIME        NULL,
+    [BankName]            VARCHAR (50)    NULL,
+    [DateOfBooking]       DATETIME        NULL,
+    [PlaceofBooking]      VARCHAR (50)    NULL,
+    [BoardingPoint]       VARCHAR (50)    NULL,
+    [ReservationUpto]     VARCHAR (50)    NULL,
+    [Passenger1Name]      VARCHAR (50)    NULL,
+    [Passenger1ContactNo] VARCHAR (10)    NULL
 );
 
 
+GO
+PRINT N'Creating [dbo].[tblBus]...';
+
+
+GO
+CREATE TABLE [dbo].[tblBus] (
+    [BusId]           INT          IDENTITY (1, 1) NOT NULL,
+    [BusTypeId]       INT          NULL,
+    [BusName]         VARCHAR (50) NULL,
+    [SeatingCapacity] INT          NULL
+);
+
+
+GO
+PRINT N'Creating [dbo].[tblService]...';
+
+
+GO
+CREATE TABLE [dbo].[tblService] (
+    [ServiceId]   INT IDENTITY (1, 1) NOT NULL,
+    [ServiceNo]   INT NULL,
+    [FromPlaceID] INT NULL,
+    [ToPlaceID]   INT NULL
+);
+
+
+GO
+PRINT N'Creating [dbo].[tblState]...';
+
+
+GO
+CREATE TABLE [dbo].[tblState] (
+    [StateID]     INT          IDENTITY (1, 1) NOT NULL,
+    [StateName]   VARCHAR (50) NULL,
+    [CountryName] VARCHAR (50) NULL
+);
+
+
+GO
+PRINT N'Creating [dbo].[spDeleteBus]...';
+
+
+GO
+CREATE PROCEDURE [dbo].[spDeleteBus]
+	@BusId int
+AS
+	DELETE From tblBus where BusId = @BusId
+GO
+PRINT N'Creating [dbo].[spDeletePlace]...';
+
+
+GO
+CREATE PROCEDURE [dbo].[spDeletePlace]
+	@placeId int
+AS
+	DELETE from tblPlace where placeId = @placeId
+GO
+PRINT N'Creating [dbo].[spInsertBus]...';
+
+
+GO
+--IF EXISTS(SELECT * FROM sys.objects WHERE type='p' and name='spInsertBus')
+--DROP PROCEDURE spInsertBus
+--GO
+CREATE PROCEDURE spInsertBus
+	@BusTypeID int, 
+	@BusName varchar(50),
+	@Capacity int
+
+AS
+BEGIN
+	INSERT INTO tblBus(BusTypeId, BusName, SeatingCapacity)
+		   VALUES(@BusTypeId,@BusName,@Capacity)
+END
+GO
+PRINT N'Creating [dbo].[spInsertPlace]...';
+
+
+GO
+CREATE PROCEDURE [dbo].[spInsertPlace]
+	@placeName varchar(50) 
+AS
+	INSERT INTO tblPlace(placeName, dateModified)
+	Values (@placeName, getdate())
+GO
+PRINT N'Creating [dbo].[spUpdateBus]...';
+
+
+GO
+CREATE PROCEDURE [dbo].[spUpdateBus]
+	@BusId int, @BusTypeId int, @BusName varchar(50), @Capacity int
+AS
+	UPDATE tblBus SET BusTypeId = @BusTypeId, BusName = @BusName,
+	SeatingCapacity = @Capacity
+	Where BusId = @BusId
+GO
+PRINT N'Creating [dbo].[spUpdatePlace]...';
+
+
+GO
+CREATE PROCEDURE [dbo].[spUpdatePlace]
+	@placeId int, 
+	@PlaceName varchar(50)
+AS
+	UPDATE tblPlace SET placeName = @PlaceName, dateModified = GETDATE()
+	WHERE placeId = @placeId
 GO
 /*
 Post-Deployment Script Template							

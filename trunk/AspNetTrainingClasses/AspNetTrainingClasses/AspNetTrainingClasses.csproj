@@ -33,8 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AjaxControlToolkit">
-      <HintPath>E:\software\New folder\AjaxControlToolkit.dll</HintPath>
+    <Reference Include="AjaxControlToolkit, Version=4.1.50508.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -109,6 +110,7 @@
     <Content Include="Assignments\Naveen\googlepagedesign\StyleSheet.css" />
     <Content Include="Assignments\Naveen\TNSRTC\Apsrtcimages.jpg" />
     <Content Include="Assignments\Naveen\TNSRTC\background.jpg" />
+    <Content Include="Assignments\Naveen\TNSRTC\gvbusServiceDemo.aspx" />
     <Content Include="Assignments\Naveen\TNSRTC\Regestration.aspx" />
     <Content Include="Assignments\Naveen\TNSRTC\RegistrationLogoBg.gif" />
     <Content Include="Assignments\Naveen\UserControl\CSS\csspage.aspx" />
@@ -199,6 +201,7 @@
     <Content Include="Global.asax" />
     <Content Include="GoogleImageSearch.htm" />
     <Content Include="gvP.aspx" />
+    <Content Include="gvService.aspx" />
     <Content Include="HtmlClass.htm" />
     <Content Include="HtmlTableswithCSS.htm" />
     <Content Include="images\bgImage1.png" />
@@ -275,7 +278,6 @@
     <Compile Include="AJAX\accordTabs.aspx.designer.cs">
       <DependentUpon>accordTabs.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AJAX\AjaxControlToolkit.cs" />
     <Compile Include="AJAX\AsyncCallBack.aspx.cs">
       <DependentUpon>AsyncCallBack.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -395,6 +397,13 @@
     </Compile>
     <Compile Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\MapsFooter.ascx.designer.cs">
       <DependentUpon>MapsFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Assignments\Naveen\TNSRTC\gvbusServiceDemo.aspx.cs">
+      <DependentUpon>gvbusServiceDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Naveen\TNSRTC\gvbusServiceDemo.aspx.designer.cs">
+      <DependentUpon>gvbusServiceDemo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Assignments\Naveen\TNSRTC\Regestration.aspx.cs">
       <DependentUpon>Regestration.aspx</DependentUpon>
@@ -657,6 +666,13 @@
     </Compile>
     <Compile Include="gvP.aspx.designer.cs">
       <DependentUpon>gvP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gvService.aspx.cs">
+      <DependentUpon>gvService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gvService.aspx.designer.cs">
+      <DependentUpon>gvService.aspx</DependentUpon>
     </Compile>
     <Compile Include="login\loginPage.aspx.cs">
       <DependentUpon>loginPage.aspx</DependentUpon>

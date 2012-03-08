@@ -3,9 +3,21 @@
     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<asp:GridView ID="gvbusService" runat="server" DataSourceID="SqlDataSource1" >
+<asp:GridView ID="gvbusService" runat="server" DataSourceID="busService" 
+        AutoGenerateColumns="False" >
+    <Columns>
+        <asp:BoundField DataField="ServiceId" HeaderText="ServiceId" 
+            InsertVisible="False" ReadOnly="True" SortExpression="ServiceId" />
+        <asp:BoundField DataField="ServiceNo" HeaderText="ServiceNo" 
+            SortExpression="ServiceNo" />
+        <asp:BoundField DataField="FromPlaceID" HeaderText="FromPlaceID" 
+            SortExpression="FromPlaceID" />
+        <asp:BoundField DataField="ToPlaceID" HeaderText="ToPlaceID" 
+            SortExpression="ToPlaceID" />
+    </Columns>
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+    <asp:SqlDataSource ID="busService" runat="server" 
         ConnectionString="<%$ ConnectionStrings:TNSRTCConnectionString %>" 
-        SelectCommand="SELECT [busserviceNo], [fromplaceID], [toplaceID], [busType], [busId] FROM [tblbusService]"></asp:SqlDataSource>
+        SelectCommand="SELECT [ServiceId], [ServiceNo], [FromPlaceID], [ToPlaceID] FROM [tblService]">
+    </asp:SqlDataSource>
 </asp:Content>
