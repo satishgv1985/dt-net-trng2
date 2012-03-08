@@ -7,10 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TNSRTCWebSite.Admin {
+namespace AspNetTrainingClasses.Assignments.Naveen.TNSRTC {
     
     
-    public partial class ManageBus {
+    public partial class gvbusServiceDemo {
+        
+        /// <summary>
+        /// form1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
         /// gvbusService control.
@@ -22,12 +31,12 @@ namespace TNSRTCWebSite.Admin {
         protected global::System.Web.UI.WebControls.GridView gvbusService;
         
         /// <summary>
-        /// busService control.
+        /// gvbusServices control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource busService;
+        protected global::System.Web.UI.WebControls.SqlDataSource gvbusServices;
     }
 }

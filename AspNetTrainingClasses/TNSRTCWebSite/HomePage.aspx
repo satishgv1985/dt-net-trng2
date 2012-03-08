@@ -81,7 +81,7 @@
                     </td>
                     <td class="style2">
                         <asp:DropDownList ID="DropDownList1" runat="server" 
-                            DataSourceID="SqlDataSource1" DataTextField="placeName" 
+                            DataSourceID="placedataSource" DataTextField="placeName" 
                             DataValueField="placeName">
                             <asp:ListItem Value="0">Bangalore</asp:ListItem>
                             <asp:ListItem Value="1">Hyderabad</asp:ListItem>
@@ -90,9 +90,10 @@
                             <asp:ListItem Value="4">Vijayawada</asp:ListItem>
                             <asp:ListItem></asp:ListItem>
                         </asp:DropDownList>
-                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                        <asp:SqlDataSource ID="placedataSource" runat="server" 
                             ConnectionString="<%$ ConnectionStrings:TNSRTCConnectionString %>" 
-                            SelectCommand="SELECT [placeName] FROM [tblPlace]"></asp:SqlDataSource>
+                            SelectCommand="SELECT [placeName] FROM [tblPlace] ORDER BY [placeName]">
+                        </asp:SqlDataSource>
                     </td>
                 </tr>
                 <tr>
@@ -109,6 +110,10 @@
                             <asp:ListItem Value="3">Kurnool</asp:ListItem>
                             <asp:ListItem Value="4">Vijayawada</asp:ListItem>
                         </asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                            ConnectionString="<%$ ConnectionStrings:TNSRTCConnectionString %>" 
+                            SelectCommand="SELECT [placeName] FROM [tblPlace] ORDER BY [placeName]">
+                        </asp:SqlDataSource>
                     </td>
                 </tr>
                 <tr>

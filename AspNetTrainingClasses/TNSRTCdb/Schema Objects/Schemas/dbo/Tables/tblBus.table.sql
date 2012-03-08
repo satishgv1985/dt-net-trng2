@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[tblBus]
+﻿CREATE TABLE [tblBus]
 (
 	BusId int NOT NULL Identity(1,1), 
 	BusTypeId int NULL,
