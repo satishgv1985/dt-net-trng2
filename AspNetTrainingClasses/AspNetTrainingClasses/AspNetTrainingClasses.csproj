@@ -42,6 +42,7 @@
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -108,6 +109,7 @@
     <Content Include="Assignments\Naveen\googlepagedesign\icon.png" />
     <Content Include="Assignments\Naveen\googlepagedesign\settingsicon.jpg" />
     <Content Include="Assignments\Naveen\googlepagedesign\StyleSheet.css" />
+    <Content Include="Assignments\Naveen\GRIDVIEWtoWEBSERVICE.aspx" />
     <Content Include="Assignments\Naveen\TNSRTC\Apsrtcimages.jpg" />
     <Content Include="Assignments\Naveen\TNSRTC\background.jpg" />
     <Content Include="Assignments\Naveen\TNSRTC\gvbusServiceDemo.aspx" />
@@ -117,6 +119,8 @@
     <Content Include="Assignments\Naveen\UserControl\CSS\W3Schools.ascx" />
     <Content Include="Assignments\Naveen\UserControl\w3schools.ascx" />
     <Content Include="Assignments\Naveen\Web Services\GetCities.aspx" />
+    <Content Include="Assignments\Naveen\Web Services\gvfromwebservice.aspx" />
+    <Content Include="Assignments\Naveen\Web Services\gvwebservice.asmx" />
     <Content Include="Assignments\Naveen\Web Services\SendSMS.aspx" />
     <Content Include="Assignments\Naveen\WebForm1.aspx" />
     <Content Include="Assignments\Naveen\Yahoo\Images\bgimg.png" />
@@ -213,6 +217,23 @@
     <Content Include="obj\Debug\AspNetTrainingClasses.dll" />
     <Content Include="obj\Debug\AspNetTrainingClasses.pdb" />
     <Content Include="PageToAccessUCvalue.aspx" />
+    <None Include="Service References\CalcServiceReference\CalculationWCFService.disco" />
+    <None Include="Service References\CalcServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\CalcServiceReference\configuration.svcinfo" />
+    <None Include="Service References\CalcServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CustServiceReference\AspNetTrainingClasses.CustServiceReference.CustomerDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CustServiceReference\CustomerService.disco" />
+    <None Include="Service References\CustServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\CustServiceReference\configuration.svcinfo" />
+    <None Include="Service References\CustServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Session.aspx" />
     <Content Include="SessionRead.aspx" />
     <Content Include="StyleSheet.css" />
@@ -224,7 +245,29 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Service References\CalcServiceReference\CalculationWCFService.wsdl" />
+    <None Include="Service References\CalcServiceReference\CalculationWCFService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CalcServiceReference\CalculationWCFService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustServiceReference\CustomerService.wsdl" />
+    <None Include="Service References\CustServiceReference\CustomerService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustServiceReference\CustomerService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustServiceReference\CustomerService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web References\calculator\CalculatorService.disco" />
+    <None Include="Web References\gridviewfromwebservice\gvwebservice.wsdl" />
+    <None Include="Web References\gridviewfromwebservice\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <None Include="Web References\MyCalc\CalculatorService.disco" />
     <None Include="Web References\net.webservicex.www\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
@@ -232,6 +275,9 @@
     </None>
     <None Include="Web References\net.webservicex.www\weatherforecast.disco" />
     <None Include="Web References\weatherwebservicedemo\globalweather.disco" />
+    <Content Include="wcf\Calculations.aspx" />
+    <Content Include="wcf\GetCustomerDetails.aspx" />
+    <None Include="Web References\gridviewfromwebservice\gvwebservice.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -398,6 +444,13 @@
     <Compile Include="Assignments\Naveen\googlepagedesign\googlepageusingmaster\MapsFooter.ascx.designer.cs">
       <DependentUpon>MapsFooter.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Assignments\Naveen\GRIDVIEWtoWEBSERVICE.aspx.cs">
+      <DependentUpon>GRIDVIEWtoWEBSERVICE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Naveen\GRIDVIEWtoWEBSERVICE.aspx.designer.cs">
+      <DependentUpon>GRIDVIEWtoWEBSERVICE.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Assignments\Naveen\TNSRTC\gvbusServiceDemo.aspx.cs">
       <DependentUpon>gvbusServiceDemo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -440,6 +493,17 @@
     </Compile>
     <Compile Include="Assignments\Naveen\Web Services\GetCities.aspx.designer.cs">
       <DependentUpon>GetCities.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assignments\Naveen\Web Services\gvfromwebservice.aspx.cs">
+      <DependentUpon>gvfromwebservice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assignments\Naveen\Web Services\gvfromwebservice.aspx.designer.cs">
+      <DependentUpon>gvfromwebservice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assignments\Naveen\Web Services\gvwebservice.asmx.cs">
+      <DependentUpon>gvwebservice.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Assignments\Naveen\Web Services\SendSMS.aspx.cs">
       <DependentUpon>SendSMS.aspx</DependentUpon>
@@ -706,6 +770,16 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Service References\CalcServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CustServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Session.aspx.cs">
       <DependentUpon>Session.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -755,7 +829,26 @@
     <Compile Include="ViewState.aspx.designer.cs">
       <DependentUpon>ViewState.aspx</DependentUpon>
     </Compile>
+    <Compile Include="wcf\Calculations.aspx.cs">
+      <DependentUpon>Calculations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wcf\Calculations.aspx.designer.cs">
+      <DependentUpon>Calculations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wcf\GetCustomerDetails.aspx.cs">
+      <DependentUpon>GetCustomerDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wcf\GetCustomerDetails.aspx.designer.cs">
+      <DependentUpon>GetCustomerDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Web References\calculator\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\gridviewfromwebservice\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -812,6 +905,17 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
+    <WebReferenceUrl Include="http://localhost/AspNetTrainingClasses/Assignments/Naveen/Web%2520Services/gvwebservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\gridviewfromwebservice\</RelPath>
+      <UpdateFromURL>http://localhost/AspNetTrainingClasses/Assignments/Naveen/Web%2520Services/gvwebservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>AspNetTrainingClasses_gridviewfromwebservice_gvwebservice</CachedSettingsPropName>
+    </WebReferenceUrl>
     <WebReferenceUrl Include="http://localhost:1285/CalculatorService.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\MyCalc\</RelPath>
@@ -856,6 +960,13 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>AspNetTrainingClasses_net_webservicex_www_WeatherForecast</CachedSettingsPropName>
     </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CalcServiceReference\" />
+    <WCFMetadataStorage Include="Service References\CustServiceReference\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

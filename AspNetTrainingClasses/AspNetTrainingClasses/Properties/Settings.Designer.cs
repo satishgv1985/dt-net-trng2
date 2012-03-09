@@ -72,5 +72,16 @@ namespace AspNetTrainingClasses.Properties {
                 return ((string)(this["AspNetTrainingClasses_SendSMS_SendSMS"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost/AspNetTrainingClasses/Assignments/Naveen/Web%20Services/gvwebser" +
+            "vice.asmx")]
+        public string AspNetTrainingClasses_gridviewfromwebservice_gvwebservice {
+            get {
+                return ((string)(this["AspNetTrainingClasses_gridviewfromwebservice_gvwebservice"]));
+            }
+        }
     }
 }

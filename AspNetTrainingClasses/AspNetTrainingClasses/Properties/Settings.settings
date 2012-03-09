@@ -17,5 +17,8 @@
     <Setting Name="AspNetTrainingClasses_SendSMS_SendSMS" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://www.webservicex.net/SendSMS.asmx</Value>
     </Setting>
+    <Setting Name="AspNetTrainingClasses_gridviewfromwebservice_gvwebservice" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/AspNetTrainingClasses/Assignments/Naveen/Web%20Services/gvwebservice.asmx</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
