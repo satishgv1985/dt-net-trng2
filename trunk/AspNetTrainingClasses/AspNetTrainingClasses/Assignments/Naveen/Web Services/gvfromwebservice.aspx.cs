@@ -7,18 +7,18 @@ using System.Web.UI.WebControls;
 
 namespace AspNetTrainingClasses.Assignments.Naveen.Web_Services
 {
-    public partial class GetCities : System.Web.UI.Page
+    public partial class gvfromwebservice : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void btnSubmit_Click(object sender, EventArgs e)
+        protected void Button1_Click(object sender, EventArgs e)
         {
-           
-            weatherwebservicedemo.GlobalWeather ws = new weatherwebservicedemo.GlobalWeather();
-            txtgetCities.Text=ws.GetCitiesByCountry(txtCountry.Text);
+            gridviewfromwebservice.gvwebservice gvws = new gridviewfromwebservice.gvwebservice();
+            gvwebservices.DataSource=gvws.getProducts();
+            gvwebservices.DataBind();
         }
     }
 }
