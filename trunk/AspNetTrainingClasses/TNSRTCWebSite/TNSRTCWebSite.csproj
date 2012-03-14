@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="AjaxControlToolkit, Version=4.1.50508.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AspNetTrainingClasses\AssembliesShared\AjaxControlToolkit.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
@@ -54,7 +55,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AboutUs.aspx" />
     <Content Include="Admin\ErrorPage.aspx" />
     <Content Include="Admin\ManageBus.aspx" />
     <Content Include="App_Data\ASPNETDB.MDF" />
@@ -63,28 +63,11 @@
     </Content>
     <Content Include="background.jpg" />
     <Content Include="bin\AjaxControlToolkit.dll" />
-    <Content Include="bin\AjaxControlToolkit.pdb" />
-    <Content Include="bin\ar\AjaxControlToolkit.resources.dll" />
-    <Content Include="bin\cs\AjaxControlToolkit.resources.dll" />
-    <Content Include="bin\de\AjaxControlToolkit.resources.dll" />
-    <Content Include="bin\es\AjaxControlToolkit.resources.dll" />
-    <Content Include="bin\fr\AjaxControlToolkit.resources.dll" />
-    <Content Include="bin\he\AjaxControlToolkit.resources.dll" />
-    <Content Include="bin\hi\AjaxControlToolkit.resources.dll" />
-    <Content Include="bin\it\AjaxControlToolkit.resources.dll" />
-    <Content Include="bin\ja\AjaxControlToolkit.resources.dll" />
-    <Content Include="bin\ko\AjaxControlToolkit.resources.dll" />
-    <Content Include="bin\nl\AjaxControlToolkit.resources.dll" />
-    <Content Include="bin\pt\AjaxControlToolkit.resources.dll" />
-    <Content Include="bin\ru\AjaxControlToolkit.resources.dll" />
     <Content Include="bin\TNSRTC.dll" />
     <Content Include="bin\TNSRTC.pdb" />
     <Content Include="bin\TNSRTCWebSite.dll" />
     <Content Include="bin\TNSRTCWebSite.pdb" />
-    <Content Include="bin\tr-TR\AjaxControlToolkit.resources.dll" />
-    <Content Include="bin\zh-CHS\AjaxControlToolkit.resources.dll" />
-    <Content Include="bin\zh-CHT\AjaxControlToolkit.resources.dll" />
-    <Content Include="ContactUs.aspx" />
+    <Content Include="HomePage.aspx" />
     <Content Include="Images\Facebook.png" />
     <Content Include="Images\google.png" />
     <Content Include="Images\Pepsi.jpg" />
@@ -104,23 +87,18 @@
     <Content Include="obj\Release\TNSRTCWebSite.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Release\TNSRTCWebSite.dll" />
     <Content Include="obj\Release\TNSRTCWebSite.pdb" />
-    <Content Include="SearchBus.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="GetPlaces.asmx" />
-    <Content Include="HomePage.aspx" />
     <Content Include="Images\innerbookings.png" />
     <Content Include="LoginPage.aspx" />
     <Content Include="Registration.aspx" />
     <Content Include="RegistrationLogoBg.gif" />
-    <Content Include="shared\footer.ascx" />
-    <Content Include="shared\header.ascx" />
-    <Content Include="user\BookingHistory.aspx" />
-    <Content Include="user\BookTicket.aspx" />
-    <Content Include="user\EditProfile.aspx" />
+    <Content Include="SearchBus.aspx" />
     <Content Include="user\WelcomeUser.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -128,13 +106,6 @@
     <Content Include="WelcomePage.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutUs.aspx.cs">
-      <DependentUpon>AboutUs.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AboutUs.aspx.designer.cs">
-      <DependentUpon>AboutUs.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -156,12 +127,12 @@
     <Compile Include="Admin\ManageBus.aspx.designer.cs">
       <DependentUpon>ManageBus.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ContactUs.aspx.cs">
-      <DependentUpon>ContactUs.aspx</DependentUpon>
+    <Compile Include="HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ContactUs.aspx.designer.cs">
-      <DependentUpon>ContactUs.aspx</DependentUpon>
+    <Compile Include="HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="SearchBus.aspx.cs">
       <DependentUpon>SearchBus.aspx</DependentUpon>
@@ -181,13 +152,6 @@
       <DependentUpon>GetPlaces.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="HomePage.aspx.cs">
-      <DependentUpon>HomePage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HomePage.aspx.designer.cs">
-      <DependentUpon>HomePage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -203,47 +167,12 @@
     <Compile Include="Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
-    <Compile Include="shared\footer.ascx.cs">
-      <DependentUpon>footer.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="shared\footer.ascx.designer.cs">
-      <DependentUpon>footer.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="shared\header.ascx.cs">
-      <DependentUpon>header.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="shared\header.ascx.designer.cs">
-      <DependentUpon>header.ascx</DependentUpon>
-    </Compile>
     <Compile Include="TNSRTCsite.Master.cs">
       <DependentUpon>TNSRTCsite.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="TNSRTCsite.Master.designer.cs">
       <DependentUpon>TNSRTCsite.Master</DependentUpon>
-    </Compile>
-    <Compile Include="user\BookingHistory.aspx.cs">
-      <DependentUpon>BookingHistory.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="user\BookingHistory.aspx.designer.cs">
-      <DependentUpon>BookingHistory.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="user\BookTicket.aspx.cs">
-      <DependentUpon>BookTicket.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="user\BookTicket.aspx.designer.cs">
-      <DependentUpon>BookTicket.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="user\EditProfile.aspx.cs">
-      <DependentUpon>EditProfile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="user\EditProfile.aspx.designer.cs">
-      <DependentUpon>EditProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\WelcomeUser.aspx.cs">
       <DependentUpon>WelcomeUser.aspx</DependentUpon>

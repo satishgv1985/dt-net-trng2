@@ -33,9 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AjaxControlToolkit, Version=4.1.50508.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+    <Reference Include="AjaxControlToolkit, Version=4.1.51116.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+      <HintPath>AssembliesShared\AjaxControlToolkit.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -78,8 +78,10 @@
     <Content Include="AJAX\userNameCheck.aspx" />
     <Content Include="AJAX\WebServiceDemo.aspx" />
     <Content Include="ASPNetClass.aspx" />
+    <Content Include="AspNetTrainingClasses.Publish.xml" />
     <Content Include="aspValidation.aspx" />
     <Content Include="ASPxAction.aspx" />
+    <Content Include="AssembliesShared\AjaxControlToolkit.dll" />
     <Content Include="Assignments\Anupam\gmail_asp_net\bar.bmp" />
     <Content Include="Assignments\Anupam\gmail_asp_net\google_logo_41.png" />
     <Content Include="Assignments\Anupam\gmail_asp_net\more-than.jpg" />
@@ -176,6 +178,9 @@
     <Content Include="bin\AjaxControlToolkit.dll" />
     <Content Include="bin\AspNetTrainingClasses.dll" />
     <Content Include="bin\AspNetTrainingClasses.pdb" />
+    <Content Include="bin\AspNetTrainingClasses.XmlSerializers.dll" />
+    <Content Include="bin\BusinessLogic.dll" />
+    <Content Include="bin\BusinessLogic.pdb" />
     <Content Include="bodyPage.aspx" />
     <Content Include="cache\CacheRead.aspx" />
     <Content Include="cache\CacheStore.aspx" />
