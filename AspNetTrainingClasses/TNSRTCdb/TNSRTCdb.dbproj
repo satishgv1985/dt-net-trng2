@@ -188,8 +188,5 @@
     <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spDeleteBooking.proc.sql">
       <SubType>Code</SubType>
     </Build>
-    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\spBookingHistoryByUserName.proc.sql">
-      <SubType>Code</SubType>
-    </Build>
   </ItemGroup>
 </Project>
