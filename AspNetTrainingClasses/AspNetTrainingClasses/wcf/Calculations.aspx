@@ -11,10 +11,11 @@
         Addition:
         <asp:TextBox ID="txtFirstNo" runat="server"></asp:TextBox>
         +
-        <asp:TextBox ID="txtSecondNo" runat="server"></asp:TextBox><br />
+        <asp:TextBox ID="txtSecondNo" runat="server"></asp:TextBox><br /><br />
         <asp:Button ID="Button1" runat="server" Text="Submit" onclick="Button1_Click" />
-        <br />
-        Answer:<asp:Label ID="lblAnswer" runat="server"></asp:Label>
+        <br /><br />
+        Addition:<asp:Label ID="lblAnswer" runat="server"></asp:Label><br /><br />
+        Subtraction:<asp:Label ID="lblSub" runat="server"></asp:Label>
     </div>
     </form>
 </body>

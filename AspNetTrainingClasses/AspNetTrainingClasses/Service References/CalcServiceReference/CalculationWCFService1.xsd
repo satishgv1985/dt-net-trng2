@@ -25,4 +25,19 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="Subtraction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="x" type="xs:int" />
+        <xs:element minOccurs="0" name="y" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubtractionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SubtractionResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

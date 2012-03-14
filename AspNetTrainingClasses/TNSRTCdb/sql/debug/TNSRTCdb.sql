@@ -67,86 +67,61 @@ GO
 */
 
 GO
-PRINT N'Creating [dbo].[tblBooking]...';
+PRINT N'Creating [dbo].[spInsertBooking]...';
 
 
 GO
-CREATE TABLE [dbo].[tblBooking] (
-    [BookingId]           INT             IDENTITY (1, 1) NOT NULL,
-    [UserID]              INT             NULL,
-    [ServiceID]           INT             NULL,
-    [AmtPerTkt]           NUMERIC (14, 4) NULL,
-    [NoofTkts]            INT             NULL,
-    [TotalAmt]            NUMERIC (14, 4) NULL,
-    [PaymentType]         VARCHAR (50)    NULL,
-    [ChequeNo]            VARCHAR (50)    NULL,
-    [Chequedate]          DATETIME        NULL,
-    [BankName]            VARCHAR (50)    NULL,
-    [DateOfBooking]       DATETIME        NULL,
-    [PlaceofBooking]      VARCHAR (50)    NULL,
-    [BoardingPoint]       VARCHAR (50)    NULL,
-    [ReservationUpto]     VARCHAR (50)    NULL,
-    [Passenger1Name]      VARCHAR (50)    NULL,
-    [Passenger1ContactNo] VARCHAR (10)    NULL
-);
-
-
-GO
-PRINT N'Creating [dbo].[tblBus]...';
-
-
-GO
-CREATE TABLE [dbo].[tblBus] (
-    [BusId]           INT          IDENTITY (1, 1) NOT NULL,
-    [BusTypeId]       INT          NULL,
-    [BusName]         VARCHAR (50) NULL,
-    [SeatingCapacity] INT          NULL
-);
-
-
-GO
-PRINT N'Creating [dbo].[tblService]...';
-
-
-GO
-CREATE TABLE [dbo].[tblService] (
-    [ServiceId]   INT IDENTITY (1, 1) NOT NULL,
-    [ServiceNo]   INT NULL,
-    [FromPlaceID] INT NULL,
-    [ToPlaceID]   INT NULL
-);
-
-
-GO
-PRINT N'Creating [dbo].[tblState]...';
-
-
-GO
-CREATE TABLE [dbo].[tblState] (
-    [StateID]     INT          IDENTITY (1, 1) NOT NULL,
-    [StateName]   VARCHAR (50) NULL,
-    [CountryName] VARCHAR (50) NULL
-);
-
-
-GO
-PRINT N'Creating [dbo].[spDeleteBus]...';
-
-
-GO
-CREATE PROCEDURE [dbo].[spDeleteBus]
-	@BusId int
+CREATE PROCEDURE [dbo].[spInsertBooking]
+	@UserID int ,
+	@ServiceID int ,
+	@AmtPerTkt numeric(14,4) ,
+	@NoofTkts int ,
+	@TotalAmt numeric(14,4) ,
+	@PaymentType varchar(50) , 
+	@ChequeNo varchar(50) ,
+	@Chequedate DateTime ,
+	@BankName varchar(50) ,
+	@DateOfBooking DateTime ,
+	@PlaceofBooking varchar(50) ,
+	@BoardingPoint varchar(50) ,
+	@ReservationUpto varchar(50) ,
+	@Passenger1Name varchar(50) ,
+	@Passenger1ContactNo varchar(10) 
 AS
-	DELETE From tblBus where BusId = @BusId
-GO
-PRINT N'Creating [dbo].[spDeletePlace]...';
-
-
-GO
-CREATE PROCEDURE [dbo].[spDeletePlace]
-	@placeId int
-AS
-	DELETE from tblPlace where placeId = @placeId
+	INSERT INTO tblBooking(
+	UserID ,
+	ServiceID ,
+	AmtPerTkt ,
+	NoofTkts ,
+	TotalAmt ,
+	PaymentType ,
+	ChequeNo ,
+	Chequedate ,
+	BankName ,
+	DateOfBooking ,
+	PlaceofBooking ,
+	BoardingPoint ,
+	ReservationUpto ,
+	Passenger1Name ,
+	Passenger1ContactNo)
+	VALUES
+	(
+	@UserID ,
+	@ServiceID,
+	@AmtPerTkt,
+	@NoofTkts,
+	@TotalAmt,
+	@PaymentType,
+	@ChequeNo,
+	@Chequedate,
+	@BankName,
+	@DateOfBooking,
+	@PlaceofBooking,
+	@BoardingPoint,
+	@ReservationUpto,
+	@Passenger1Name,
+	@Passenger1ContactNo
+    )
 GO
 PRINT N'Creating [dbo].[spInsertBus]...';
 
@@ -175,6 +150,46 @@ CREATE PROCEDURE [dbo].[spInsertPlace]
 AS
 	INSERT INTO tblPlace(placeName, dateModified)
 	Values (@placeName, getdate())
+GO
+PRINT N'Creating [dbo].[spUpdateBooking]...';
+
+
+GO
+CREATE PROCEDURE [dbo].[spUpdateBooking]
+	@BookingId int,
+	@UserID int ,
+	@ServiceID int ,
+	@AmtPerTkt numeric(14,4) ,
+	@NoofTkts int ,
+	@TotalAmt numeric(14,4) ,
+	@PaymentType varchar(50) , 
+	@ChequeNo varchar(50) ,
+	@Chequedate DateTime ,
+	@BankName varchar(50) ,
+	@DateOfBooking DateTime ,
+	@PlaceofBooking varchar(50) ,
+	@BoardingPoint varchar(50) ,
+	@ReservationUpto varchar(50) ,
+	@Passenger1Name varchar(50) ,
+	@Passenger1ContactNo varchar(10) 
+AS
+	UPDATE tblBooking Set 
+	UserID = @UserID,
+	ServiceID = @ServiceID,
+	AmtPerTkt = @AmtPerTkt,
+	NoofTkts = @NoofTkts,
+	TotalAmt = @TotalAmt,
+	PaymentType = @PaymentType,
+	ChequeNo = @ChequeNo,
+	Chequedate = @Chequedate,
+	BankName = @BankName,
+	DateOfBooking = @DateOfBooking,
+	PlaceofBooking = @PlaceofBooking,
+	BoardingPoint = @BoardingPoint,
+	ReservationUpto = @ReservationUpto,
+	Passenger1Name = @Passenger1Name,
+	Passenger1ContactNo = @Passenger1ContactNo
+	WHERE BookingId = @BookingId
 GO
 PRINT N'Creating [dbo].[spUpdateBus]...';
 

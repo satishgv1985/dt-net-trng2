@@ -20,6 +20,9 @@ namespace AspNetTrainingClasses.CalcServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculationWCFService/Addition", ReplyAction="http://tempuri.org/ICalculationWCFService/AdditionResponse")]
         double Addition(double a, double b);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalculationWCFService/Subtraction", ReplyAction="http://tempuri.org/ICalculationWCFService/SubtractionResponse")]
+        int Subtraction(int x, int y);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,6 +58,10 @@ namespace AspNetTrainingClasses.CalcServiceReference {
         
         public double Addition(double a, double b) {
             return base.Channel.Addition(a, b);
+        }
+        
+        public int Subtraction(int x, int y) {
+            return base.Channel.Subtraction(x, y);
         }
     }
 }

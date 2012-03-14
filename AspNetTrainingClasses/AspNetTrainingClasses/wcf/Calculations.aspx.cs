@@ -18,6 +18,7 @@ namespace AspNetTrainingClasses.wcf
         {
             CalcServiceReference.CalculationWCFServiceClient cswcf = new CalcServiceReference.CalculationWCFServiceClient();
             lblAnswer.Text = Convert.ToString(cswcf.Addition(Convert.ToDouble(txtFirstNo.Text), Convert.ToDouble(txtSecondNo.Text)));
+            lblSub.Text = Convert.ToString(cswcf.Subtraction(Convert.ToInt32(txtFirstNo.Text), Convert.ToInt32(txtSecondNo.Text)));
         }
     }
 }

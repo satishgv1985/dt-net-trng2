@@ -31,6 +31,15 @@ namespace TNSRTCWebSite {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// ucHeader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::TNSRTCWebSite.shared.header ucHeader;
+        
+        /// <summary>
         /// lbLogOut control.
         /// </summary>
         /// <remarks>
@@ -47,5 +56,14 @@ namespace TNSRTCWebSite {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        
+        /// <summary>
+        /// ucFooter control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::TNSRTCWebSite.shared.footer ucFooter;
     }
 }
