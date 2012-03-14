@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TNSRTC
 {
-    class Booking
+   public class Booking
     {
        public int BookingId {get; set;}
        public int UserID  {get; set;}

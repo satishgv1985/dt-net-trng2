@@ -3,10 +3,10 @@
   <PropertyGroup>
     <TargetConnectionString>Data Source=localhost;Persist Security Info=True;User ID=sa;Pooling=False</TargetConnectionString>
     <TargetDatabase>TNSRTC</TargetDatabase>
-    <DeployToDatabase>False</DeployToDatabase>
+    <DeployToDatabase>True</DeployToDatabase>
     <DeployToScript>True</DeployToScript>
     <SourceModel>TNSRTCdb.dbschema</SourceModel>
-    <DeployScriptFileName>TNSRTCdb.sql</DeployScriptFileName>
+    <DeployScriptFileName>TNSRTCdeploydb.sql</DeployScriptFileName>
     <DeploymentConfigurationFile>TNSRTC_Database.sqldeployment</DeploymentConfigurationFile>
   </PropertyGroup>
   <PropertyGroup>

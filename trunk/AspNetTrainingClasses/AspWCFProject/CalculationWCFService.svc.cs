@@ -17,5 +17,9 @@ namespace AspWCFProject
         {
             return x + y;
         }
+        public int Subtraction(int x, int y)
+        {
+            return x - y;
+        }
     }
 }

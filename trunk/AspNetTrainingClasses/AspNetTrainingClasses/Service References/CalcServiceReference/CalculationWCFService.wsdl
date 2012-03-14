@@ -18,6 +18,12 @@
   <wsdl:message name="ICalculationWCFService_Addition_OutputMessage">
     <wsdl:part name="parameters" element="tns:AdditionResponse" />
   </wsdl:message>
+  <wsdl:message name="ICalculationWCFService_Subtraction_InputMessage">
+    <wsdl:part name="parameters" element="tns:Subtraction" />
+  </wsdl:message>
+  <wsdl:message name="ICalculationWCFService_Subtraction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubtractionResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICalculationWCFService">
     <wsdl:operation name="DoWork">
       <wsdl:input wsaw:Action="http://tempuri.org/ICalculationWCFService/DoWork" message="tns:ICalculationWCFService_DoWork_InputMessage" />
@@ -26,6 +32,10 @@
     <wsdl:operation name="Addition">
       <wsdl:input wsaw:Action="http://tempuri.org/ICalculationWCFService/Addition" message="tns:ICalculationWCFService_Addition_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICalculationWCFService/AdditionResponse" message="tns:ICalculationWCFService_Addition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Subtraction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICalculationWCFService/Subtraction" message="tns:ICalculationWCFService_Subtraction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICalculationWCFService/SubtractionResponse" message="tns:ICalculationWCFService_Subtraction_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICalculationWCFService" type="tns:ICalculationWCFService">
@@ -41,6 +51,15 @@
     </wsdl:operation>
     <wsdl:operation name="Addition">
       <soap:operation soapAction="http://tempuri.org/ICalculationWCFService/Addition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Subtraction">
+      <soap:operation soapAction="http://tempuri.org/ICalculationWCFService/Subtraction" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

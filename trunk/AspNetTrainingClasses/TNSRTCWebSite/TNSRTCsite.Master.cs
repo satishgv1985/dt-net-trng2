@@ -16,8 +16,7 @@ namespace TNSRTCWebSite
                 lbLogOut.Visible = false;
             if (Session["userDetails"] != null)
                 lbLogOut.Visible = true;
-            //else
-            //    FormsAuthentication.RedirectToLoginPage();
+            
         }
 
         protected void lbLogOut_Click(object sender, EventArgs e)

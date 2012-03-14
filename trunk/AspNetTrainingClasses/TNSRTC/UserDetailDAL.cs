@@ -53,7 +53,7 @@ namespace TNSRTC
             {
                 tempUser.Firstname = Convert.ToString(sdr["firstName"]);
                 tempUser.Lastname = Convert.ToString(sdr["lastName"]);
-                
+                tempUser.Username = Convert.ToString(sdr["userName"]);
                 tempUser.RoleId = Convert.ToInt32(sdr["roleId"]);
             }
             return tempUser;
@@ -73,12 +73,40 @@ namespace TNSRTC
             cmd.Parameters.Add(new SqlParameter("firstName", ud.Firstname));
 
             con.Open();
-            int rowsAffected=cmd.ExecuteNonQuery();
+            int rowsAffected = cmd.ExecuteNonQuery();
             con.Close();
 
             return rowsAffected;
 
 
+        }
+
+        public static List<Booking> BookingHistory(string userName)
+        {
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = ConfigurationManager.ConnectionStrings["TNSRTCConnectionString"].ConnectionString;
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            con.Open();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "spBookingHistoryByUserName";
+            cmd.Parameters.Add(new SqlParameter("username", userName));
+           
+
+            SqlDataReader sdr = cmd.ExecuteReader();
+
+            List<Booking> listBookings = new List<Booking>();
+            Booking bk;
+            while (sdr.Read())
+            {
+                bk = new Booking();
+                bk.DateOfBooking = Convert.ToDateTime(sdr["DateOfBooking"]);
+                bk.ServiceID = Convert.ToInt32(sdr["ServiceID"]);
+                listBookings.Add(bk);
+            }
+            //bk.DateOfBooking=
+            con.Close();
+            return listBookings;
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[tblBooking]
 (
 	BookingId int NOT NULL Identity(1,1), 
-	UserID int NULL,
+	UserName varchar(50) NULL,
 	ServiceID int Null,
 	AmtPerTkt numeric(14,4) Null,
 	NoofTkts int Null,

@@ -36,7 +36,6 @@
             margin: 0px 300px 0px 300px;
             border: 1px ridge orange;
             background-color: #E6E6FA;
-            
         }
         .topimage
         {
@@ -53,12 +52,12 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   <div class="body">
+    <div class="body">
         <span>
             <asp:Label ID="lblMessage" ForeColor="Green" runat="server" Visible="false" Text="Registration Successfull"></asp:Label>
-        </span>
-        <span>
-            <asp:HyperLink ID="hlClickHere" runat="server" NavigateUrl="~/LoginPage.aspx" Visible="false" Text="Click Here to login"></asp:HyperLink></span>
+        </span><span>
+            <asp:HyperLink ID="hlClickHere" runat="server" NavigateUrl="~/LoginPage.aspx" Visible="false"
+                Text="Click Here to login"></asp:HyperLink></span>
         <div class="topimage">
             <div style="height: 20px; font-family: @FangSong; color: Orange; font-size: large;
                 font-weight: bolder">
@@ -70,7 +69,7 @@
             <table class="style1">
                 <tr>
                     <td class="style7">
-                        <asp:Label ID="lblUsername" runat="server">User Name &nbsp:<span class="Errortext">&nbsp*</span></asp:Label>
+                        <asp:Label ID="lblUsername" runat="server">User Name &nbsp:<span class="Errortext">&nbsp;*</span></asp:Label>
                     </td>
                     <td>
                         <table>
@@ -88,9 +87,9 @@
                                 </td>
                                 <td>
                                     <span>
-                                        <asp:RegularExpressionValidator ID="revName" runat="server" ControlToValidate="txtuName"
+                                        <%--<asp:RegularExpressionValidator ID="revName" runat="server" ControlToValidate="txtuName"
                                             SetFocusOnError="true" ForeColor="Red" ErrorMessage="Please enter only alphabet"
-                                            ValidationExpression="[a-z]" Display="Dynamic"></asp:RegularExpressionValidator>
+                                            ValidationExpression="[a-z]" Display="Dynamic"></asp:RegularExpressionValidator>--%>
                                     </span>
                                 </td>
                             </tr>
@@ -119,7 +118,7 @@
                     </td>
                     <td>
                         <asp:DropDownList ID="ddlSecurityquestion" runat="server">
-                            <asp:ListItem>-Select One-</asp:ListItem>
+                            <asp:ListItem Text="-Select One-" Value="0"></asp:ListItem>
                             <asp:ListItem>What town were you born in?</asp:ListItem>
                             <asp:ListItem>What town was your father born in?</asp:ListItem>
                             <asp:ListItem>What is the first name of your best childhood friend?</asp:ListItem>
@@ -127,6 +126,8 @@
                             <asp:ListItem>What town was your mother born in?</asp:ListItem>
                             <asp:ListItem>Other</asp:ListItem>
                         </asp:DropDownList>
+                        <asp:RequiredFieldValidator ID="rfvSecurityQuestion" runat="server" ControlToValidate="ddlSecurityquestion"
+                            Text="Select Security Question" InitialValue="0" SetFocusOnError="true"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>

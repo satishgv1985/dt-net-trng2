@@ -16,5 +16,8 @@ namespace AspWCFProject
 
         [OperationContract]
         double Addition(double a, double b);
+
+        [OperationContract]
+        int Subtraction(int x, int y);
     }
 }

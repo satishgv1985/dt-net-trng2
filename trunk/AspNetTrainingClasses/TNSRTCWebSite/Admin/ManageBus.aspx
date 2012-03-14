@@ -15,9 +15,8 @@
         <asp:BoundField DataField="ToPlaceID" HeaderText="ToPlaceID" 
             SortExpression="ToPlaceID" />
     </Columns>
-    </asp:GridView>
-    <asp:SqlDataSource ID="busService" runat="server" 
-        ConnectionString="<%$ ConnectionStrings:TNSRTCConnectionString %>" 
-        SelectCommand="SELECT [ServiceId], [ServiceNo], [FromPlaceID], [ToPlaceID] FROM [tblService]">
-    </asp:SqlDataSource>
+    </asp:GridView><br /><br />
+
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+
 </asp:Content>
