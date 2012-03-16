@@ -14,7 +14,11 @@
 			<Metadata Name="CompatibilityMode" Value="90" />
 		</CustomData>
 		<CustomData Category="Permissions" Type="XmlPermissions">
+<<<<<<< .mine
+			<Metadata Name="FileName" Value="C:\DOCUMENTS AND SETTINGS\COMPLEX\DESKTOP\DT-NET-TRNG2\ASPNETTRAININGCLASSES\TNSRTCDB\PROPERTIES\DATABASE.SQLPERMISSIONS" />
+=======
 			<Metadata Name="FileName" Value="E:\INSTITUTEWORKS\DOTNETTRAINING2\ASPNETTRAININGCLASSES\TNSRTCDB\PROPERTIES\DATABASE.SQLPERMISSIONS" />
+>>>>>>> .r65
 		</CustomData>
 	</Header>
 	<Model>

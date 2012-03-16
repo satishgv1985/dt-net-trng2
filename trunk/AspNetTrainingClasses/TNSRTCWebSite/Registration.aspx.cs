@@ -6,6 +6,12 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using TNSRTC;
 using System.Web.Security;
+using System.Web.Mail;
+using System.Net;
+using System.Net.Mime;
+using System.Threading;
+using System.ComponentModel;
+
 namespace TNSRTCWebSite
 {
     public partial class Registration : System.Web.UI.Page
@@ -54,6 +60,8 @@ namespace TNSRTCWebSite
                     lblMessage.Visible = true;
                     lblMessage.Text = "Error! Try again";
                 }
+                MailMessage msg = new MailMessage();
+                msg.To = txtEmail.Text;
 
 
 

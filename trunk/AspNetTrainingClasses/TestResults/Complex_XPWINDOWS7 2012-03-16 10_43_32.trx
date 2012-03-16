@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="435d44e0-8fcc-4e77-a2de-f13ed03a0fe1" name="Complex@XPWINDOWS7 2012-03-16 10:43:32" runUser="XPWINDOWS7\Complex" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="7a6bac4f-575e-469f-9033-0b8a712b82f5">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Complex_XPWINDOWS7 2012-03-16 10_43_32">
+      <DeploymentItem filename="C:\Documents and Settings\Complex\Desktop\dt-net-trng2\AspNetTrainingClasses\TNSRTC\bin\Debug\TNSRTC.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-03-16T10:43:32.6406250+07:00" queuing="2012-03-16T10:43:34.2812500+07:00" start="2012-03-16T10:43:34.3593750+07:00" finish="2012-03-16T10:43:35.1718750+07:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="ValidateRegistration" storage="c:\documents and settings\complex\desktop\dt-net-trng2\aspnettrainingclasses\tnsrtctest\bin\debug\tnsrtctest.dll" id="cf0b81fe-0d04-8974-30d5-596b69a5ceac">
+      <Execution id="3edf927e-951e-497d-a31f-e0ac6a32986b" />
+      <TestMethod codeBase="C:/Documents and Settings/Complex/Desktop/dt-net-trng2/AspNetTrainingClasses/TNSRTCTest/bin/Debug/TNSRTCTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TNSRTCTest.Registration, TNSRTCTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ValidateRegistration" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="cf0b81fe-0d04-8974-30d5-596b69a5ceac" executionId="3edf927e-951e-497d-a31f-e0ac6a32986b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="3edf927e-951e-497d-a31f-e0ac6a32986b" testId="cf0b81fe-0d04-8974-30d5-596b69a5ceac" testName="ValidateRegistration" computerName="XPWINDOWS7" duration="00:00:00.0953822" startTime="2012-03-16T10:43:34.4843750+07:00" endTime="2012-03-16T10:43:35.0625000+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3edf927e-951e-497d-a31f-e0ac6a32986b">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TNSRTCTest.Registration.ValidateRegistration threw exception: 
+System.NullReferenceException: Object reference not set to an instance of an object.</Message>
+          <StackTrace>    at TNSRTC.UserDetailDAL.InsertUser(UserDetail ud) in C:\Documents and Settings\Complex\Desktop\dt-net-trng2\AspNetTrainingClasses\TNSRTC\UserDetailDAL.cs:line 65
+   at TNSRTCTest.Registration.ValidateRegistration() in C:\Documents and Settings\Complex\Desktop\dt-net-trng2\AspNetTrainingClasses\TNSRTCTest\Registration.cs:line 18
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
